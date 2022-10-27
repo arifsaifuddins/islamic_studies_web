@@ -1,1 +1,1 @@
-"Islamic Studies Site" 
+Islamic Studies Site

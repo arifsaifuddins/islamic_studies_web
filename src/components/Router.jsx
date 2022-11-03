@@ -10,6 +10,8 @@ import Haikal from './pages/Haikal';
 import Muktamarat from './pages/Muktamarat';
 import Programs from './pages/Programs';
 import Contact from './pages/Contact';
+import Akbaar from './pages/Akbaar';
+
 
 const Routers = () => {
   return (
@@ -25,6 +27,7 @@ const Routers = () => {
         <Route path="/muktamarat" element={<Muktamarat />} />
         <Route path="/programs" element={<Programs />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/news" element={<Akbaar />} />
         <Route path="*" element={<Blank />} />
       </Routes>
     </>

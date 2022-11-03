@@ -42,16 +42,23 @@ const Header = () => {
         <div className="mx-auto w-[1200px] flex flex-row-reverse items-center justify-between">
           <Link to="/home" className="flex-row-reverse flex gap-2 items-center">
             <img src="/logo.png" alt="logo_iua" className='w-8' />
-            <h1 className='text-2xl font-bold text-yellow-900'>الدراسات الإسلامية</h1>
+            <h1 className='text-3xl font-bold text-yellow-900'>الدراسات الإسلامية</h1>
           </Link>
-          <div className="flex flex-row-reverse gap-1 items-center text-white subnav my-5">
-            <NavLink to="/home" style={active} className="px-3 py-2 text-sm rounded-md hover:bg-yellow-300 hover:bg-opacity-50">الرئيسية</NavLink>
-            <NavLink to="/about" style={active} className="px-3 py-2 text-sm rounded-md hover:bg-yellow-300 hover:bg-opacity-50">عن الكلية</NavLink>
-            <NavLink to="/aqsam" style={active} className="px-3 py-2 text-sm rounded-md hover:bg-yellow-300 hover:bg-opacity-50">أقسام الكلية</NavLink>
-            <NavLink to="/haiah" style={active} className="px-3 py-2 text-sm rounded-md hover:bg-yellow-300 hover:bg-opacity-50">هيئة التدريس</NavLink>
-            <NavLink to="/haikal" style={active} className="px-3 py-2 text-sm rounded-md hover:bg-yellow-300 hover:bg-opacity-50">الهيكل الإداري</NavLink>
-            <NavLink to="/muktamarat" style={active} className="px-3 py-2 text-sm rounded-md hover:bg-yellow-300 hover:bg-opacity-50">المؤتمرات</NavLink>
-            <div className="px-3 py-2 rounded-md hover:bg-yellow-300 hover:bg-opacity-50" >
+          {/**
+           * TODO
+           * - make texts more bolder
+           * - make logo bigger also
+           */}
+          <div className="flex flex-row-reverse gap-1 items-center text-white subnav">
+            <NavLink to="/" style={active} className="px-3 py-2 text-sm rounded-md hover:bg-yellow-200 hover:bg-opacity-50">الرئيسية</NavLink>
+            <NavLink to="/about" style={active} className="px-3 py-2 text-sm rounded-md hover:bg-yellow-200 hover:bg-opacity-50">عن الكلية</NavLink>
+            <NavLink to="/aqsam" style={active} className="px-3 py-2 text-sm rounded-md hover:bg-yellow-200 hover:bg-opacity-50">أقسام الكلية</NavLink>
+            <NavLink to="/haiah" style={active} className="px-3 py-2 text-sm rounded-md hover:bg-yellow-200 hover:bg-opacity-50">هيئة التدريس</NavLink>
+            <NavLink to="/haikal" style={active} className="px-3 py-2 text-sm rounded-md hover:bg-yellow-200 hover:bg-opacity-50">الهيكل الإداري</NavLink>
+            <NavLink to="/muktamarat" style={active} className="px-3 py-2 text-sm rounded-md hover:bg-yellow-200 hover:bg-opacity-50">المؤتمرات</NavLink>
+            <NavLink to="/dirasat" style={active} className="px-3 py-2 text-sm rounded-md hover:bg-yellow-200 hover:bg-opacity-50">الـدراســات العليا</NavLink>
+            <NavLink to="/news" style={active} className="px-3 py-2 text-sm rounded-md hover:bg-yellow-200 hover:bg-opacity-50">الأخبار</NavLink>
+            <div className="px-3 py-2 rounded-md hover:bg-yellow-200 hover:bg-opacity-50" >
               <FiSearch />
             </div>
           </div>

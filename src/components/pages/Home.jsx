@@ -29,7 +29,7 @@ const Home = () => {
               l.map((e) => {
                 return (
                   <div className="p-1 shadow">
-                    <img src="./src/assets/exmp.jpg" alt="photo" className='object-cover h-72 w-52 hover:scale-110 rounded-lg' />
+                    <img src="/exmp.jpg" alt="photo" className='object-cover h-72 w-52 hover:scale-110 rounded-lg' />
                   </div>
                 )
               })
@@ -45,7 +45,7 @@ const Home = () => {
               r.map((e) => {
                 return (
                   <div className="flex flex-row-reverse items-center justify-between p-3 gap-6">
-                    <img src="./src/assets/exmp.jpg" alt="photo" className='object-cover h-32 w-32 rounded-lg' />
+                    <img src="/exmp.jpg" alt="photo" className='object-cover h-32 w-32 rounded-lg' />
                     <div className="text-end">
                       <h2 className='font-bold text-2xl text-yellow-600 underline'>قاعة الحاج نور الكبرى أ.د. حسن علي الشايقي أ.د. حسن علي لي الشايقيأ.د. حسقيأ.د.</h2>
                       <p className="pt-2">12/01/2022</p>
@@ -60,7 +60,7 @@ const Home = () => {
               r.map((e) => {
                 return (
                   <div className="flex flex-row-reverse items-center justify-between p-3 gap-6">
-                    <img src="./src/assets/exmp.jpg" alt="photo" className='object-cover h-32 w-32 rounded-lg' />
+                    <img src="/exmp.jpg" alt="photo" className='object-cover h-32 w-32 rounded-lg' />
                     <div className="text-end">
                       <h2 className='font-bold text-2xl text-yellow-600 underline'>قاعة الحاج نور الكبرى أ.د. حسن علي الشايقي أ.د. حسن علي لي الشايقيأ.د. حسقيأ.د.</h2>
                       <p className="pt-2">12/01/2022</p>
@@ -76,7 +76,7 @@ const Home = () => {
             <h2 className='px-3 py-1 absolute right-0 rounded-bl-lg bg-yellow-600 w-max text-white'>نشاطات كلية الدراسات الإسلامية</h2>
             <div className="pb-20 pt-40">
               <div className="flex flex-row items-center justify-between p-3 gap-28">
-                <img src="./src/assets/exmp.jpg" alt="photo" className='object-cover h-[500px] w-[450px]' data-aos="fade-up" />
+                <img src="/exmp.jpg" alt="photo" className='object-cover h-[500px] w-[450px]' data-aos="fade-up" />
                 <div className="text-end">
                   <h3 className='text-lg mb-4 font-thin'>قاعة الحاج نور الكبرى</h3>
                   <h2 className='font-bold text-5xl text-yellow-600 underline mb-4'>قاعة الحاج نور الكبرى</h2>
@@ -86,7 +86,7 @@ const Home = () => {
             </div>
             <div className="py-20 ">
               <div className="flex flex-row-reverse items-center justify-between p-3 gap-28">
-                <img src="./src/assets/exmp.jpg" alt="photo" className='object-cover h-[500px] w-[450px]' data-aos="fade-up" />
+                <img src="/exmp.jpg" alt="photo" className='object-cover h-[500px] w-[450px]' data-aos="fade-up" />
                 <div className="text-end">
                   <h3 className='text-lg mb-4 font-thin'>قاعة الحاج نور الكبرى</h3>
                   <h2 className='font-bold text-5xl text-yellow-600 underline mb-4'>قاعة الحاج نور الكبرى</h2>

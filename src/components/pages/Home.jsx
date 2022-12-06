@@ -16,20 +16,20 @@ const Home = () => {
           <p className='text-xl text-yellow-400'>الخرطوم - السودان</p>
 
           <div className="flex flex-row-reverse items-center gap-4 mt-14">
-            <Link to="/programs" className='px-8 py-2 border-4 hover:border-yellow-400 border-yellow-600 hover:bg-yellow-400 bg-yellow-600 rounded-lg flex flex-row-reverse items-center gap-2'><FiBriefcase /> انظر البرامج</Link>
-            <Link to='/contact' className='px-8 py-2 border-4 hover:border-yellow-400 border-yellow-600 rounded-lg flex flex-row-reverse items-center gap-2'><FiPhone /> اتصل بنا</Link>
+            <Link to="/programs" className='px-8 py-2 border-4 hover:border-yellow-600 border-yellow-400 hover:bg-yellow-600 bg-yellow-400 rounded-lg flex flex-row-reverse text-slate-700 items-center gap-2'><FiBriefcase /> انظر البرامج</Link>
+            <Link to='/contact' className='px-8 py-2 border-4 hover:border-yellow-600 border-yellow-400 rounded-lg flex flex-row-reverse items-center gap-2'><FiPhone /> اتصل بنا</Link>
           </div>
         </div>
       </div>
       <div className="bg-white border-t-4 border-yellow-600">
         <div className="mx-auto w-[1200px] relative">
           <h2 className='px-3 py-1 absolute right-0 rounded-bl-lg bg-yellow-600 w-max text-white'>إعلانات كلية الدراسات الإسلامية</h2>
-          <div className="py-40 flex flex-row-reverse items-end gap-4 justify-around" data-aos="fade-up" data-aos-duration="2500">
+          <div className="py-40 flex flex-row-reverse items-end gap-4 justify-around" data-aos="fade-up">
             {
               l.map((e) => {
                 return (
-                  <div className="p-1 shadow">
-                    <img src="/exmp.jpg" alt="photo" className='object-cover h-72 w-52 hover:scale-110 rounded-lg' />
+                  <div className="shadow">
+                    <img src="/exmp.jpg" alt="photo" className='object-cover h-72 w-52 hover:scale-110' />
                   </div>
                 )
               })
@@ -45,7 +45,7 @@ const Home = () => {
               r.map((e) => {
                 return (
                   <div className="flex flex-row-reverse items-center justify-between p-3 gap-6">
-                    <img src="/exmp.jpg" alt="photo" className='object-cover h-32 w-32 rounded-lg' />
+                    <img src="/exmp.jpg" alt="photo" className='object-cover h-32 w-32' />
                     <div className="text-end">
                       <h2 className='font-bold text-2xl text-yellow-600 underline'>قاعة الحاج نور الكبرى أ.د. حسن علي الشايقي أ.د. حسن علي لي الشايقيأ.د. حسقيأ.د.</h2>
                       <p className="pt-2">12/01/2022</p>
@@ -60,7 +60,7 @@ const Home = () => {
               r.map((e) => {
                 return (
                   <div className="flex flex-row-reverse items-center justify-between p-3 gap-6">
-                    <img src="/exmp.jpg" alt="photo" className='object-cover h-32 w-32 rounded-lg' />
+                    <img src="/exmp.jpg" alt="photo" className='object-cover h-32 w-32' />
                     <div className="text-end">
                       <h2 className='font-bold text-2xl text-yellow-600 underline'>قاعة الحاج نور الكبرى أ.د. حسن علي الشايقي أ.د. حسن علي لي الشايقيأ.د. حسقيأ.د.</h2>
                       <p className="pt-2">12/01/2022</p>
@@ -96,40 +96,40 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="bg-slate-100 border-t-4 border-yellow-600">
-          <div className="mx-auto w-[1200px] relative">
-            <h2 className='px-3 py-1 absolute rounded-br-lg bg-yellow-600 w-max text-white'>أقسام كلية الدراسات الإسلامية</h2>
-            <div className="py-40 flex flex-row-reverse items-center justify-around gap-8" data-aos="fade-down">
-              <div className="flex flex-col items-center px-4 pb-6 pt-16 rounded-lg shadow">
-                <div className="p-4 rounded-lg bg-purple-400 text-white w-max text-2xl">
-                  <FiBookOpen />
-                </div>
-                <h1 className='font-bold text-yellow-600 my-4'>قسم السنة وعلوم الحديث</h1>
-                <p className='text-center'>د. حسن علي الشايقي أ.د. حسن علي الشايقي أ.د.ي الشايقيأ.د.ي الشايقي</p>
+      </div>
+      <div className="bg-slate-100 border-t-4 border-yellow-600">
+        <div className="mx-auto w-[1200px] relative">
+          <h2 className='px-3 py-1 absolute rounded-br-lg bg-yellow-600 w-max text-white'>أقسام كلية الدراسات الإسلامية</h2>
+          <div className="py-40 flex flex-row-reverse items-center justify-around gap-8" data-aos="fade-down">
+            <div className="flex flex-col items-center px-4 pb-6 pt-16 rounded-lg shadow bg-white">
+              <div className="p-4 rounded-lg bg-purple-400 mb-4 text-white w-max text-2xl">
+                <FiBookOpen />
               </div>
-              <div className="flex flex-col items-center px-4 pb-6 pt-16 rounded-lg shadow">
-                <div className="p-4 rounded-lg bg-orange-400 text-white w-max text-2xl">
-                  <FiVolume2 />
-                </div>
-                <h1 className='font-bold text-yellow-600 my-4'>قسم الدعوة والسيرة</h1>
-                <p className='text-center'>د. حسن علي الشايقي أ.د. حسن علي الشايقي أ.د.ي الشايقيأ.د.ي الشايقي</p>
+              <h1 className='font-bold text-yellow-600 my-4'>قسم السنة وعلوم الحديث</h1>
+              <p className='text-center'>د. حسن علي الشايقي أ.د. حسن علي الشايقي أ.د.ي الشايقيأ.د.ي الشايقي</p>
+            </div>
+            <div className="flex flex-col items-center px-4 pb-6 pt-16 rounded-lg shadow bg-white">
+              <div className="p-4 rounded-lg bg-orange-400 mb-4 text-white w-max text-2xl">
+                <FiVolume2 />
               </div>
-              <div className="flex flex-col items-center px-4 pb-6 pt-16 rounded-lg shadow">
-                <div className="p-4 rounded-lg bg-green-400 text-white w-max text-2xl">
-                  <FiTarget />
-                </div>
-                <h1 className='font-bold text-yellow-600 my-4'>قسم العقيدة والفكر الإسلامي</h1>
-                <p className='text-center'>د. حسن علي الشايقي أ.د. حسن علي الشايقي أ.د.ي الشايقيأ.د.ي الشايقي</p>
+              <h1 className='font-bold text-yellow-600 my-4'>قسم الدعوة والسيرة</h1>
+              <p className='text-center'>د. حسن علي الشايقي أ.د. حسن علي الشايقي أ.د.ي الشايقيأ.د.ي الشايقي</p>
+            </div>
+            <div className="flex flex-col items-center px-4 pb-6 pt-16 rounded-lg shadow bg-white">
+              <div className="p-4 rounded-lg bg-green-400 mb-4 text-white w-max text-2xl">
+                <FiTarget />
               </div>
+              <h1 className='font-bold text-yellow-600 my-4'>قسم العقيدة والفكر الإسلامي</h1>
+              <p className='text-center'>د. حسن علي الشايقي أ.د. حسن علي الشايقي أ.د.ي الشايقيأ.د.ي الشايقي</p>
             </div>
           </div>
         </div>
-        <div className="bg-white border-t-4 border-yellow-600">
-          <div className="mx-auto w-[1200px] relative">
-            <h2 className='px-3 py-1 absolute right-0 rounded-bl-lg bg-yellow-600 w-max text-white'>عدد زائري موقع الكلية</h2>
-            <div className="py-40 flex items-center gap-4 justify-center">
-              <h1 className='text-6xl font-bold'>1000</h1>
-            </div>
+      </div>
+      <div className="bg-white border-t-4 border-yellow-600">
+        <div className="mx-auto w-[1200px] relative">
+          <h2 className='px-3 py-1 absolute right-0 rounded-bl-lg bg-yellow-600 w-max text-white'>عدد زائري موقع الكلية</h2>
+          <div className="py-40 flex items-center gap-4 justify-center">
+            <h1 className='text-6xl font-bold' data-aos="fade-right">1000</h1>
           </div>
         </div>
       </div>

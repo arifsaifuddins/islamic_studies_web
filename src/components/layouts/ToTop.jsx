@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import { FiArrowUp } from 'react-icons/fi'
 
 const ToTop = () => {
@@ -17,11 +17,11 @@ const ToTop = () => {
 
   return (
     <a href="#" className="topscroll hidden ">
-      <i className="fixed bottom-8 left-8 bg-yellow-600 p-3 cursor-pointer hover:bg-yellow-300 rounded-xl text-xl text-white font-bold z-10">
+      <i className="fixed bottom-8 left-8 bg-yellow-600 p-3 cursor-pointer hover:bg-yellow-400 rounded-xl text-xl text-white font-bold z-10">
         <FiArrowUp />
       </i>
     </a>
-  );
+  )
 }
 
-export default ToTop;
+export default ToTop

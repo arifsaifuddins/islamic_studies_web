@@ -76,11 +76,11 @@ const Header = () => {
         <div className="mx-auto w-[1200px] flex flex-row-reverse items-center justify-between">
           <Link onClick={() => dropdown()} to="/" className="flex-row-reverse flex gap-2 items-center">
             <img src="/logo.png" alt="logo_iua" className='w-8' />
-            <h1 className='text-2xl font-bold text-yellow-900'>الدراسات الإسلامية</h1>
+            <h1 className='text-2xl font-bold text-yellow-900 hover:underline hover:text-yellow-400'>الدراسات الإسلامية</h1>
           </Link>
           <div className="flex flex-row-reverse gap-1 items-center text-white subnav my-5">
-            <div onClick={() => { document.querySelector('.drop').classList.toggle('hidden'); document.querySelector('.drop').classList.toggle('flex'); document.querySelector('.droptwo').classList.add('hidden'); document.querySelector('.droptwo').classList.remove('flex') }} className="cursor-pointer px-3 py-2 dropdownqism text-sm rounded-md hover:bg-yellow-300 hover:bg-opacity-50 flex gap-1 items-center relative">
-              <div className="flex-col items-end rounded-lg bg-yellow-300 subnav drop absolute w-max p-1 gap-1 right-0 top-[120%] hidden">
+            <div onClick={() => { document.querySelector('.drop').classList.toggle('hidden'); document.querySelector('.drop').classList.toggle('flex'); document.querySelector('.droptwo').classList.add('hidden'); document.querySelector('.droptwo').classList.remove('flex') }} className="cursor-pointer px-3 py-2 dropdownqism text-sm rounded-md hover:bg-yellow-400 hover:bg-opacity-50 flex gap-1 items-center relative">
+              <div className="flex-col items-end rounded-lg bg-yellow-400 subnav drop absolute w-max p-1 gap-1 right-0 top-[120%] hidden">
                 <Link to="/hadith" className='px-3 py-2 border-b hover:bg-yellow-500 w-full text-end rounded-lg'>قسم السنة وعلوم الحديث</Link>
                 <Link to="/dakwah" className='px-3 py-2 border-b hover:bg-yellow-500 w-full text-end rounded-lg'>قسم الدعوة والسيرة</Link>
                 <Link to="/aqidah" className='px-3 py-2 hover:bg-yellow-500 w-full text-end rounded-lg'>قسم العقيدة والفكر الإسلامي</Link>
@@ -88,8 +88,8 @@ const Header = () => {
               <FiChevronDown />
               أقسام الكلية
             </div>
-            <div onClick={() => { document.querySelector('.droptwo').classList.toggle('hidden'); document.querySelector('.droptwo').classList.toggle('flex'); document.querySelector('.drop').classList.add('hidden'); document.querySelector('.drop').classList.remove('flex') }} className="cursor-pointer px-3 py-2 dropdownqism text-sm rounded-md hover:bg-yellow-300 hover:bg-opacity-50 flex gap-1 items-center relative">
-              <div className="flex-col items-end rounded-lg w-52 bg-yellow-300 subnav droptwo absolute p-1 gap-1 right-0 top-[120%] hidden">
+            <div onClick={() => { document.querySelector('.droptwo').classList.toggle('hidden'); document.querySelector('.droptwo').classList.toggle('flex'); document.querySelector('.drop').classList.add('hidden'); document.querySelector('.drop').classList.remove('flex') }} className="cursor-pointer px-3 py-2 dropdownqism text-sm rounded-md hover:bg-yellow-400 hover:bg-opacity-50 flex gap-1 items-center relative">
+              <div className="flex-col items-end rounded-lg w-52 bg-yellow-400 subnav droptwo absolute p-1 gap-1 right-0 top-[120%] hidden">
                 <Link to="/about" className='px-3 py-2 border-b hover:bg-yellow-500 w-full text-end rounded-lg'>التعريف بالكلية</Link>
                 <Link to="/haikal" className='px-3 py-2 border-b hover:bg-yellow-500 w-full text-end rounded-lg'>الهيكلة الإداري</Link>
                 <Link to="/haiah" className='px-3 py-2 hover:bg-yellow-500 w-full text-end rounded-lg'>هيئة التدريس</Link>
@@ -97,10 +97,10 @@ const Header = () => {
               <FiChevronDown />
               عن الكلية
             </div>
-            <NavLink onClick={() => dropdown()} to="/qobul" style={active} className="px-3 py-2 text-sm rounded-md hover:bg-yellow-300 hover:bg-opacity-50">التسجيل والقبول</NavLink>
-            <NavLink onClick={() => dropdown()} to="/kuliat" style={active} className="px-3 py-2 text-sm rounded-md hover:bg-yellow-300 hover:bg-opacity-50">الكليات المنتسبة</NavLink>
-            <NavLink onClick={() => dropdown()} to="/dirasat" style={active} className="px-3 py-2 text-sm rounded-md hover:bg-yellow-300 hover:bg-opacity-50">الدراسات العليا</NavLink>
-            <NavLink onClick={() => dropdown()} to="/programs" style={active} className="px-3 py-2 text-sm rounded-md hover:bg-yellow-300 hover:bg-opacity-50">البرامج</NavLink>
+            <NavLink onClick={() => dropdown()} to="/qobul" style={active} className="px-3 py-2 text-sm rounded-md hover:bg-yellow-400 hover:bg-opacity-50">التسجيل والقبول</NavLink>
+            <NavLink onClick={() => dropdown()} to="/kuliat" style={active} className="px-3 py-2 text-sm rounded-md hover:bg-yellow-400 hover:bg-opacity-50">الكليات المنتسبة</NavLink>
+            <NavLink onClick={() => dropdown()} to="/dirasat" style={active} className="px-3 py-2 text-sm rounded-md hover:bg-yellow-400 hover:bg-opacity-50">الدراسات العليا</NavLink>
+            <NavLink onClick={() => dropdown()} to="/programs" style={active} className="px-3 py-2 text-sm rounded-md hover:bg-yellow-400 hover:bg-opacity-50">البرامج</NavLink>
           </div>
         </div>
       </nav>

@@ -76,7 +76,7 @@ const Header = () => {
         <div className="mx-auto w-[1200px] flex flex-row-reverse items-center justify-between">
           <Link onClick={() => dropdown()} to="/" className="flex-row-reverse flex gap-2 items-center">
             <img src="/logo.png" alt="logo_iua" className='w-8' />
-            <h1 className='text-2xl font-bold text-yellow-900 hover:underline hover:text-yellow-400'>الدراسات الإسلامية</h1>
+            <h1 className='text-2xl font-bold text-yellow-900 hover:underline'>الدراسات الإسلامية</h1>
           </Link>
           <div className="flex flex-row-reverse gap-1 items-center text-white subnav my-5">
             <div onClick={() => { document.querySelector('.drop').classList.toggle('hidden'); document.querySelector('.drop').classList.toggle('flex'); document.querySelector('.droptwo').classList.add('hidden'); document.querySelector('.droptwo').classList.remove('flex') }} className="cursor-pointer px-3 py-2 dropdownqism text-sm rounded-md hover:bg-yellow-400 hover:bg-opacity-50 flex gap-1 items-center relative">

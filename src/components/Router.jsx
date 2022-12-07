@@ -13,6 +13,8 @@ import Contact from './pages/Contact'
 import Dakwah from './pages/Dakwah'
 import Qobul from './pages/Qobul'
 import Kuliat from './pages/Kuliat'
+import Program from './pages/details/Program'
+import Profile from './pages/details/Profile'
 
 const Routers = () => {
   return (
@@ -22,8 +24,10 @@ const Routers = () => {
         <Route path="/qobul" element={<Qobul />} />
         <Route path="/about" element={<About />} />
         <Route path="/haiah" element={<Haiah />} />
+        <Route path="/haiah/:id" element={<Profile />} />
         <Route path="/haikal" element={<Haikal />} />
         <Route path="/programs" element={<Programs />} />
+        <Route path="/programs/:id" element={<Program />} />
         <Route path="/hadith" element={<Hadith />} />
         <Route path="/dakwah" element={<Dakwah />} />
         <Route path="/aqidah" element={<Aqidah />} />

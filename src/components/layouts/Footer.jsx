@@ -19,7 +19,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <div className='flex flex-row-reverse items-end justify-between mt-8 mx-auto w-[1200px]'>
+      <div className='flex flex-row-reverse justify-between mt-8 mx-auto w-[1200px]'>
         <div className="flex flex-col items-end gap-8">
           <div className='flex flex-row-reverse items-end justify-between gap-6 text-xl'>
             <a className="p-3 hover:scale-105 rounded-lg bg-blue-800" href="https://facebook.com/profile.php?id=100088419282005" target="_blank" rel="noopener noreferrer"><FiFacebook /></a>
@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
           <h3 className='text-end'>الموقع الرسمي لكلية الدراسات الإسلامية بجامعة إفريقيا العالمية</h3>
         </div>
-        <p className='font-light py-1 px-4 rounded-lg border border-yellow-600'>&copy; Islamic Studies 2022 . Khartoum-Sudan . IUA</p>
+        <p className='font-light py-1 px-4 h-max rounded-lg border border-yellow-600'>&copy; Islamic Studies 2022 . Khartoum-Sudan . IUA</p>
       </div>
     </footer>
   )

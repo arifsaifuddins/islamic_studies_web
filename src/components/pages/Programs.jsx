@@ -1,10 +1,11 @@
 import React from 'react'
 import { FiCalendar, FiChevronsLeft, FiChevronsRight } from 'react-icons/fi'
+import { Link } from 'react-router-dom'
 
 const Programs = () => {
   return (
     <>
-      <div className='h-96 flex bg-stone-700 bg-opacity-50 text-white'>
+      <div className='h-80 flex bg-stone-700 bg-opacity-50 text-white'>
         <h1 className='text-5xl m-auto'>البرامج والأخبار</h1>
       </div>
       <div className="bg-white border-t-4 border-yellow-600">
@@ -12,12 +13,12 @@ const Programs = () => {
           <h2 className='px-3 py-1 absolute right-0 rounded-bl-lg bg-yellow-600 w-max text-white'>البرامج والأخبار والمؤتمرات</h2>
           <div className="mx-auto w-[900px] text-lg text-end leading-9 py-32">
             <div className="flex flex-col shadow-lg hover:shadow-xl overflow-hidden bg-white mb-20">
-              <a href="#" className="relative">
+              <Link to="/programs/okkook" className="relative">
                 <img src="/exmp.jpg" alt="poster" className="w-full h-80 object-cover hover:object-right-bottom transition-all duration-500" />
                 <div className="flex justify-end bg-cover text-slate-100 flex-col absolute right-0 bottom-0 left-0">
                   <h1 className="text-2xl font-bold p-4 bg-opacity-50 bg-slate-200 hover:underline hover:text-yellow-600">لكلية تؤدي رسالة الجامعة، وترفد المجتمعات المحلية والعالمية بخريجين، على مدى عقدٍ من الزمان، من خلال واجبهة؛ لمواكبة التطور العلمي الهائل</h1>
                 </div>
-              </a>
+              </Link>
             </div>
             <div className="flex flex-row-reverse items-center justify-between mt-10 gap-6" data-aos="fade-up">
               <img src="/exmp.jpg" alt="photo" className='object-cover h-44 w-44' />

@@ -1,17 +1,28 @@
 import React from 'react'
+import { FiCalendar, FiUser } from 'react-icons/fi'
 
-const Hadith = () => {
+const Program = () => {
   return (
     <>
       <div className='h-80 flex bg-stone-700 bg-opacity-50 text-white'>
-        <h1 className='text-5xl m-auto'>قسم السنة وعلوم الحديث</h1>
+        <h1 className='text-5xl m-auto'>البرامج والمؤتمرات</h1>
       </div>
       <div className="bg-white border-t-4 border-yellow-600">
         <div className="mx-auto w-[1200px] relative">
-          <h2 className='px-3 py-1 absolute right-0 rounded-bl-lg bg-yellow-600 w-max text-white'>قسم السنة وعلوم الحديث</h2>
+          <h2 className='px-3 py-1 absolute right-0 rounded-bl-lg bg-yellow-600 w-max text-white'>البرامج والمؤتمرات</h2>
           <div className="mx-auto w-[900px] text-lg text-end leading-9 py-32">
-            <img src="/exmp.jpg" alt="photo" className='object-cover w-full mb-14 h-60' />
-            <p className="mb-12 text-center text-xl font-bold text-yellow-600">جاء إنشاء هذه الكلية تلبية لحاجة أبناء </p>
+            <p className="text-end text-4xl leading-normal font-bold text-yellow-600">جاء إنشاء هذه الكلية تلبية لحاجة أباء هذه الكلية تلبية لحاجة أباء هذه الكلية تلبية لحاجة أبناء </p>
+            <div className="pt-4 flex flex-row-reverse gap-6 items-center">
+              <p className="flex flex-row-reverse gap-3 items-center">
+                <FiCalendar />
+                <span>12/01/2022</span>
+              </p>
+              <p className="flex flex-row-reverse gap-3 items-center">
+                <FiUser />
+                <span>الدراسات الإسلامية</span>
+              </p>
+            </div>
+            <img src="/exmp.jpg" alt="photo" className='object-cover w-full my-14 h-60' />
             <p className="mb-12">
               جاء إنشاء هذه الكلية تلبية لحاجة أبناء المسلمين في مختلف بقاع العالم للتزود بسلاح العلم الشرعي، والمعارف الإسلامية، وتأهيلهم وتنمية قدراتهم لأداء دورهم للقيام بواجب الدعوة الإسلامية في بلادهم، وفق أهداف الجامعة ورسالتها، وخصوصية طلابها
             </p>
@@ -28,4 +39,4 @@ const Hadith = () => {
   )
 }
 
-export default Hadith
+export default Program

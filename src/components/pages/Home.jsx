@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { FiBookOpen, FiBriefcase, FiPhone, FiTarget, FiVolume2 } from 'react-icons/fi'
+import { FiBookOpen, FiBriefcase, FiCalendar, FiPhone, FiTarget, FiVolume2 } from 'react-icons/fi'
 
 const Home = () => {
 
@@ -48,7 +48,10 @@ const Home = () => {
                     <img src="/exmp.jpg" alt="photo" className='object-cover h-32 w-32' />
                     <div className="text-end">
                       <h2 className='font-bold text-2xl text-yellow-600 underline'>قاعة الحاج نور الكبرى أ.د. حسن علي الشايقي أ.د. حسن علي لي الشايقيأ.د. حسقيأ.د.</h2>
-                      <p className="pt-2">12/01/2022</p>
+                      <p className="pt-2 flex flex-row-reverse gap-3 items-center">
+                        <FiCalendar />
+                        <span>12/01/2022</span>
+                      </p>
                     </div>
                   </div>
                 )
@@ -63,7 +66,10 @@ const Home = () => {
                     <img src="/exmp.jpg" alt="photo" className='object-cover h-32 w-32' />
                     <div className="text-end">
                       <h2 className='font-bold text-2xl text-yellow-600 underline'>قاعة الحاج نور الكبرى أ.د. حسن علي الشايقي أ.د. حسن علي لي الشايقيأ.د. حسقيأ.د.</h2>
-                      <p className="pt-2">12/01/2022</p>
+                      <p className="pt-2 flex flex-row-reverse gap-3 items-center">
+                        <FiCalendar />
+                        <span>12/01/2022</span>
+                      </p>
                     </div>
                   </div>
                 )
@@ -72,15 +78,15 @@ const Home = () => {
           </div>
         </div>
         <div className="bg-white border-t-4 border-yellow-600">
-          <div className="mx-auto w-[1200px] relative">
+          <div className="mx-auto w-[1200px] relative leading-9">
             <h2 className='px-3 py-1 absolute right-0 rounded-bl-lg bg-yellow-600 w-max text-white'>نشاطات كلية الدراسات الإسلامية</h2>
             <div className="pb-20 pt-40">
               <div className="flex flex-row items-center justify-between p-3 gap-28">
                 <img src="/exmp.jpg" alt="photo" className='object-cover h-[500px] w-[450px]' data-aos="fade-up" />
                 <div className="text-end">
-                  <h3 className='text-lg mb-4 font-thin'>قاعة الحاج نور الكبرى</h3>
-                  <h2 className='font-bold text-5xl text-yellow-600 underline mb-4'>قاعة الحاج نور الكبرى</h2>
+                  <h2 className='font-bold text-5xl text-yellow-600 mb-4'>قاعة الحاج نور الكبرى</h2>
                   <p className="text-xl pt-2">أ.د. حسن علي الشايقي أ.د. حسن علي الشايقي أ.د.ي الشايقيأ.د.ي الشايقيأ.د. حسن علي الشايقيأ.د. حسن علي الشايقي</p>
+                  <h3 className='text-lg mt-4 text-red-500'>قاعة الحاج نور الكبرى</h3>
                 </div>
               </div>
             </div>
@@ -88,9 +94,9 @@ const Home = () => {
               <div className="flex flex-row-reverse items-center justify-between p-3 gap-28">
                 <img src="/exmp.jpg" alt="photo" className='object-cover h-[500px] w-[450px]' data-aos="fade-up" />
                 <div className="text-end">
-                  <h3 className='text-lg mb-4 font-thin'>قاعة الحاج نور الكبرى</h3>
-                  <h2 className='font-bold text-5xl text-yellow-600 underline mb-4'>قاعة الحاج نور الكبرى</h2>
+                  <h2 className='font-bold text-5xl text-yellow-600 mb-4'>قاعة الحاج نور الكبرى</h2>
                   <p className="text-xl pt-2">أ.د. حسن علي الشايقي أ.د. حسن علي الشايقي أ.د.ي الشايقيأ.د.ي الشايقيأ.د. حسن علي الشايقيأ.د. حسن علي الشايقي</p>
+                  <h3 className='text-lg mt-4 text-red-500'>قاعة الحاج نور الكبرى</h3>
                 </div>
               </div>
             </div>

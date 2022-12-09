@@ -3,13 +3,13 @@ import React from 'react'
 const About = () => {
   return (
     <>
-      <div className='h-80 flex bg-stone-700 bg-opacity-50 text-white'>
-        <h1 className='text-5xl m-auto'>التعريف بالكلية</h1>
+      <div className='md:h-80 h-72 flex bg-stone-700 bg-opacity-50 text-white'>
+        <h1 className='lg:text-5xl text-4xl text-center m-auto'>التعريف بالكلية</h1>
       </div>
       <div className="bg-white border-t-4 border-yellow-600">
-        <div className="mx-auto w-[1200px] relative">
-          <h2 className='px-3 py-1 absolute right-0 rounded-bl-lg bg-yellow-600 w-max text-white'>عن كلية الدراسات الإسلامية</h2>
-          <div className="mx-auto w-[900px] text-lg text-end leading-9 py-32">
+        <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
+          <h2 className='px-3 py-1 absolute xl:right-0 right-4 rounded-bl-lg bg-yellow-600 w-max text-white'>عن كلية الدراسات الإسلامية</h2>
+          <div className="mx-auto  lg:w-[900px] w-full text-end leading-9 py-32">
             <img src="/exmp.jpg" alt="photo" className='object-cover w-full mb-14 h-60' />
             <p className="mb-12">
               جاء إنشاء هذه الكلية تلبية لحاجة أبناء المسلمين في مختلف بقاع العالم للتزود بسلاح العلم الشرعي، والمعارف الإسلامية، وتأهيلهم وتنمية قدراتهم لأداء دورهم للقيام بواجب الدعوة الإسلامية في بلادهم، وفق أهداف الجامعة ورسالتها، وخصوصية طلابها
@@ -23,6 +23,7 @@ const About = () => {
             <p className="mb-12">
               ما انفكت الكلية تؤدي رسالة الجامعة، وترفد المجتمعات المحلية والعالمية بخريجين، على مدى عقدٍ من الزمان، من خلال واجبها التعليمي والبحثي وفي خدمات المجتمعات على أكمل وجه، لكن دون أن يحدث لها تطوير لمناهجها، تواكب المتغيرات المتسارعة، مما جعل أمر النظر في تحديث هذه المناهج وتنقيحها، ضرورة علمية؛ لمواكبة التطور العلمي الهائل في مجال الدراسات الإسلامية، وتلبية المناهج لسوق العمل وإضافة ما هو مفيد لأقسامها
             </p>
+            <img src="/exmp.jpg" alt="photo" className='object-cover w-full mb-14 h-60' />
             <p className="mb-12">
               تعد هذه الندوة، الخطوة الأولى في طريق بناء استراتيجية، تقوم على أفضل مؤشرات القياس وتحقيق الجودة والتقويم وتحقيق الاعتماد، لتميز الكلية وتطوير مناهجها وتنقحيها، لا سيما وقد تطور قسم التفسير وعلوم القرآن بالكلية؛ ليصبح كلية القرآن الكريم في العام 2018م
             </p>
@@ -33,9 +34,9 @@ const About = () => {
         </div>
       </div>
       <div className="bg-slate-100 border-t-4 border-yellow-600">
-        <div className="mx-auto w-[1200px] relative">
-          <h2 className='px-3 py-1 absolute left-0 rounded-br-lg bg-yellow-600 w-max text-white'>الرؤيات والأهداف لكلية الدراسات الإسلامية</h2>
-          <div className="mx-auto w-[900px] text-lg text-end leading-9 py-32">
+        <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
+          <h2 className='px-3 py-1 absolute xl:left-0 left-4 rounded-br-lg bg-yellow-600 w-max text-white'>الرؤيات والأهداف لكلية الدراسات الإسلامية</h2>
+          <div className="mx-auto lg:w-[900px] w-full text-end leading-9 py-32">
             <h2 className='text-2xl font-bold text-yellow-600 mb-12'>رؤيات الكلية</h2>
             <ul>
               <li className='flex flex-row-reverse relative mb-6' data-aos="fade-up">

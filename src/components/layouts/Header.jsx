@@ -54,10 +54,40 @@ const Header = () => {
     setS(s)
   }
 
-  const dropdown = () => {
-    const dp = document.querySelector('.drop')
-    const dpt = document.querySelector('.droptwo')
+  const dp = document.querySelector('.drop')
+  const dpt = document.querySelector('.droptwo')
+  const dpth = document.querySelector('.dropthree')
 
+  const dropdown = () => {
+    dp.classList.add('hidden')
+    dp.classList.remove('flex')
+    dpt.classList.add('hidden')
+    dpt.classList.remove('flex')
+    dpth.classList.add('hidden')
+    dpth.classList.remove('flex')
+  }
+
+  const toggledrop1 = () => {
+    dp.classList.toggle('hidden')
+    dp.classList.toggle('flex')
+    dpt.classList.add('hidden')
+    dpt.classList.remove('flex')
+    dpth.classList.add('hidden')
+    dpth.classList.remove('flex')
+  }
+
+  const toggledrop2 = () => {
+    dpt.classList.toggle('hidden')
+    dpt.classList.toggle('flex')
+    dp.classList.add('hidden')
+    dp.classList.remove('flex')
+    dpth.classList.add('hidden')
+    dpth.classList.remove('flex')
+  }
+
+  const toggledrop3 = () => {
+    dpth.classList.toggle('hidden')
+    dpth.classList.toggle('flex')
     dp.classList.add('hidden')
     dp.classList.remove('flex')
     dpt.classList.add('hidden')
@@ -83,27 +113,37 @@ const Header = () => {
             <h1 className='xl:text-2xl text-xl font-bold text-yellow-900 hover:underline'>الدراسات الإسلامية</h1>
           </Link>
           <div className="lg:flex hidden flex-row-reverse gap-1 items-center text-white subnav">
-            <div onClick={() => { document.querySelector('.drop').classList.toggle('hidden'); document.querySelector('.drop').classList.toggle('flex'); document.querySelector('.droptwo').classList.add('hidden'); document.querySelector('.droptwo').classList.remove('flex') }} className="cursor-pointer py-2 px-3 text-sm rounded-md hover:bg-yellow-400 hover:bg-opacity-50 flex gap-1 items-center relative">
-              <div className="flex-col items-end rounded-lg bg-yellow-400 drop overflow-hidden absolute w-max p-1 gap-1 right-0 top-[120%] hidden">
-                <Link to="/hadith" className='py-2 px-3 hover:underline bg-yellow-500 w-full text-end'>قسم السنة وعلوم الحديث</Link>
-                <Link to="/dakwah" className='py-2 px-3 hover:underline bg-yellow-500 w-full text-end'>قسم الدعوة والسيرة</Link>
-                <Link to="/aqidah" className='py-2 px-3 hover:underline bg-yellow-500 w-full text-end'>قسم العقيدة والفكر الإسلامي</Link>
-              </div>
-              <FiChevronDown />
-              أقسام الكلية
-            </div>
-            <div onClick={() => { document.querySelector('.droptwo').classList.toggle('hidden'); document.querySelector('.droptwo').classList.toggle('flex'); document.querySelector('.drop').classList.add('hidden'); document.querySelector('.drop').classList.remove('flex') }} className="cursor-pointer py-2 px-3 text-sm rounded-md hover:bg-yellow-400 hover:bg-opacity-50 flex gap-1 items-center relative">
-              <div className="flex-col items-end rounded-lg w-52 bg-yellow-400 overflow-hidden droptwo absolute p-1 gap-1 right-0 top-[120%] hidden">
-                <Link to="/about" className='py-2 px-3 hover:underline bg-yellow-500 w-full text-end'>التعريف بالكلية</Link>
-                <Link to="/haikal" className='py-2 px-3 hover:underline bg-yellow-500 w-full text-end'>الهيكلة الإداري</Link>
-                <Link to="/haiah" className='py-2 px-3 hover:underline bg-yellow-500 w-full text-end'>هيئة التدريس</Link>
+            <div onClick={() => toggledrop1()} className="cursor-pointer py-2 px-3 text-sm rounded-md hover:bg-yellow-400 hover:bg-opacity-50 flex gap-1 items-center relative">
+              <div className="flex-col items-end rounded-lg w-52 bg-white text-slate-800 overflow-hidden drop absolute shadow right-0 top-[120%] hidden">
+                <Link to="/about" className='py-2 px-3 hover:underline border-b w-full text-end'>التعريف بالكلية</Link>
+                <Link to="/haikal" className='py-2 px-3 hover:underline border-b w-full text-end'>الهيكل الإداري</Link>
+                <Link to="/haiah" className='py-2 px-3 hover:underline border-b w-full text-end'>هيئة التدريس</Link>
               </div>
               <FiChevronDown />
               عن الكلية
             </div>
+            <div onClick={() => toggledrop2()} className="cursor-pointer py-2 px-3 text-sm rounded-md hover:bg-yellow-400 hover:bg-opacity-50 flex gap-1 items-center relative">
+              <div className="flex-col items-end rounded-lg bg-white text-slate-800 droptwo overflow-hidden absolute w-max shadow right-0 top-[120%] hidden">
+                <Link to="/allqism" className='py-2 px-3 hover:underline border-b w-full text-end'>جميع التخصصات</Link>
+                <Link to="/hadith" className='py-2 px-3 hover:underline border-b w-full text-end'>قسم السنة وعلوم الحديث</Link>
+                <Link to="/dakwah" className='py-2 px-3 hover:underline border-b w-full text-end'>قسم الدعوة والسيرة</Link>
+                <Link to="/aqidah" className='py-2 px-3 hover:underline border-b w-full text-end'>قسم العقيدة والفكر الإسلامي</Link>
+              </div>
+              <FiChevronDown />
+              البكالوريوس
+            </div>
+            <div onClick={() => toggledrop3()} className="cursor-pointer py-2 px-3 text-sm rounded-md hover:bg-yellow-400 hover:bg-opacity-50 flex gap-1 items-center relative">
+              <div className="flex-col items-end rounded-lg w-52 bg-white text-slate-800 overflow-hidden dropthree absolute shadow right-0 top-[120%] hidden">
+                <Link to="/diplomawasit" className='py-2 px-3 hover:underline border-b w-full text-end'>الدبلومات الوسيطة</Link>
+                <Link to="/diplomaulya" className='py-2 px-3 hover:underline border-b w-full text-end'>الدبلومات العليا</Link>
+                <Link to="/master" className='py-2 px-3 hover:underline border-b w-full text-end'>الماجستير</Link>
+                <Link to="/doctoral" className='py-2 px-3 hover:underline border-b w-full text-end'>الدكتوراه</Link>
+              </div>
+              <FiChevronDown />
+              الدراسات العليا
+            </div>
             <NavLink onClick={() => dropdown()} to="/qobul" style={active} className="py-2 px-3 text-sm rounded-md hover:bg-yellow-400 hover:bg-opacity-50">التسجيل والقبول</NavLink>
             <NavLink onClick={() => dropdown()} to="/kuliat" style={active} className="py-2 px-3 text-sm rounded-md hover:bg-yellow-400 hover:bg-opacity-50">الكليات المنتسبة</NavLink>
-            <NavLink onClick={() => dropdown()} to="/dirasat" style={active} className="py-2 px-3 text-sm rounded-md hover:bg-yellow-400 hover:bg-opacity-50">الدراسات العليا</NavLink>
             <NavLink onClick={() => dropdown()} to="/programs" style={active} className="py-2 px-3 text-sm rounded-md hover:bg-yellow-400 hover:bg-opacity-50">البرامج</NavLink>
           </div>
           <div className="text-2xl text-yellow-900 lg:hidden cursor-pointer hover:text-yellow-700" onClick={() => document.querySelector('.close-nav').classList.remove('translate-x-full')}>
@@ -127,26 +167,36 @@ const Header = () => {
         <div className="flex flex-col items-end w-full text-slate-800 pb-40 px-4 h-[100vh] overflow-y-scroll">
           <div className="py-3 text-yellow-600 flex justify-between items-center w-full border-b">
             <FiChevronDown />
-            <p>أقسام الكلية</p>
+            <p>عن الكلية</p>
+          </div>
+          <div className="flex-col flex items-end w-full p-2 gap-2 border-b">
+            <Link to="/about" className='w-full text-end rounded-lg border hover:underline p-2' onClick={() => sidebar()}>التعريف بالكلية</Link>
+            <Link to="/haikal" className='w-full text-end rounded-lg border hover:underline p-2' onClick={() => sidebar()}>الهيكل الإداري للكلية</Link>
+            <Link to="/haiah" className='w-full text-end rounded-lg border hover:underline p-2' onClick={() => sidebar()}>هيئة التدريس للكلية</Link>
+          </div>
+          <div className="py-3 text-yellow-600 flex justify-between items-center w-full border-b">
+            <FiChevronDown />
+            <p>البكالريوس</p>
           </div>
           <div className="flex-col  items-end w-full p-2 gap-2 border-b flex">
+            <Link to="/allqism" className='w-full text-end rounded-lg border hover:underline p-2' onClick={() => sidebar()}>جميع التخصصات</Link>
             <Link to="/hadith" className='w-full text-end rounded-lg border hover:underline p-2' onClick={() => sidebar()}>قسم السنة وعلوم الحديث</Link>
             <Link to="/dakwah" className='w-full text-end rounded-lg border hover:underline p-2' onClick={() => sidebar()}>قسم الدعوة والسيرة</Link>
             <Link to="/aqidah" className='w-full text-end rounded-lg border hover:underline p-2' onClick={() => sidebar()}>قسم العقيدة والفكر الإسلامي</Link>
           </div>
           <div className="py-3 text-yellow-600 flex justify-between items-center w-full border-b">
             <FiChevronDown />
-            <p>عن الكلية</p>
+            <p>الدراسات العليا</p>
           </div>
-          <div className="flex-col flex items-end w-full p-2 gap-2 border-b">
-            <Link to="/about" className='w-full text-end rounded-lg border hover:underline p-2' onClick={() => sidebar()}>التعريف بالكلية</Link>
-            <Link to="/haikal" className='w-full text-end rounded-lg border hover:underline p-2' onClick={() => sidebar()}>الهيكلة الإداري</Link>
-            <Link to="/haiah" className='w-full text-end rounded-lg border hover:underline p-2' onClick={() => sidebar()}>هيئة التدريس</Link>
+          <div className="flex-col  items-end w-full p-2 gap-2 border-b flex">
+            <Link to="/diplomawasit" className='w-full text-end rounded-lg border hover:underline p-2' onClick={() => sidebar()}>الدبلومات الوسيطة</Link>
+            <Link to="/diplomaulya" className='w-full text-end rounded-lg border hover:underline p-2' onClick={() => sidebar()}>الدبلومات العليا</Link>
+            <Link to="/master" className='w-full text-end rounded-lg border hover:underline p-2' onClick={() => sidebar()}>الماجستير</Link>
+            <Link to="/dortoral" className='w-full text-end rounded-lg border hover:underline p-2' onClick={() => sidebar()}>الدكتوراه</Link>
           </div>
           <Link to="/qobul" onClick={() => sidebar()} className="py-3 text-yellow-600 w-full hover:underline text-end border-b">التسجيل والقبول</Link>
           <Link to="/kuliat" onClick={() => sidebar()} className="py-3 text-yellow-600 w-full hover:underline text-end border-b">الكليات المنتسبة</Link>
-          <Link to="/dirasat" onClick={() => sidebar()} className="py-3 text-yellow-600 w-full hover:underline text-end border-b">الدراسات العليا</Link>
-          <Link to="/programs" onClick={() => sidebar()} className="py-3 text-yellow-600 w-full hover:underline text-end border-b">البرامج</Link>
+          <Link to="/programs" onClick={() => sidebar()} className="py-3 text-yellow-600 w-full hover:underline text-end border-b">البرامج والأخبار والمعتمرات</Link>
         </div>
       </div>
     </>

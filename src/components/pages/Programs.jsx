@@ -13,15 +13,25 @@ const Programs = () => {
           <h2 className='px-3 py-1 absolute xl:right-0 right-4 rounded-bl-lg bg-yellow-600 w-max text-white'>البرامج والأخبار والمؤتمرات</h2>
           <div className="mx-auto lg:w-[900px] w-full text-end leading-9 py-32">
             <div className="flex-row-reverse flex items-center gap-4 relative">
-              <input type="text" className='bg-transparent text-base py-2 outline-none shadow-none text-end w-full pl-4 pr-12 border rounded-lg border-yellow-600' />
+              <input type="text" className='bg-transparent text-base py-2 outline-none shadow-none text-end w-full pl-4 pr-12 border rounded-lg border-yellow-600' placeholder='ابحث عن برنامج' />
               <div className="p-2 text-2xl rounded-lg text-yellow-600 absolute right-2">
                 <FiSearch />
               </div>
-              <div className="p-2 text-2xl rounded-lg bg-yellow-600 text-white">
+              <div className="p-2 cursor-pointer text-2xl relative rounded-lg bg-yellow-600 text-white" onClick={() => { document.querySelector('.filter').classList.toggle('hidden'); document.querySelector('.filter').classList.toggle('flex') }}>
                 <FiSliders />
+                <div className="flex-col hidden text-base filter items-end text-slate-800 rounded-lg shadow overflow-hidden absolute w-max left-0 z-20 top-[120%] bg-white">
+                  <Link to="/hadith" className='py-2 px-3 hover:underline border-b w-full text-end'>إظهار الكل</Link>
+                  <Link to="/hadith" className='py-2 px-3 hover:underline border-b w-full text-end'>البرامج</Link>
+                  <Link to="/dakwah" className='py-2 px-3 hover:underline border-b w-full text-end'>الأخبار</Link>
+                  <Link to="/dakwah" className='py-2 px-3 hover:underline border-b w-full text-end'>المعتمرات</Link>
+                  <Link to="/aqidah" className='py-2 px-3 hover:underline border-b w-full text-end'>السنة وعلوم الحديث</Link>
+                  <Link to="/dakwah" className='py-2 px-3 hover:underline border-b w-full text-end'>الدعوة والسيرة</Link>
+                  <Link to="/aqidah" className='py-2 px-3 hover:underline border-b w-full text-end'>العقيدة والفكر الإسلامي</Link>
+                </div>
               </div>
             </div>
-            <div className="flex flex-col shadow-lg hover:shadow-xl overflow-hidden bg-white my-16">
+            <p className="my-8 text-center text-lg font-bold text-yellow-600">جميع البرامج والمؤتمرات : 122</p>
+            <div className="flex flex-col shadow-lg hover:shadow-xl overflow-hidden bg-white mb-14">
               <Link to="/programs/okkook" className="relative">
                 <img src="/exmp.jpg" alt="poster" className="w-full lg:h-80 h-60 object-cover hover:object-right-bottom transition-all duration-500" />
                 <div className="flex justify-end bg-cover text-slate-100 flex-col absolute right-0 bottom-0 left-0">
@@ -33,7 +43,7 @@ const Programs = () => {
               <img src="/exmp.jpg" alt="photo" className='object-cover md:h-44 md:w-44 w-32 h-32' />
               <div className="text-end">
                 <h2 className='font-bold md:text-2xl text-sm text-yellow-600 hover:underline'>قاعة الحاج نور الكبرعلي لي الشايقيأ.د. حسقيأ.د.</h2>
-                <p className='md:text-lg text-xs md:mt-4 mt-2'>قاعة الحاج نور الكبرى أ.د. حسن علي الشايقي أ.د. حسن علي ليى أ.د. حسن علي الشايقي أ.د. حسن ى أ.د. حسن علي الشايقي أ.د. حسن  الشايقيأ.د. حسقيأ.د.</p>
+                <p className='md:text-lg text-xs md:mt-4 mt-2'>قاعة الحاج نور الكبرى أ.د. حسن علي الشايقي أ.د. حسن علي ليى أ.د. حسن علي الشاد. حسن  الشايقيأ.د. حسقيأ.د.</p>
                 <p className="pt-2 flex flex-row-reverse text-sm md:text-md gap-3 items-center">
                   <FiCalendar />
                   <span>12/01/2022</span>
@@ -44,7 +54,7 @@ const Programs = () => {
               <img src="/exmp.jpg" alt="photo" className='object-cover md:h-44 md:w-44 w-32 h-32' />
               <div className="text-end">
                 <h2 className='font-bold md:text-2xl text-sm text-yellow-600 hover:underline'>قاعة الحاج نور الكبرعلي لي الشايقيأ.د. حسقيأ.د.</h2>
-                <p className='md:text-lg text-xs md:mt-4 mt-2'>قاعة الحاج نور الكبرى أ.د. حسن علي الشايقي أ.د. حسن علي ليى أ.د. حسن علي الشايقي أ.د. حسن ى أ.د. حسن علي الشايقي أ.د. حسن  الشايقيأ.د. حسقيأ.د.</p>
+                <p className='md:text-lg text-xs md:mt-4 mt-2'>قاعة الحاج نور الكبرى أ.د. حسن علي الشايقي أ.د. حسن علي ليى أ.د. حسن علي الشاد. حسن  الشايقيأ.د. حسقيأ.د.</p>
                 <p className="pt-2 flex flex-row-reverse text-sm md:text-md gap-3 items-center">
                   <FiCalendar />
                   <span>12/01/2022</span>
@@ -55,7 +65,7 @@ const Programs = () => {
               <img src="/exmp.jpg" alt="photo" className='object-cover md:h-44 md:w-44 w-32 h-32' />
               <div className="text-end">
                 <h2 className='font-bold md:text-2xl text-sm text-yellow-600 hover:underline'>قاعة الحاج نور الكبرعلي لي الشايقيأ.د. حسقيأ.د.</h2>
-                <p className='md:text-lg text-xs md:mt-4 mt-2'>قاعة الحاج نور الكبرى أ.د. حسن علي الشايقي أ.د. حسن علي ليى أ.د. حسن علي الشايقي أ.د. حسن ى أ.د. حسن علي الشايقي أ.د. حسن  الشايقيأ.د. حسقيأ.د.</p>
+                <p className='md:text-lg text-xs md:mt-4 mt-2'>قاعة الحاج نور الكبرى أ.د. حسن علي الشايقي أ.د. حسن علي ليى أ.د. حسن علي الشاد. حسن  الشايقيأ.د. حسقيأ.د.</p>
                 <p className="pt-2 flex flex-row-reverse text-sm md:text-md gap-3 items-center">
                   <FiCalendar />
                   <span>12/01/2022</span>
@@ -66,7 +76,7 @@ const Programs = () => {
               <img src="/exmp.jpg" alt="photo" className='object-cover md:h-44 md:w-44 w-32 h-32' />
               <div className="text-end">
                 <h2 className='font-bold md:text-2xl text-sm text-yellow-600 hover:underline'>قاعة الحاج نور الكبرعلي لي الشايقيأ.د. حسقيأ.د.</h2>
-                <p className='md:text-lg text-xs md:mt-4 mt-2'>قاعة الحاج نور الكبرى أ.د. حسن علي الشايقي أ.د. حسن علي ليى أ.د. حسن علي الشايقي أ.د. حسن ى أ.د. حسن علي الشايقي أ.د. حسن  الشايقيأ.د. حسقيأ.د.</p>
+                <p className='md:text-lg text-xs md:mt-4 mt-2'>قاعة الحاج نور الكبرى أ.د. حسن علي الشايقي أ.د. حسن علي ليى أ.د. حسن علي الشاد. حسن  الشايقيأ.د. حسقيأ.د.</p>
                 <p className="pt-2 flex flex-row-reverse text-sm md:text-md gap-3 items-center">
                   <FiCalendar />
                   <span>12/01/2022</span>
@@ -77,7 +87,7 @@ const Programs = () => {
               <img src="/exmp.jpg" alt="photo" className='object-cover md:h-44 md:w-44 w-32 h-32' />
               <div className="text-end">
                 <h2 className='font-bold md:text-2xl text-sm text-yellow-600 hover:underline'>قاعة الحاج نور الكبرعلي لي الشايقيأ.د. حسقيأ.د.</h2>
-                <p className='md:text-lg text-xs md:mt-4 mt-2'>قاعة الحاج نور الكبرى أ.د. حسن علي الشايقي أ.د. حسن علي ليى أ.د. حسن علي الشايقي أ.د. حسن ى أ.د. حسن علي الشايقي أ.د. حسن  الشايقيأ.د. حسقيأ.د.</p>
+                <p className='md:text-lg text-xs md:mt-4 mt-2'>قاعة الحاج نور الكبرى أ.د. حسن علي الشايقي أ.د. حسن علي ليى أ.د. حسن علي الشاد. حسن  الشايقيأ.د. حسقيأ.د.</p>
                 <p className="pt-2 flex flex-row-reverse text-sm md:text-md gap-3 items-center">
                   <FiCalendar />
                   <span>12/01/2022</span>
@@ -88,7 +98,7 @@ const Programs = () => {
               <img src="/exmp.jpg" alt="photo" className='object-cover md:h-44 md:w-44 w-32 h-32' />
               <div className="text-end">
                 <h2 className='font-bold md:text-2xl text-sm text-yellow-600 hover:underline'>قاعة الحاج نور الكبرعلي لي الشايقيأ.د. حسقيأ.د.</h2>
-                <p className='md:text-lg text-xs md:mt-4 mt-2'>قاعة الحاج نور الكبرى أ.د. حسن علي الشايقي أ.د. حسن علي ليى أ.د. حسن علي الشايقي أ.د. حسن ى أ.د. حسن علي الشايقي أ.د. حسن  الشايقيأ.د. حسقيأ.د.</p>
+                <p className='md:text-lg text-xs md:mt-4 mt-2'>قاعة الحاج نور الكبرى أ.د. حسن علي الشايقي أ.د. حسن علي ليى أ.د. حسن علي الشاد. حسن  الشايقيأ.د. حسقيأ.د.</p>
                 <p className="pt-2 flex flex-row-reverse text-sm md:text-md gap-3 items-center">
                   <FiCalendar />
                   <span>12/01/2022</span>
@@ -99,7 +109,7 @@ const Programs = () => {
               <img src="/exmp.jpg" alt="photo" className='object-cover md:h-44 md:w-44 w-32 h-32' />
               <div className="text-end">
                 <h2 className='font-bold md:text-2xl text-sm text-yellow-600 hover:underline'>قاعة الحاج نور الكبرعلي لي الشايقيأ.د. حسقيأ.د.</h2>
-                <p className='md:text-lg text-xs md:mt-4 mt-2'>قاعة الحاج نور الكبرى أ.د. حسن علي الشايقي أ.د. حسن علي ليى أ.د. حسن علي الشايقي أ.د. حسن ى أ.د. حسن علي الشايقي أ.د. حسن  الشايقيأ.د. حسقيأ.د.</p>
+                <p className='md:text-lg text-xs md:mt-4 mt-2'>قاعة الحاج نور الكبرى أ.د. حسن علي الشايقي أ.د. حسن علي ليى أ.د. حسن علي الشاد. حسن  الشايقيأ.د. حسقيأ.د.</p>
                 <p className="pt-2 flex flex-row-reverse text-sm md:text-md gap-3 items-center">
                   <FiCalendar />
                   <span>12/01/2022</span>

@@ -10,9 +10,9 @@ const Qobul = () => {
         <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
           <h2 className='px-3 py-1 absolute xl:right-0 right-4 rounded-bl-lg bg-yellow-600 w-max text-white'>رسوم كلية الدراسات الإسلامية</h2>
           <div className="mx-auto lg:w-[900px] w-full text-end leading-9 py-32 px-4 lg:px-0">
-            <div className="border-t-8 border-yellow-600 relative mt-6">
-              <h2 className='text-lg text-white py-1 rounded-full sm:w-[103%] w-[105%] bg-yellow-600 absolute -right-3 -left-3 -top-6 text-center'>رسوم كلية الدراسات الإسلامية</h2>
-              <ul className='bg-white pt-4 shadow'>
+            <div className="mt-4">
+              <h2 className='text-lg text-white w-full px-4 py-2 bg-yellow-600 text-center'>رسوم كلية الدراسات الإسلامية</h2>
+              <ul className='bg-white shadow'>
                 <li className='flex flex-row-reverse items-center font-bold gap-8 border-b-4 px-4 py-2 text-yellow-600'>
                   <p className='md:w-[50%] w-full text-center'>الكليات الدراسية</p>
                   <div className='border-2 hidden md:block h-6 border-yellow-600' />
@@ -75,7 +75,7 @@ const Qobul = () => {
       </div>
       <div className="bg-slate-100 border-t-4 border-yellow-600">
         <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
-          <h2 className='px-3 py-1 absolute xl:right-0 right-4 rounded-bl-lg bg-yellow-600 w-max text-white'>شروط كلية الدراسات الإسلامية</h2>
+          <h2 className='px-3 py-1 absolute xl:left-0 left-4 rounded-br-lg bg-yellow-600 w-max text-white'>شروط كلية الدراسات الإسلامية</h2>
           <div className="mx-auto lg:w-[900px] w-full text-end leading-9 py-32">
             <h2 className='text-2xl font-bold text-yellow-600 mb-12'>شروط التسجيل والقبول</h2>
             <ul>

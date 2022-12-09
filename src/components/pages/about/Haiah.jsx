@@ -35,10 +35,10 @@ const Haiah = () => {
                 <h3 >د. أبوبكر حسن علي بخيت</h3>
               </a>
             </div>
-            <div className="border-t-8 border-yellow-600 relative mt-20">
-              <h2 className='text-lg text-white px-4 py-2 rounded-full sm:w-[103%] w-[105%] bg-yellow-600 absolute -right-3 -left-3 -top-6 text-center'>قسم السنة وعلوم الحديث</h2>
-              <ul className='bg-white pt-5 shadow'>
-                <li className='flex flex-row-reverse items-center font-bold gap-6 border-b-4 px-4 py-2 text-yellow-600'>
+            <div className="mt-20">
+              <h2 className='text-lg text-white w-full px-4 py-2 bg-yellow-600 text-center'>قسم السنة وعلوم الحديث</h2>
+              <ul className='bg-white shadow'>
+                <li className='flex flex-row-reverse items-center font-bold gap-6 border-b-4 px-6 py-2 text-yellow-600'>
                   <p className='w-[65%] text-center'>الأسماء</p>
                   <div className='border-2 h-6 border-yellow-600' />
                   <p className='w-[30%] text-center'>الدرجة</p>
@@ -65,10 +65,10 @@ const Haiah = () => {
                 </li>
               </ul>
             </div>
-            <div className="border-t-8 border-yellow-600 relative mt-20">
-              <h2 className='text-lg text-white px-4 py-2 rounded-full sm:w-[103%] w-[105%] bg-yellow-600 absolute -right-3 -left-3 -top-6 text-center'>قسم السنة وعلوم الحديث</h2>
-              <ul className='bg-white pt-5 shadow'>
-                <li className='flex flex-row-reverse items-center font-bold gap-6 border-b-4 px-4 py-2 text-yellow-600'>
+            <div className="mt-20">
+              <h2 className='text-lg text-white w-full px-4 py-2 bg-yellow-600 text-center'>قسم السنة وعلوم الحديث</h2>
+              <ul className='bg-white shadow'>
+                <li className='flex flex-row-reverse items-center font-bold gap-6 border-b-4 px-6 py-2 text-yellow-600'>
                   <p className='w-[65%] text-center'>الأسماء</p>
                   <div className='border-2 h-6 border-yellow-600' />
                   <p className='w-[30%] text-center'>الدرجة</p>
@@ -95,10 +95,10 @@ const Haiah = () => {
                 </li>
               </ul>
             </div>
-            <div className="border-t-8 border-yellow-600 relative mt-20">
-              <h2 className='text-lg text-white px-4 py-2 rounded-full sm:w-[103%] w-[105%] bg-yellow-600 absolute -right-3 -left-3 -top-6 text-center'>قسم السنة وعلوم الحديث</h2>
-              <ul className='bg-white pt-5 shadow'>
-                <li className='flex flex-row-reverse items-center font-bold gap-6 border-b-4 px-4 py-2 text-yellow-600'>
+            <div className="mt-20">
+              <h2 className='text-lg text-white w-full px-4 py-2 bg-yellow-600 text-center'>قسم السنة وعلوم الحديث</h2>
+              <ul className='bg-white shadow'>
+                <li className='flex flex-row-reverse items-center font-bold gap-6 border-b-4 px-6 py-2 text-yellow-600'>
                   <p className='w-[65%] text-center'>الأسماء</p>
                   <div className='border-2 h-6 border-yellow-600' />
                   <p className='w-[30%] text-center'>الدرجة</p>

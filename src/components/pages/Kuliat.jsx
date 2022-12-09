@@ -11,7 +11,7 @@ const Kuliat = () => {
           <h2 className='px-3 py-1 absolute xl:right-0 right-4 rounded-bl-lg bg-yellow-600 w-max text-white'>الكليات المنتسبة للدراسات الإسلامية</h2>
           <div className="mx-auto lg:w-[900px] w-full text-end py-32 leading-9">
             <div className="mb-20">
-              <h3 className="mb-8 text-xl font-bold text-yellow-600">1. جاء إنشاء هذه الكلية تلبية لحاجة أبناء </h3>
+              <h3 className='py-2 px-6 border-r-8 bg-white rounded-l-lg w-full mb-8 text-xl text-yellow-600 shadow border-yellow-600 pr-4'> جاء إنشاء هذه الكلية تلبية لحاجة أبناء </h3>
               <img src="/exmp.jpg" alt="photo" className='object-cover md:w-[50%] mb-6  md:ml-8 h-60 md:float-right w-full' />
               <p className="mb-8">
                 ما انفكت الكلية تؤدي رسالة الجامعة، وترفد المجتمعات المحلية والعالمية بخريجين، على مدى عقدٍ من الزمان، من خلال واجبها التعليمي والبحثي وفي خدمات المجتمعات على أكمل وجه، لكن دون أن يحدث لها تطوير لمناهجها، تواكب المتغيرات المتسارعة، مما جعل أمر النظر في تحديث هذه المناهج وتنقيحها، ضرورة علمية؛ لمواكبة التطور العلمي الهائل في مجال الدراسات الإسلامية، وتلبية المناهج لسوق العمل وإضافة ما هو مفيد لأقسامها تعد هذه الندوة، الخطوة الأولى في طريق بناء استراتيجية، تقوم على أفضل مؤشرات القياس وتحقيق الجودة والتقويم وتحقيق الاعتماد، لتميز الكلية وتطوير مناهجها وتنقحيها، لا سيما وقد تطور قسم التفسير وعلوم القرآن بالكلية؛ ليصبح كلية القرآن الكريم في العام 2018م
@@ -21,7 +21,7 @@ const Kuliat = () => {
               </p>
             </div>
             <div className="mb-20">
-              <h3 className="mb-8 text-xl font-bold text-yellow-600">1. جاء إنشاء هذه الكلية تلبية لحاجة أبناء </h3>
+              <h3 className='py-2 px-6 border-r-8 bg-white rounded-l-lg w-full mb-8 text-xl text-yellow-600 shadow border-yellow-600 pr-4'> جاء إنشاء هذه الكلية تلبية لحاجة أبناء </h3>
               <img src="/exmp.jpg" alt="photo" className='object-cover md:w-[50%] mb-6  md:ml-8 h-60 md:float-right w-full' />
               <p className="mb-8">
                 ما انفكت الكلية تؤدي رسالة الجامعة، وترفد المجتمعات المحلية والعالملتميز الكلية وتطوير مناهجها وتنقحيها، لا سيما وقد تطور قسم التفسير وعلوم القرآن بالكلية؛ ليصبح كلية القرآن الكريم في العام 2018م
@@ -31,7 +31,7 @@ const Kuliat = () => {
               </p>
             </div>
             <div className="mb-20">
-              <h3 className="mb-8 text-xl font-bold text-yellow-600">1. جاء إنشاء هذه الكلية تلبية لحاجة أبناء </h3>
+              <h3 className='py-2 px-6 border-r-8 bg-white rounded-l-lg w-full mb-8 text-xl text-yellow-600 shadow border-yellow-600 pr-4'> جاء إنشاء هذه الكلية تلبية لحاجة أبناء </h3>
               <img src="/exmp.jpg" alt="photo" className='object-cover md:w-[50%] mb-6  md:ml-8 h-60 md:float-right w-full' />
               <p className="mb-8">
                 ما انفكت الكلية تؤدي رسالة الجامعة، وترفد المجتمعات المحلية والعالمية بخريجين، على مدى عقدٍ من الزمان، من خلال واجبها التعليمي والبحثي وفي خدمات المجتمعات على أكمل وجه، لكن دون أن يحدث لها تطوير لمناهجها، تواكب المتغيرات المتسارعة، مما جعل أمر النظر في تحديث هذه المناهج وتنقيحها، ضرورة علمية؛ لمواكبة التطور العلمي الهائل في مجال الدراسات الإسلامية، وتلبية المناهج لسوق العمل وإضافة ما هو مفيد لأقسامها تعد هذه الندوة، الخطوة الأولى في طريق بناء استراتيجية، تقوم على أفضل مؤشرات القياس وتحقيق الجودة والتقويم وتحقيق الاعتماد، لتميز الكلية وتطوير مناهجها وتنقحيها، لا سيما وقد تطور قسم التفسير وعلوم القرآن بالكلية؛ ليصبح كلية القرآن الكريم في العام 2018م
@@ -41,7 +41,7 @@ const Kuliat = () => {
               </p>
             </div>
             <div className="mb-20">
-              <h3 className="mb-8 text-xl font-bold text-yellow-600">1. جاء إنشاء هذه الكلية تلبية لحاجة أبناء </h3>
+              <h3 className='py-2 px-6 border-r-8 bg-white rounded-l-lg w-full mb-8 text-xl text-yellow-600 shadow border-yellow-600 pr-4'> جاء إنشاء هذه الكلية تلبية لحاجة أبناء </h3>
               <img src="/exmp.jpg" alt="photo" className='object-cover md:w-[50%] mb-6  md:ml-8 h-60 md:float-right w-full' />
               <p className="mb-8">
                 ما انفكت الكلية تؤدي رسالة الجامعة، وترفد المجتممفيد لأقسامها تعد هذه الندوة، الخطوة الأولى في طريق بناء استراتيجية، تقوم على أفضل مؤشرات القياس وتحقيق الجودة والتقويم وتحقيق الاعتماد، لتميز الكلية وتطوير مناهجها وتنقحيها، لا سيما وقد تطور قسم التفسير وعلوم القرآن بالكلية؛ ليصبح كلية القرآن الكريم في العام 2018م
@@ -51,7 +51,7 @@ const Kuliat = () => {
               </p>
             </div>
             <div className="mb-20">
-              <h3 className="mb-8 text-xl font-bold text-yellow-600">1. جاء إنشاء هذه الكلية تلبية لحاجة أبناء </h3>
+              <h3 className='py-2 px-6 border-r-8 bg-white rounded-l-lg w-full mb-8 text-xl text-yellow-600 shadow border-yellow-600 pr-4'> جاء إنشاء هذه الكلية تلبية لحاجة أبناء </h3>
               <img src="/exmp.jpg" alt="photo" className='object-cover md:w-[50%] mb-6  md:ml-8 h-60 md:float-right w-full' />
               <p className="mb-8">
                 ما انفكت الكلية تؤدي رسالة الجامعة، وترفد المجتمعات المحلية والعالمية بخريجين، على مدى عقدٍ من الزمان، من خلال واجبها التعليمي والبحثي وفي خدمات المجتمعات على أكمل و

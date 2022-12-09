@@ -19,12 +19,12 @@ const App = () => {
   }, [pathname])
 
   return (
-    <div className='font-[Alexandria] text-slate-700'>
+    < >
       <Header />
       <Routers />
       <ToTop />
       <Footer />
-    </div>
+    </>
   )
 }
 

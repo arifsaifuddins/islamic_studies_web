@@ -1,9 +1,13 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import { FiFacebook, FiInstagram, FiMail, FiTwitter } from 'react-icons/fi'
 
 const Contact = () => {
   return (
     <>
+      <Helmet>
+        <title>Islamic Studies | اتصل بنا</title>
+      </Helmet>
       <div className='md:h-80 h-72 flex bg-stone-700 bg-opacity-50 text-white'>
         <h1 className='lg:text-5xl text-4xl text-center m-auto'>اتصل بنا</h1>
       </div>

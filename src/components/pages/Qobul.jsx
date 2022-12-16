@@ -1,19 +1,23 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 
 const Qobul = () => {
   return (
     <>
+      <Helmet>
+        <title>Islamic Studies | التسجيل والقبول</title>
+      </Helmet>
       <div className='md:h-80 h-72 flex bg-stone-700 bg-opacity-50 text-white'>
         <h1 className='lg:text-5xl text-4xl text-center m-auto'>التسجيل والقبول</h1>
       </div>
       <div className="bg-white border-t-4 border-yellow-600">
         <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
           <h2 className='px-3 py-1 absolute xl:right-0 right-4 rounded-bl-lg bg-yellow-600 w-max text-white'>رسوم كلية الدراسات الإسلامية</h2>
-          <div className="mx-auto lg:w-[900px] w-full text-end leading-9 py-32 px-4 lg:px-0">
+          <div className="mx-auto lg:w-[900px] w-full text-end leading-9 py-32">
             <div className="mt-4">
               <h2 className='text-lg text-white w-full px-4 py-2 bg-yellow-600 text-center'>رسوم كلية الدراسات الإسلامية</h2>
               <ul className='bg-white shadow'>
-                <li className='flex flex-row-reverse items-center font-bold gap-8 border-b-4 px-4 py-2 text-yellow-600'>
+                <li className='flex flex-row-reverse items-center font-bold gap-8 border-b-4 py-2 text-yellow-600'>
                   <p className='md:w-[50%] w-full text-center'>الكليات الدراسية</p>
                   <div className='border-2 hidden md:block h-6 border-yellow-600' />
                   <p className=' hidden md:block w-[20%] text-center'>الدولار</p>

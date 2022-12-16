@@ -1,15 +1,17 @@
 {
   "name": "islamic_studies_web",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "author": "Arief Saifuddien",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "aos": "^3.0.0-beta.6",
+    "aos": "^2.3.4",
+    "js-cookies": "^1.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",

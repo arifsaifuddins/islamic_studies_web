@@ -176,7 +176,7 @@ const Header = () => {
           </div>
           <div className="py-3 text-yellow-600 flex justify-between items-center w-full border-b">
             <FiChevronDown />
-            <p>البكالريوس</p>
+            <p>البكالوريوس</p>
           </div>
           <div className="flex-col  items-end w-full p-2 gap-2 border-b flex">
             <Link to="/allqism" className='w-full text-end rounded-lg border hover:underline p-2' onClick={() => sidebar()}>جميع التخصصات</Link>
@@ -192,11 +192,11 @@ const Header = () => {
             <Link to="/diplomawasit" className='w-full text-end rounded-lg border hover:underline p-2' onClick={() => sidebar()}>الدبلومات الوسيطة</Link>
             <Link to="/diplomaulya" className='w-full text-end rounded-lg border hover:underline p-2' onClick={() => sidebar()}>الدبلومات العليا</Link>
             <Link to="/master" className='w-full text-end rounded-lg border hover:underline p-2' onClick={() => sidebar()}>الماجستير</Link>
-            <Link to="/dortoral" className='w-full text-end rounded-lg border hover:underline p-2' onClick={() => sidebar()}>الدكتوراه</Link>
+            <Link to="/doctoral" className='w-full text-end rounded-lg border hover:underline p-2' onClick={() => sidebar()}>الدكتوراه</Link>
           </div>
           <Link to="/qobul" onClick={() => sidebar()} className="py-3 text-yellow-600 w-full hover:underline text-end border-b">التسجيل والقبول</Link>
           <Link to="/kuliat" onClick={() => sidebar()} className="py-3 text-yellow-600 w-full hover:underline text-end border-b">الكليات المنتسبة</Link>
-          <Link to="/programs" onClick={() => sidebar()} className="py-3 text-yellow-600 w-full hover:underline text-end border-b">البرامج والأخبار والمعتمرات</Link>
+          <Link to="/programs" onClick={() => sidebar()} className="py-3 text-yellow-600 w-full hover:underline text-end border-b">البرامج والأخبار والمؤتمرات</Link>
         </div>
       </div>
     </>

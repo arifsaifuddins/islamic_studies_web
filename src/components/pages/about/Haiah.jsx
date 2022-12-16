@@ -1,10 +1,14 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import { FiMonitor, FiUser } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
 
 const Haiah = () => {
   return (
     <>
+      <Helmet>
+        <title>Islamic Studies | هيئة التدريس</title>
+      </Helmet>
       <div className='md:h-80 h-72 flex bg-stone-700 bg-opacity-50 text-white'>
         <h1 className='lg:text-5xl text-4xl text-center m-auto'>هيئة التدريس</h1>
       </div>

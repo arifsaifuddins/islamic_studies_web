@@ -1,9 +1,13 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import { FiMonitor, FiUser, FiUserCheck } from 'react-icons/fi'
 
 const Haikal = () => {
   return (
     <>
+      <Helmet>
+        <title>Islamic Studies | الهيكل الإداري</title>
+      </Helmet>
       <div className='md:h-80 h-72 flex bg-stone-700 bg-opacity-50 text-white'>
         <h1 className='lg:text-5xl text-4xl text-center m-auto'>الهيكل الإداري</h1>
       </div>

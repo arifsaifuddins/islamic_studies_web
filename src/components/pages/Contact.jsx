@@ -20,19 +20,19 @@ const Contact = () => {
             </div>
             <div className='flex md:flex-row-reverse flex-col items-center justify-around gap-6 text-xl'>
               <a href="https://facebook.com/profile.php?id=100088419282005" target="_blank" rel="noopener noreferrer" className="flex flex-col p-4 md:w-52 w-full text-white rounded-lg shadow items-center gap-2">
-                <a className="p-3 hover:scale-105 rounded-full w-max bg-blue-800"><FiFacebook /></a>
+                <p className="p-3 hover:scale-105 rounded-full w-max bg-blue-800"><FiFacebook /></p>
                 <h1 className='text-slate-900'>Facebook</h1>
               </a>
               <a href="https://instagram.com/islamicstudiesiua" target="_blank" rel="noopener noreferrer" className="flex flex-col p-4 md:w-52 w-full text-white rounded-lg shadow items-center gap-2">
-                <a className="p-3 hover:scale-105 rounded-full w-max bg-pink-600"><FiInstagram /></a>
+                <p className="p-3 hover:scale-105 rounded-full w-max bg-pink-600"><FiInstagram /></p>
                 <h1 className='text-slate-900'>Instagram</h1>
               </a>
               <a href="https://twitter.com/islamicstdiua" target="_blank" rel="noopener noreferrer" className="flex flex-col p-4 md:w-52 w-full text-white rounded-lg shadow items-center gap-2">
-                <a className="p-3 hover:scale-105 rounded-full w-max bg-blue-400"><FiTwitter /></a>
+                <p className="p-3 hover:scale-105 rounded-full w-max bg-blue-400"><FiTwitter /></p>
                 <h1 className='text-slate-900'>Twitter</h1>
               </a>
               <a href="mailto:islamicstudiesiua@gmail.com" target="_blank" rel="noopener noreferrer" className="flex flex-col p-4 md:w-52 w-full text-white rounded-lg shadow items-center gap-2">
-                <a className="p-3 hover:scale-105 rounded-full w-max bg-red-800"><FiMail /></a>
+                <p className="p-3 hover:scale-105 rounded-full w-max bg-red-800"><FiMail /></p>
                 <h1 className='text-slate-900'>G-Mail</h1>
               </a>
             </div>

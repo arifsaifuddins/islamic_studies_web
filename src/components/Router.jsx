@@ -19,6 +19,7 @@ import DiplomaWasit from './pages/dirasatulya/DiplomasWasit'
 import DiplomaUlya from './pages/dirasatulya/DiplomasUlya'
 import Masters from './pages/dirasatulya/Masters'
 import Doctorals from './pages/dirasatulya/Doctorals'
+import PDF from './pages/PDF'
 
 const Routers = () => {
   return (
@@ -45,6 +46,8 @@ const Routers = () => {
         <Route path="/diplomaulya" element={<DiplomaUlya />} />
         <Route path="/master" element={<Masters />} />
         <Route path="/doctoral" element={<Doctorals />} />
+
+        <Route path="/pdf" element={<PDF />} />
         <Route path="*" element={<Blank />} />
       </Routes>
     </>

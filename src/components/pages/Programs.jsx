@@ -23,14 +23,14 @@ const Programs = () => {
               </div>
               <div className="p-2 cursor-pointer text-2xl relative rounded-lg bg-yellow-600 text-white" onClick={() => { document.querySelector('.filter').classList.toggle('hidden'); document.querySelector('.filter').classList.toggle('flex') }}>
                 <FiSliders />
-                <div className="flex-col hidden text-base filter items-end text-slate-800 rounded-lg shadow overflow-hidden absolute w-max left-0 z-20 top-[120%] bg-white">
-                  <Link to="/hadith" className='py-2 px-3 hover:underline border-b w-full text-end'>إظهار الكل</Link>
-                  <Link to="/hadith" className='py-2 px-3 hover:underline border-b w-full text-end'>البرامج</Link>
-                  <Link to="/dakwah" className='py-2 px-3 hover:underline border-b w-full text-end'>الأخبار</Link>
-                  <Link to="/dakwah" className='py-2 px-3 hover:underline border-b w-full text-end'>المعتمرات</Link>
-                  <Link to="/aqidah" className='py-2 px-3 hover:underline border-b w-full text-end'>السنة وعلوم الحديث</Link>
-                  <Link to="/dakwah" className='py-2 px-3 hover:underline border-b w-full text-end'>الدعوة والسيرة</Link>
-                  <Link to="/aqidah" className='py-2 px-3 hover:underline border-b w-full text-end'>العقيدة والفكر الإسلامي</Link>
+                <div className="flex-col hidden text-base filter items-end text-slate-800 rounded-lg shadow overflow-hidden absolute w-52 left-0 z-20 top-[120%] bg-white">
+                  <Link to="/programs/ok" className='py-2 px-3 hover:underline border-b w-full text-end'>إظهار الكل</Link>
+                  <Link to="/programs/ok" className='py-2 px-3 hover:underline border-b w-full text-end'>البرامج</Link>
+                  <Link to="/programs/ok" className='py-2 px-3 hover:underline border-b w-full text-end'>الأخبار</Link>
+                  <Link to="/programs/ok" className='py-2 px-3 hover:underline border-b w-full text-end'>المؤتمرات</Link>
+                  <Link to="/programs/ok" className='py-2 px-3 hover:underline border-b w-full text-end'>البكالوريوس</Link>
+                  <Link to="/programs/ok" className='py-2 px-3 hover:underline border-b w-full text-end'>الماجستير</Link>
+                  <Link to="/programs/ok" className='py-2 px-3 hover:underline border-b w-full text-end'>الدكتوراه</Link>
                 </div>
               </div>
             </div>

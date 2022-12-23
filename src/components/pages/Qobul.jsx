@@ -14,66 +14,63 @@ const Qobul = () => {
         <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
           <h2 className='px-3 py-1 absolute xl:right-0 right-4 rounded-bl-lg bg-yellow-600 w-max text-white'>رسوم كلية الدراسات الإسلامية</h2>
           <div className="mx-auto lg:w-[900px] w-full text-end leading-9 py-32">
-            <div className="mt-4">
-              <h2 className='text-lg text-white w-full px-4 py-2 bg-yellow-600 text-center'>رسوم كلية الدراسات الإسلامية</h2>
-              <ul className='bg-white shadow'>
-                <li className='flex flex-row-reverse items-center font-bold gap-8 border-b-4 py-2 text-yellow-600'>
-                  <p className='md:w-[50%] w-full text-center'>الكليات الدراسية</p>
-                  <div className='border-2 hidden md:block h-6 border-yellow-600' />
-                  <p className=' hidden md:block w-[20%] text-center'>الدولار</p>
-                  <div className='border-2 hidden md:block h-6 border-yellow-600' />
-                  <p className=' hidden md:block w-[20%] text-center'>الجنيه</p>
-                </li>
-                <li className='flex md:flex-row-reverse flex-col items-center gap-8 border-b-4 px-4 py-2'>
-                  <p className='md:w-[50%] w-full text-center md:text-end'>الكليات الدراسية</p>
-                  <div className="p-1 rounded-lg w-full flex flex-row-reverse items-center justify-around md:hidden border">
-                    <p className='md:hidden text-center'>2000</p>
-                    <div className='border-2 md:hidden h-6 border-gray-600' />
-                    <p className='md:hidden text-center'>230000</p>
-                  </div>
-                  <div className='border-2 hidden md:block h-6 border-gray-600' />
-                  <p className=' hidden md:block w-[20%] text-center'>2000</p>
-                  <div className='border-2 hidden md:block h-6 border-gray-600' />
-                  <p className=' hidden md:block w-[20%] text-center'>230000</p>
-                </li>
-                <li className='flex md:flex-row-reverse flex-col items-center gap-8 border-b-4 px-4 py-2'>
-                  <p className='md:w-[50%] w-full text-center md:text-end'>الكليات الدراسية</p>
-                  <div className="p-1 rounded-lg w-full flex flex-row-reverse items-center justify-around md:hidden border">
-                    <p className='md:hidden text-center'>2000</p>
-                    <div className='border-2 md:hidden h-6 border-gray-600' />
-                    <p className='md:hidden text-center'>230000</p>
-                  </div>
-                  <div className='border-2 hidden md:block h-6 border-gray-600' />
-                  <p className=' hidden md:block w-[20%] text-center'>2000</p>
-                  <div className='border-2 hidden md:block h-6 border-gray-600' />
-                  <p className=' hidden md:block w-[20%] text-center'>230000</p>
-                </li>
-                <li className='flex md:flex-row-reverse flex-col items-center gap-8 border-b-4 px-4 py-2'>
-                  <p className='md:w-[50%] w-full text-center md:text-end'>الكليات الدراسية</p>
-                  <div className="p-1 rounded-lg w-full flex flex-row-reverse items-center justify-around md:hidden border">
-                    <p className='md:hidden text-center'>2000</p>
-                    <div className='border-2 md:hidden h-6 border-gray-600' />
-                    <p className='md:hidden text-center'>230000</p>
-                  </div>
-                  <div className='border-2 hidden md:block h-6 border-gray-600' />
-                  <p className=' hidden md:block w-[20%] text-center'>2000</p>
-                  <div className='border-2 hidden md:block h-6 border-gray-600' />
-                  <p className=' hidden md:block w-[20%] text-center'>230000</p>
-                </li>
-                <li className='flex md:flex-row-reverse flex-col items-center gap-8 border-b-4 px-4 py-2'>
-                  <p className='md:w-[50%] w-full text-center md:text-end'>الكليات الدراسية</p>
-                  <div className="p-1 rounded-lg w-full flex flex-row-reverse items-center justify-around md:hidden border">
-                    <p className='md:hidden text-center'>2000</p>
-                    <div className='border-2 md:hidden h-6 border-gray-600' />
-                    <p className='md:hidden text-center'>230000</p>
-                  </div>
-                  <div className='border-2 hidden md:block h-6 border-gray-600' />
-                  <p className=' hidden md:block w-[20%] text-center'>2000</p>
-                  <div className='border-2 hidden md:block h-6 border-gray-600' />
-                  <p className=' hidden md:block w-[20%] text-center'>230000</p>
-                </li>
-              </ul>
-            </div>
+            <ul className='bg-white mt-4 border-t border-x'>
+              <li className='flex flex-row-reverse items-center font-bold gap-8 border-b-4 px-4 py-2 text-yellow-600'>
+                <p className='md:w-[50%] w-full text-center'>الكليات الدراسية</p>
+                <div className='border-2 hidden md:block h-6 border-yellow-600' />
+                <p className=' hidden md:block w-[20%] text-center'>الدولار</p>
+                <div className='border-2 hidden md:block h-6 border-yellow-600' />
+                <p className=' hidden md:block w-[20%] text-center'>الجنيه</p>
+              </li>
+              <li className='flex md:flex-row-reverse flex-col items-center gap-8 border-b-4 px-4 py-2'>
+                <p className='md:w-[50%] w-full text-center md:text-end'>الكليات الدراسية</p>
+                <div className="p-1 rounded-lg w-full flex flex-row-reverse items-center justify-around md:hidden border">
+                  <p className='md:hidden text-center'>2000</p>
+                  <div className='border-2 md:hidden h-6 border-gray-600' />
+                  <p className='md:hidden text-center'>230000</p>
+                </div>
+                <div className='border-2 hidden md:block h-6 border-gray-600' />
+                <p className=' hidden md:block w-[20%] text-center'>2000</p>
+                <div className='border-2 hidden md:block h-6 border-gray-600' />
+                <p className=' hidden md:block w-[20%] text-center'>230000</p>
+              </li>
+              <li className='flex md:flex-row-reverse flex-col items-center gap-8 border-b-4 px-4 py-2'>
+                <p className='md:w-[50%] w-full text-center md:text-end'>الكليات الدراسية</p>
+                <div className="p-1 rounded-lg w-full flex flex-row-reverse items-center justify-around md:hidden border">
+                  <p className='md:hidden text-center'>2000</p>
+                  <div className='border-2 md:hidden h-6 border-gray-600' />
+                  <p className='md:hidden text-center'>230000</p>
+                </div>
+                <div className='border-2 hidden md:block h-6 border-gray-600' />
+                <p className=' hidden md:block w-[20%] text-center'>2000</p>
+                <div className='border-2 hidden md:block h-6 border-gray-600' />
+                <p className=' hidden md:block w-[20%] text-center'>230000</p>
+              </li>
+              <li className='flex md:flex-row-reverse flex-col items-center gap-8 border-b-4 px-4 py-2'>
+                <p className='md:w-[50%] w-full text-center md:text-end'>الكليات الدراسية</p>
+                <div className="p-1 rounded-lg w-full flex flex-row-reverse items-center justify-around md:hidden border">
+                  <p className='md:hidden text-center'>2000</p>
+                  <div className='border-2 md:hidden h-6 border-gray-600' />
+                  <p className='md:hidden text-center'>230000</p>
+                </div>
+                <div className='border-2 hidden md:block h-6 border-gray-600' />
+                <p className=' hidden md:block w-[20%] text-center'>2000</p>
+                <div className='border-2 hidden md:block h-6 border-gray-600' />
+                <p className=' hidden md:block w-[20%] text-center'>230000</p>
+              </li>
+              <li className='flex md:flex-row-reverse flex-col items-center gap-8 border-b-4 px-4 py-2'>
+                <p className='md:w-[50%] w-full text-center md:text-end'>الكليات الدراسية</p>
+                <div className="p-1 rounded-lg w-full flex flex-row-reverse items-center justify-around md:hidden border">
+                  <p className='md:hidden text-center'>2000</p>
+                  <div className='border-2 md:hidden h-6 border-gray-600' />
+                  <p className='md:hidden text-center'>230000</p>
+                </div>
+                <div className='border-2 hidden md:block h-6 border-gray-600' />
+                <p className=' hidden md:block w-[20%] text-center'>2000</p>
+                <div className='border-2 hidden md:block h-6 border-gray-600' />
+                <p className=' hidden md:block w-[20%] text-center'>230000</p>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

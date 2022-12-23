@@ -23,7 +23,7 @@ const Haikal = () => {
                 <h3 className='text-yellow-600 font-bold'>مجلس كلية الدراسات الإسلامية</h3>
               </a>
             </div>
-            <div className="flex flex-col w-full md:flex-row-reverse gap-12 justify-center mb-20" data-aos="fade-down">
+            <div className="flex flex-col w-full md:flex-row-reverse gap-12 justify-center mb-20">
               <div className="md:w-80 w-full relative pt-14">
                 <div className="p-6 right-[38%] absolute top-0 rounded-full bg-purple-400 text-white w-max text-2xl">
                   <FiUser />
@@ -37,18 +37,18 @@ const Haikal = () => {
                 <div className='px-7 py-5 bg-white text-center font-bold text-yellow-600 rounded-lg shadow'>نائب عميد الكلية</div>
               </div>
             </div>
-            <div className="flex flex-col w-full md:flex-row-reverse gap-6 justify-between mb-20" data-aos="fade-down">
+            <div className="flex flex-col w-full md:flex-row-reverse gap-6 justify-between mb-20">
               <h3 className='md:w-52 w-full px-7 py-3 text-center font-bold text-yellow-600 rounded-lg shadow bg-white text-sm'>رئيس وحدة الدراسات العليا</h3>
               <h3 className='md:w-52 w-full px-7 py-3 text-center font-bold text-yellow-600 rounded-lg shadow bg-white text-sm'>رئيس وحدة الخدمة المجتمعية</h3>
               <h3 className='md:w-52 w-full px-7 py-3 text-center font-bold text-yellow-600 rounded-lg shadow bg-white text-sm'>رئيس وحدة الشؤون التعليمية</h3>
               <h3 className='md:w-52 w-full px-7 py-3 text-center font-bold text-yellow-600 rounded-lg shadow bg-white text-sm'>رئيس وحدة الكليات المنتسبة</h3>
             </div>
-            <div className="flex flex-col w-full md:flex-row-reverse justify-center gap-6 mb-20" data-aos="fade-down">
+            <div className="flex flex-col w-full md:flex-row-reverse justify-center gap-6 mb-20">
               <h3 className='md:w-52 w-full px-7 py-3 text-center font-bold text-yellow-600 rounded-lg shadow bg-white text-sm'>رئيس وحدة الشؤون الثقافية والإجتماعية</h3>
               <h3 className='md:w-52 w-full px-7 py-3 text-center font-bold text-yellow-600 rounded-lg shadow bg-white text-sm'>رئيس مجلة الكلية المحكمة</h3>
               <h3 className='md:w-52 w-full px-7 py-3 text-center font-bold text-yellow-600 rounded-lg shadow bg-white text-sm'>رئيس  وحدة الجودة  وترقية الأداء </h3>
             </div>
-            <div className="flex flex-col w-full md:flex-row-reverse gap-12 justify-center" data-aos="fade-down">
+            <div className="flex flex-col w-full md:flex-row-reverse gap-12 justify-center">
               <div className="relative pt-14">
                 <div className="p-6 right-[38%] absolute top-0 rounded-full bg-red-400 text-white w-max text-2xl">
                   <FiMonitor />
@@ -67,13 +67,13 @@ const Haikal = () => {
               <h2 className='text-lg text-white px-4 py-1 rounded-full w-max bg-yellow-600 absolute -right-3 -top-5'>مجلس كلية الدراسات الإسلامية</h2>
               <ul className='pt-3 flex flex-col gap-4 rounded-lg overflow-hidden'>
                 <li className='flex flex-row-reverse bg-white rounded-lg'>
-                  <p className='py-2 px-6'>التميز في الدراسات الإسلامية، في إطار من الأصالة والمعاصرة، وطنياً وإقليمياً وعالمياً</p>
+                  <p className='py-2 px-6 text-yellow-600'>تقدالحضاري، وطنياً وإقليمياً وعالمياً، على أسس تتسم بالوسطية والاعتدال</p>
                 </li>
-                <li className='flex flex-row-reverse bg-white rounded-lg'>
-                  <p className='py-2 px-6'>تقديم خدمة تعليمية وبحثية متميزة، في الدراسات الإسلامية؛ تسهم في البناء المعرفي والحضاري، وطنياً وإقليمياً وعالمياً، على أسس تتسم بالوسطية والاعتدال</p>
+                <li className='flex flex-row-reverse bg-white border-r-8 rounded-l-lg w-full border-yellow-600'>
+                  <p className='py-2 px-6'>التميز في الدراسات الإسلامية، في إطار من الأصالة والمعاصرةيم خدمة تعليمية وبحثية متميزة، في الدراسات الإسلامية؛ تسهم في البناء المعرفي و، وطنياً وإقليمياً وعالمياً</p>
                 </li>
-                <li className='flex flex-row-reverse bg-white rounded-lg'>
-                  <p className='py-2 px-6'>التميز والكفاءة، الأصالة والمعاصرة، الوسطية والاعتدال</p>
+                <li className='flex flex-row-reverse bg-white border-r-8 rounded-l-lg w-full border-yellow-600'>
+                  <p className='py-2 px-6'>التميز في الدراسات الإسلامية، في إطار من الأصالة والمعاصرةيم خدمة تعليمية وبحثية متميزة، في الدراسات الإسلامية؛ تسهم في البناء المعرفي و، وطنياً وإقليمياً وعالمياً</p>
                 </li>
               </ul>
             </div>

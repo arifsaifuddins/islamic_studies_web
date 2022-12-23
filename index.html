@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" class="bg-[url('/iua.jpg')] bg-fixed bg-cover scroll-smooth">
+<html lang="en" class="bg-[url('/iua.jpg')] bg-fixed bg-cover scroll-smooth">
 
 <head>
   <meta charset="UTF-8" />
@@ -18,12 +18,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
   <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <link rel="stylesheet" type="text/css" href="/css/trix.css">
+  <script type="text/javascript" src="/js/trix.js"></script>
   <title>Islamic Studies | الدراسات الإسلامية</title>
 </head>
 
 <body class='font-[Alexandria] overflow-x-hidden text-slate-700'>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
+  <script>
+    document.addEventListener('trix-file-accept', (e) => {
+      e.preventDefault()
+    })
+  </script>
 </body>
 
 </html>

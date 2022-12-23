@@ -16,7 +16,7 @@ const Bachelors = () => {
           <div className="mx-auto lg:w-[900px] w-full text-end leading-9 py-32">
             <div className="mb-20">
               <h2 className='text-lg text-white w-full px-4 py-2 bg-yellow-600 text-center'>الفصل الدراسي الأول</h2>
-              <ul className='bg-white shadow'>
+              <ul className='bg-white border-x'>
                 <li className='flex flex-row-reverse items-center font-bold gap-6 border-b-4 px-6 py-2 text-yellow-600'>
                   <p className='w-[65%] text-center'>المواد الدراسية</p>
                   <div className='border-2 h-6 border-yellow-600' />
@@ -46,7 +46,7 @@ const Bachelors = () => {
             </div>
             <div className="mb-20">
               <h2 className='text-lg text-white w-full px-4 py-2 bg-yellow-600 text-center'>الفصل الدراسي الثاني</h2>
-              <ul className='bg-white shadow'>
+              <ul className='bg-white border-x'>
                 <li className='flex flex-row-reverse items-center font-bold gap-6 border-b-4 px-6 py-2 text-yellow-600'>
                   <p className='w-[65%] text-center'>المواد الدراسية</p>
                   <div className='border-2 h-6 border-yellow-600' />
@@ -76,7 +76,7 @@ const Bachelors = () => {
             </div>
             <div className="mb-20">
               <h2 className='text-lg text-white w-full px-4 py-2 bg-yellow-600 text-center'>الفصل الدراسي الثالث</h2>
-              <ul className='bg-white shadow'>
+              <ul className='bg-white border-x'>
                 <li className='flex flex-row-reverse items-center font-bold gap-6 border-b-4 px-6 py-2 text-yellow-600'>
                   <p className='w-[65%] text-center'>المواد الدراسية</p>
                   <div className='border-2 h-6 border-yellow-600' />
@@ -106,7 +106,7 @@ const Bachelors = () => {
             </div>
             <div className="mb-20">
               <h2 className='text-lg text-white w-full px-4 py-2 bg-yellow-600 text-center'>الفصل الدراسي الرابع</h2>
-              <ul className='bg-white shadow'>
+              <ul className='bg-white border-x'>
                 <li className='flex flex-row-reverse items-center font-bold gap-6 border-b-4 px-6 py-2 text-yellow-600'>
                   <p className='w-[65%] text-center'>المواد الدراسية</p>
                   <div className='border-2 h-6 border-yellow-600' />

@@ -19,9 +19,24 @@ import DiplomaWasit from './pages/dirasatulya/DiplomasWasit'
 import DiplomaUlya from './pages/dirasatulya/DiplomasUlya'
 import Masters from './pages/dirasatulya/Masters'
 import Doctorals from './pages/dirasatulya/Doctorals'
-import PDF from './pages/PDF'
+import { useCookies } from "react-cookie"
+import { useState } from 'react'
+import { useEffect } from 'react'
+import Login from './pages/admin/Login'
+import Admin from './pages/admin/Admin'
 
 const Routers = () => {
+  const [admin, setAdmin] = useState(false)
+  const [cookies] = useCookies()
+
+  useEffect(() => {
+    if (cookies.admin && cookies.id_admin) {
+      setAdmin(true)
+    } else if (!cookies.admin) {
+      setAdmin(false)
+    }
+  })
+
   return (
     <>
       <Routes>
@@ -47,7 +62,7 @@ const Routers = () => {
         <Route path="/master" element={<Masters />} />
         <Route path="/doctoral" element={<Doctorals />} />
 
-        <Route path="/pdf" element={<PDF />} />
+        <Route path="/admin" element={admin ? <Admin /> : <Login />} />
         <Route path="*" element={<Blank />} />
       </Routes>
     </>

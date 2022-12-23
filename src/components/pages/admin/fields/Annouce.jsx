@@ -27,11 +27,6 @@ function AnnoucField() {
     document.body.classList.add('cursor-wait')
     document.body.classList.remove('cursor-default')
 
-    const date = new Date()
-    const y = date.getFullYear().toString()
-    const m = (date.getMonth() + 1).toString()
-    const d = date.getDate().toString()
-
     let forms = new FormData()
 
     forms.append('title', Title)
@@ -43,7 +38,7 @@ function AnnoucField() {
     })
       .then(r => r.json())
       .then(j => {
-        if (j.sts == 'gagal') {
+        if (j.sts == 'failed') {
           setError(j.msg)
           setCommited(true)
           setErrored(true)
@@ -51,7 +46,7 @@ function AnnoucField() {
           document.body.classList.add('cursor-default')
         }
 
-        if (j.sts == 'berhasil') {
+        if (j.sts == 'success') {
           setError(j.msg)
           setCommited(true)
           setErrored(true)

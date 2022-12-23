@@ -88,7 +88,7 @@ function TasjeelField() {
 
   return (
     <>
-      <h1 className="text-center mb-6 mt-2 text-xl font-bold">إضافة الرؤية أو القيم أو الهدف</h1>
+      <h1 className="text-center mb-6 mt-2 text-xl font-bold">إضافة شروط التسجيل</h1>
       {
         (Errored == true) && <div className="text-sm w-[100%] bg-transparent border py-1 px-2 mt-4 rounded-lg text-[#222222] flex justify-between items-center">
           <div>{Error}</div>

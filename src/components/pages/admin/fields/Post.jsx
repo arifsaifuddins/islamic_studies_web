@@ -47,7 +47,7 @@ function PostField() {
     })
       .then(r => r.json())
       .then(j => {
-        if (j.sts == 'gagal') {
+        if (j.sts == 'failed') {
           setError(j.msg)
           setCommited(true)
           setErrored(true)
@@ -55,7 +55,7 @@ function PostField() {
           document.body.classList.add('cursor-default')
         }
 
-        if (j.sts == 'berhasil') {
+        if (j.sts == 'success') {
           setError(j.msg)
           setCommited(true)
           setErrored(true)
@@ -66,7 +66,7 @@ function PostField() {
       }).catch(j => {
         document.body.classList.remove('cursor-wait')
         document.body.classList.add('cursor-default')
-        setError('Terjadi error!, gambar salah/terlalu besar.')
+        setError('Error!.')
         setCommited(true)
         setErrored(true)
       })

@@ -4,8 +4,11 @@ import AdminField from './fields/Admin'
 import AnnoucField from './fields/Annouce'
 import FeesField from './fields/Fees'
 import HaikalField from './fields/Haikal'
+import KuliatField from './fields/Kuliat'
+import MawadField from './fields/Mawad'
 import PostField from './fields/Post'
 import TasjeelField from './fields/Tasjeel'
+import TeacherField from './fields/Teacher'
 import VisMissField from './fields/VisMiss'
 
 const Admin = () => {
@@ -62,6 +65,29 @@ const Admin = () => {
             </div>
             <div className="relative w-full mx-auto p-3 rounded-lg bg-white h-max shadow">
               <FeesField />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="bg-white border-t-4 border-yellow-600">
+        <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
+          <h2 className='px-3 py-1 absolute xl:right-0 right-4 rounded-bl-lg bg-yellow-600 w-max text-white'>التعريف والهيكل الوظيفي للكلية</h2>
+          <div className="mx-auto flex flex-col gap-8 xl:flex-row lg:w-[900px] w-full text-end leading-9 py-32">
+            <div className="relative w-full mx-auto p-3 rounded-lg shadow h-max">
+              <KuliatField />
+            </div>
+            <div className="relative w-full mx-auto p-3 rounded-lg shadow h-max">
+              <MawadField />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="bg-slate-100 border-t-4 border-yellow-600">
+        <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
+          <h2 className='px-3 py-1 absolute xl:left-0 left-4 rounded-br-lg bg-yellow-600 w-max text-white'>التسجيل والقبول والشروط للكلية</h2>
+          <div className="mx-auto flex flex-col gap-8 xl:flex-row lg:w-[900px] w-full text-end leading-9 py-32">
+            <div className="relative w-full mx-auto p-3 rounded-lg bg-white h-max shadow">
+              <TeacherField />
             </div>
           </div>
         </div>

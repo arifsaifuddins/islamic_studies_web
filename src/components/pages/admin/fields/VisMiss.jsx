@@ -40,7 +40,7 @@ function VisMissField() {
       mission = Mis
     }
 
-    return await fetch(`${url}/mission/add`, {
+    return await fetch(`${url}/vision/`, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ function VisMissField() {
         setErrored(true)
         document.body.classList.add('cursor-default')
         document.body.classList.remove('cursor-wait')
-        nav('/organizations/Category')
+        nav('/')
       }).catch(j => {
         setError(j.message)
         document.body.classList.add('cursor-default')

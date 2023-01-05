@@ -22,7 +22,7 @@ function AnnoucField() {
     }
   }, [Title])
 
-  const submitBlogs = async () => {
+  const submitAnnouc = async () => {
     setCommited(false)
     document.body.classList.add('cursor-wait')
     document.body.classList.remove('cursor-default')
@@ -32,7 +32,7 @@ function AnnoucField() {
     forms.append('title', Title)
     forms.append('poster', Poster)
 
-    return await fetch(`${url}/blogs.php`, {
+    return await fetch(`${url}/annouc`, {
       method: 'POST',
       body: forms
     })
@@ -52,7 +52,7 @@ function AnnoucField() {
           setErrored(true)
           document.body.classList.remove('cursor-wait')
           document.body.classList.add('cursor-default')
-          nav('/blogs')
+          nav('/')
         }
       }).catch(j => {
         document.body.classList.remove('cursor-wait')
@@ -86,7 +86,7 @@ function AnnoucField() {
       }
       <div className="my-5">
         {
-          (Commited == false) ? <p className="bblog cursor-not-allowed text-center bg-yellow-800 text-slate-400 py-1 pl-3 rounded-lg font-bold w-[100%]">إضافة البرنامج</p> : <p className="cursor-pointer text-center bg-yellow-600 text-white py-1 pl-3 rounded-lg hover:bg-yellow-700 font-bold w-[100%]" onClick={() => submitBlogs()}>إضافة البرنامج</p>
+          (Commited == false) ? <p className="bblog cursor-not-allowed text-center bg-yellow-800 text-slate-400 py-1 pl-3 rounded-lg font-bold w-[100%]">إضافة الإعلام</p> : <p className="cursor-pointer text-center bg-yellow-600 text-white py-1 pl-3 rounded-lg hover:bg-yellow-700 font-bold w-[100%]" onClick={() => submitAnnouc()}>إضافة الإعلام</p>
         }
       </div>
     </>

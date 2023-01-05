@@ -12,8 +12,7 @@ import Programs from './pages/Programs'
 import Contact from './pages/Contact'
 import Qobul from './pages/Qobul'
 import Kuliat from './pages/Kuliat'
-import Program from './pages/details/Program'
-import Profile from './pages/details/Profile'
+import Program from './pages/Program'
 import Bachelors from './pages/bachelor/Bachelors'
 import DiplomaWasit from './pages/dirasatulya/DiplomasWasit'
 import DiplomaUlya from './pages/dirasatulya/DiplomasUlya'
@@ -49,7 +48,6 @@ const Routers = () => {
 
         <Route path="/about" element={<About />} />
         <Route path="/haiah" element={<Haiah />} />
-        <Route path="/haiah/:id" element={<Profile />} />
         <Route path="/haikal" element={<Haikal />} />
 
         <Route path="/hadith" element={<Hadith />} />

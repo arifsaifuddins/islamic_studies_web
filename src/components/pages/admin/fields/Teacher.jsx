@@ -11,6 +11,8 @@ function TeacherField() {
   const [Country, setCountry] = useState(null)
   const [Address, setAddress] = useState(null)
   const [Date, setDate] = useState(null)
+  const [Gender, setGender] = useState(null)
+  const [Status, setStatus] = useState(null)
   const [Email, setEmail] = useState(null)
   const [Phone, setPhone] = useState(null)
   const [Qism, setQism] = useState(null)
@@ -30,7 +32,7 @@ function TeacherField() {
     }
   }, [Name])
 
-  const submitBlogs = async () => {
+  const submitHaiah = async () => {
     setCommited(false)
     document.body.classList.add('cursor-wait')
     document.body.classList.remove('cursor-default')
@@ -41,6 +43,8 @@ function TeacherField() {
     forms.append('country', Country)
     forms.append('address', Address)
     forms.append('birth', Date)
+    forms.append('gender', Gender || document.querySelector('.gender').value)
+    forms.append('status', Status || document.querySelector('.status').value)
     forms.append('email', Email)
     forms.append('phone', Phone)
     forms.append('specialization', Qism || document.querySelector('.qisms').value)
@@ -48,7 +52,7 @@ function TeacherField() {
     forms.append('poster', Poster)
     forms.append('cv', CV)
 
-    return await fetch(`${url}/blogs.php`, {
+    return await fetch(`${url}/haiah/`, {
       method: 'POST',
       body: forms
     })
@@ -68,7 +72,7 @@ function TeacherField() {
           setErrored(true)
           document.body.classList.remove('cursor-wait')
           document.body.classList.add('cursor-default')
-          nav('/blogs')
+          nav('/')
         }
       }).catch(j => {
         document.body.classList.remove('cursor-wait')
@@ -121,6 +125,22 @@ function TeacherField() {
         </div>
         <div className="flex md:flex-row-reverse justify-around items-center md:gap-8 flex-col">
           <div className="w-full">
+            <label htmlFor="status" className="my-2 block font-bold text-yellow-600">: حالة اجتماعية</label>
+            <select required type="text" id="status" onChange={(e) => setStatus(e.target.value)} className="status bg-transparent p-3 rounded-lg  border text-end outline-none border-yellow-600 w-[100%]" >
+              <option value="متزوج">متزوج</option>
+              <option value="عازب">عازب</option>
+            </select>
+          </div>
+          <div className="w-full">
+            <label htmlFor="gender" className="my-2 block font-bold text-yellow-600">: جنس</label>
+            <select required type="text" id="gender" onChange={(e) => setGender(e.target.value)} className="gender bg-transparent p-3 rounded-lg  border text-end outline-none border-yellow-600 w-[100%]" >
+              <option value="ذكر">ذكر</option>
+              <option value="أنثى">أنثى</option>
+            </select>
+          </div>
+        </div>
+        <div className="flex md:flex-row-reverse justify-around items-center md:gap-8 flex-col">
+          <div className="w-full">
             <label htmlFor="qism" className="my-2 block font-bold text-yellow-600">: قسم الهيئة</label>
             <select required type="text" id="qism" onChange={(e) => setQism(e.target.value)} className="qisms bg-transparent p-3 rounded-lg  border text-end outline-none border-yellow-600 w-[100%]" >
               <option value="ameed">عميد الكلية</option>
@@ -157,7 +177,7 @@ function TeacherField() {
         }
         <div className="my-5">
           {
-            (Commited == false) ? <p className="bblog cursor-not-allowed text-center bg-yellow-800 text-slate-400 py-1 pl-3 rounded-lg font-bold w-[100%]">إضافة البرنامج</p> : <p className="cursor-pointer text-center bg-yellow-600 text-white py-1 pl-3 rounded-lg hover:bg-yellow-700 font-bold w-[100%]" onClick={() => submitBlogs()}>إضافة البرنامج</p>
+            (Commited == false) ? <p className="bblog cursor-not-allowed text-center bg-yellow-800 text-slate-400 py-1 pl-3 rounded-lg font-bold w-[100%]">إضافة البرنامج</p> : <p className="cursor-pointer text-center bg-yellow-600 text-white py-1 pl-3 rounded-lg hover:bg-yellow-700 font-bold w-[100%]" onClick={() => submitHaiah()}>إضافة البرنامج</p>
           }
         </div>
       </div>

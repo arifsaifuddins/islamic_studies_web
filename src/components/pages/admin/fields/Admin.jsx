@@ -37,7 +37,7 @@ function AdminField() {
     setCommited(false)
     document.body.classList.add('cursor-wait')
 
-    return await fetch(`${url}/admin/register`, {
+    return await fetch(`${url}/admin/`, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',

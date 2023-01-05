@@ -36,12 +36,7 @@ function Login() {
     document.body.classList.remove('cursor-default')
     setCommited(false)
 
-    return await fetch(`${url}/admin/login`, {
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-      },
-      method: 'POST',
+    return await fetch(`${url}/admin/`, {
       body: JSON.stringify({
         email: Email,
         password: Pass
@@ -52,8 +47,8 @@ function Login() {
         if (j.data) {
           removeCookie(adm)
           removeCookie(idadm)
-          setCookie(adm, j.data.name, { path: '/', maxAge: 10000 * 24 })
-          setCookie(idadm, j.data._id, { path: '/', maxAge: 10000 * 24 })
+          setCookie(adm, j.data.name, { path: '/', maxAge: 10000 * 12 })
+          setCookie(idadm, j.data._id, { path: '/', maxAge: 10000 * 12 })
           setCommited(true)
           document.body.classList.add('cursor-default')
           document.body.classList.remove('cursor-wait')

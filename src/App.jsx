@@ -6,12 +6,9 @@ import { useLocation } from "react-router-dom"
 import ToTop from "./components/layouts/ToTop"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import apis from "./components/apis"
 
 const App = () => {
   const { pathname } = useLocation()
-
-  apis.getVisitors()
 
   useEffect(() => {
     AOS.init()

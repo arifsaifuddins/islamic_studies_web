@@ -12,10 +12,12 @@
   "dependencies": {
     "aos": "^2.3.4",
     "react": "^18.2.0",
+    "react-confirm-alert": "^3.0.6",
     "react-cookie": "^4.1.1",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.6.0",
+    "react-modal": "^3.16.1",
     "react-pdf": "^6.2.0",
     "react-router-dom": "^6.4.2"
   },

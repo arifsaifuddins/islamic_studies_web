@@ -41,13 +41,13 @@ function kuliatField() {
       paragraph = Mis
     }
 
-    return await fetch(`${url}/paragraph/add`, {
+    return await fetch(`${url}/kuliat/`, {
       method: 'POST',
-      body: JSON.stringify({
-        Poster: Poster,
-        Nameription: Name,
+      body: {
+        poster: Poster,
+        title: Name,
         paragraph: paragraph
-      })
+      }
     })
       .then(r => r.json())
       .then(j => {
@@ -56,7 +56,7 @@ function kuliatField() {
         setErrored(true)
         document.body.classList.add('cursor-default')
         document.body.classList.remove('cursor-wait')
-        nav('/organizations/Poster')
+        nav('/')
       }).catch(j => {
         setError(j.message)
         document.body.classList.add('cursor-default')

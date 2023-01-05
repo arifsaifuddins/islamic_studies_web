@@ -22,7 +22,7 @@ function TasjeelField() {
   const url = import.meta.env.VITE_URL
   const nav = useNavigate()
 
-  const submitSharat = async () => {
+  const submitTasjeel = async () => {
     setCommited(false)
     document.body.classList.add('cursor-wait')
     document.body.classList.remove('cursor-default')
@@ -39,7 +39,7 @@ function TasjeelField() {
       sharat = Mis
     }
 
-    return await fetch(`${url}/sharat/add`, {
+    return await fetch(`${url}/tasjeel/`, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -56,7 +56,7 @@ function TasjeelField() {
         setErrored(true)
         document.body.classList.add('cursor-default')
         document.body.classList.remove('cursor-wait')
-        nav('/organizations/Category')
+        nav('/')
       }).catch(j => {
         setError(j.message)
         document.body.classList.add('cursor-default')
@@ -105,7 +105,7 @@ function TasjeelField() {
         <textarea required id="sharat" onChange={(e) => setSharat(e.target.value)} placeholder="شروط القبول أو التسجيل" className="shar sharats bg-transparent py-1 pr-3 rounded-lg text-end border outline-none border-yellow-600 w-[100%]" />
       </div>
       {
-        (Commited == false) ? <p className="bmiss cursor-not-allowed text-center mt-4 bg-yellow-800 text-slate-400 py-1 rounded-lg font-bold w-[100%]">إضافة الشرط الواحد</p> : <p className="cursor-pointer text-center mt-4 bg-yellow-600 text-white py-1 rounded-lg hover:bg-yellow-700 font-bold w-[100%]" onClick={() => submitSharat()}>إضافة الشرط الواحد</p>
+        (Commited == false) ? <p className="bmiss cursor-not-allowed text-center mt-4 bg-yellow-800 text-slate-400 py-1 rounded-lg font-bold w-[100%]">إضافة الشرط الواحد</p> : <p className="cursor-pointer text-center mt-4 bg-yellow-600 text-white py-1 rounded-lg hover:bg-yellow-700 font-bold w-[100%]" onClick={() => submitTasjeel()}>إضافة الشرط الواحد</p>
       }
     </>
   )

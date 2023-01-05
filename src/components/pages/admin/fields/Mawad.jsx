@@ -24,12 +24,12 @@ function MawadField() {
   const url = import.meta.env.VITE_URL
   const nav = useNavigate()
 
-  const submitVisMiss = async () => {
+  const submitStudies = async () => {
     setCommited(false)
     document.body.classList.add('cursor-wait')
     document.body.classList.remove('cursor-default')
 
-    return await fetch(`${url}/mission/add`, {
+    return await fetch(`${url}/studies/`, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -49,7 +49,7 @@ function MawadField() {
         setErrored(true)
         document.body.classList.add('cursor-default')
         document.body.classList.remove('cursor-wait')
-        nav('/organizations/Category')
+        nav('/')
       }).catch(j => {
         setError(j.message)
         document.body.classList.add('cursor-default')
@@ -99,7 +99,7 @@ function MawadField() {
       <label htmlFor="time" className="my-2 block font-bold text-yellow-600">: الساعة</label>
       <input type="number" required id="time" onChange={(e) => setTime(e.target.value)} placeholder="الساعة " className="time bg-transparent py-1 p-3 text-end rounded-lg  border outline-none border-yellow-600 w-[100%] mb-2" />
       {
-        (Commited == false) ? <p className="bmiss cursor-not-allowed text-center mt-4 bg-yellow-800 text-slate-400 py-1 rounded-lg font-bold w-[100%]">إضافة المواد الدراسية</p> : <p className="cursor-pointer text-center mt-4 bg-yellow-600 text-white py-1 rounded-lg hover:bg-yellow-700 font-bold w-[100%]" onClick={() => submitVisMiss()}>إضافة المواد الدراسية</p>
+        (Commited == false) ? <p className="bmiss cursor-not-allowed text-center mt-4 bg-yellow-800 text-slate-400 py-1 rounded-lg font-bold w-[100%]">إضافة المواد الدراسية</p> : <p className="cursor-pointer text-center mt-4 bg-yellow-600 text-white py-1 rounded-lg hover:bg-yellow-700 font-bold w-[100%]" onClick={() => submitStudies()}>إضافة المواد الدراسية</p>
       }
     </>
   )

@@ -24,7 +24,7 @@ function HaikalField() {
   const url = import.meta.env.VITE_URL
   const nav = useNavigate()
 
-  const submitVisMiss = async () => {
+  const submitHaikal = async () => {
     setCommited(false)
     document.body.classList.add('cursor-wait')
     document.body.classList.remove('cursor-default')
@@ -41,7 +41,7 @@ function HaikalField() {
       mission = Mis
     }
 
-    return await fetch(`${url}/mission/add`, {
+    return await fetch(`${url}/haikal/`, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -60,7 +60,7 @@ function HaikalField() {
         setErrored(true)
         document.body.classList.add('cursor-default')
         document.body.classList.remove('cursor-wait')
-        nav('/organizations/Category')
+        nav('/')
       }).catch(j => {
         setError(j.message)
         document.body.classList.add('cursor-default')
@@ -126,7 +126,7 @@ function HaikalField() {
         <textarea required id="missio" onChange={(e) => setMission(e.target.value)} placeholder='التعريف العملي الوظيفي' className="missis haikals bg-transparent py-1 pr-3 rounded-lg text-end border outline-none border-yellow-600 w-[100%]" />
       </div>
       {
-        (Commited == false) ? <p className="bmiss cursor-not-allowed text-center mt-4 bg-yellow-800 text-slate-400 py-1 rounded-lg font-bold w-[100%]">إضافة الهيكل الوظيفي</p> : <p className="cursor-pointer text-center mt-4 bg-yellow-600 text-white py-1 rounded-lg hover:bg-yellow-700 font-bold w-[100%]" onClick={() => submitVisMiss()}>إضافة الهيكل الوظيفي</p>
+        (Commited == false) ? <p className="bmiss cursor-not-allowed text-center mt-4 bg-yellow-800 text-slate-400 py-1 rounded-lg font-bold w-[100%]">إضافة الهيكل الوظيفي</p> : <p className="cursor-pointer text-center mt-4 bg-yellow-600 text-white py-1 rounded-lg hover:bg-yellow-700 font-bold w-[100%]" onClick={() => submitHaikal()}>إضافة الهيكل الوظيفي</p>
       }
     </>
   )

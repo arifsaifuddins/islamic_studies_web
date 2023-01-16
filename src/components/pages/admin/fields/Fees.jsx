@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-function FeesField() {
+function FeesField({ url }) {
   const [Program, setProgram] = useState(null)
   const [Dollar, setDollar] = useState(null)
   const [Pound, setPound] = useState(null)
@@ -9,8 +9,6 @@ function FeesField() {
   const [Errored, setErrored] = useState(false)
   const [Error, setError] = useState(null)
   const [Commited, setCommited] = useState(false)
-
-  const nav = useNavigate()
 
   useEffect(() => {
 
@@ -20,8 +18,6 @@ function FeesField() {
       setCommited(false)
     }
   }, [Program, Dollar, Pound])
-
-  const url = import.meta.env.VITE_URL
 
   const submitFees = async () => {
     setCommited(false)
@@ -46,7 +42,6 @@ function FeesField() {
         setErrored(true)
         document.body.classList.add('cursor-default')
         document.body.classList.remove('cursor-wait')
-        nav('/')
       }).catch(j => {
         setError(j.message)
         document.body.classList.add('cursor-default')
@@ -61,7 +56,7 @@ function FeesField() {
       <h1 className="text-center mb-6 mt-2 text-xl font-bold">رسوم التسجيل والقبول</h1>
       <div>
         {
-          (Errored == true) && <div className="text-sm w-[100%] bg-transparent border py-1 px-2 mt-4 rounded-lg text-[#222222] dark:text-slate-100 flex justify-between items-center">
+          (Errored == true) && <div className="text-sm w-[100%] bg-transparent border py-1 px-2 mt-4 rounded-lg text-[#222222]  flex justify-between items-center">
             <div>{Error}</div>
             <p onClick={() => setErrored(false)} className="text-yellow-600 hover:text-yellow-700 text-2xl cursor-pointer">&times;</p>
           </div>

@@ -2,8 +2,7 @@ import { useEffect, useState } from "react"
 import { FiPlus } from "react-icons/fi"
 import { useNavigate } from "react-router-dom"
 
-function VisMissField() {
-
+function VisMissField({ url }) {
   const [Category, setCategory] = useState(null)
   const [Mission, setMission] = useState(null)
 
@@ -19,9 +18,6 @@ function VisMissField() {
       setCommited(false)
     }
   }, [Category, Mission])
-
-  const url = import.meta.env.VITE_URL
-  const nav = useNavigate()
 
   const submitVisMiss = async () => {
     setCommited(false)
@@ -40,14 +36,14 @@ function VisMissField() {
       mission = Mis
     }
 
-    return await fetch(`${url}/vision/`, {
+    return await fetch(`${url}/about/`, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
       },
       method: 'POST',
       body: JSON.stringify({
-        category: Category,
+        category: document.querySelector('.viss').value || Category,
         mission: mission
       })
     })
@@ -58,7 +54,6 @@ function VisMissField() {
         setErrored(true)
         document.body.classList.add('cursor-default')
         document.body.classList.remove('cursor-wait')
-        nav('/')
       }).catch(j => {
         setError(j.message)
         document.body.classList.add('cursor-default')

@@ -27,7 +27,7 @@ function Login() {
 
   }, [Email, Pass])
 
-  const url = import.meta.env.VITE_URL
+  const url = import.meta.env.VITE_NURL
   const adm = import.meta.env.VITE_ADMIN
   const idadm = import.meta.env.VITE_ID
 
@@ -36,11 +36,16 @@ function Login() {
     document.body.classList.remove('cursor-default')
     setCommited(false)
 
-    return await fetch(`${url}/admin/`, {
+    return await fetch(`${url}/admin/login`, {
       body: JSON.stringify({
         email: Email,
         password: Pass
-      })
+      }),
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
     })
       .then(r => r.json())
       .then(j => {

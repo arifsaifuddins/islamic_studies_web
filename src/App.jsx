@@ -1,8 +1,8 @@
-import Header from "./components/layouts/Header"
-import Routers from "./components/Router"
 import React, { useEffect, useLayoutEffect } from "react"
-import Footer from "./components/layouts/Footer"
 import { useLocation } from "react-router-dom"
+import Header from "./components/layouts/Header"
+import Footer from "./components/layouts/Footer"
+import Routers from "./components/Router"
 import ToTop from "./components/layouts/ToTop"
 import AOS from 'aos'
 import 'aos/dist/aos.css'

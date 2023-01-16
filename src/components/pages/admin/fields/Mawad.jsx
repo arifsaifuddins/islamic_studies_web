@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-function MawadField() {
+function MawadField({ url }) {
 
   const [Program, setProgram] = useState(null)
   const [Class, setClass] = useState(null)
@@ -21,7 +21,6 @@ function MawadField() {
     }
   }, [Madah, Time])
 
-  const url = import.meta.env.VITE_URL
   const nav = useNavigate()
 
   const submitStudies = async () => {
@@ -36,8 +35,8 @@ function MawadField() {
       },
       method: 'POST',
       body: JSON.stringify({
-        program: Program,
-        class: Class,
+        program: document.querySelector('.progm').value || Program,
+        classes: document.querySelector('.classes').value || Class,
         madah: Madah,
         time: Time
       })
@@ -49,7 +48,6 @@ function MawadField() {
         setErrored(true)
         document.body.classList.add('cursor-default')
         document.body.classList.remove('cursor-wait')
-        nav('/')
       }).catch(j => {
         setError(j.message)
         document.body.classList.add('cursor-default')

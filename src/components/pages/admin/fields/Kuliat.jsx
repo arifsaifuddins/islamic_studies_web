@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { FiPlus } from "react-icons/fi"
 import { useNavigate } from "react-router-dom"
 
-function kuliatField() {
+function kuliatField({ url }) {
 
   const [Poster, setPoster] = useState(null)
   const [Name, setName] = useState(null)
@@ -21,7 +21,6 @@ function kuliatField() {
     }
   }, [Poster, Name, Desc])
 
-  const url = import.meta.env.VITE_URL
   const nav = useNavigate()
 
   const submitKuliat = async () => {
@@ -41,26 +40,39 @@ function kuliatField() {
       paragraph = Mis
     }
 
-    return await fetch(`${url}/kuliat/`, {
+    let forms = new FormData()
+
+    forms.append('title', Name)
+    forms.append('paragraph', JSON.stringify(paragraph))
+    forms.append('poster', Poster)
+
+    return await fetch(`${url}/kuliats.php`, {
       method: 'POST',
-      body: {
-        poster: Poster,
-        title: Name,
-        paragraph: paragraph
-      }
+      body: forms
     })
       .then(r => r.json())
       .then(j => {
-        setError(j.message)
-        setCommited(true)
-        setErrored(true)
-        document.body.classList.add('cursor-default')
-        document.body.classList.remove('cursor-wait')
-        nav('/')
+        if (j.sts == 'failed') {
+          setError(j.msg)
+          setCommited(true)
+          setErrored(true)
+          document.body.classList.remove('cursor-wait')
+          document.body.classList.add('cursor-default')
+        }
+
+        if (j.sts == 'success') {
+          setError(j.msg)
+          setCommited(true)
+          setErrored(true)
+          document.body.classList.remove('cursor-wait')
+          document.body.classList.add('cursor-default')
+          nav('/')
+        }
       }).catch(j => {
-        setError(j.message)
-        document.body.classList.add('cursor-default')
         document.body.classList.remove('cursor-wait')
+        document.body.classList.add('cursor-default')
+        setError('Error!.')
+        console.log(j)
         setCommited(true)
         setErrored(true)
       })

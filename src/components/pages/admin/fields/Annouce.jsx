@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-function AnnoucField() {
+function AnnoucField({ url }) {
 
   const [Errored, setErrored] = useState(false)
   const [Error, setError] = useState(null)
@@ -10,7 +10,6 @@ function AnnoucField() {
   const [Title, setTitle] = useState(null)
   const [Poster, setPoster] = useState(null)
 
-  const url = import.meta.env.VITE_URL
   const nav = useNavigate()
 
   useEffect(() => {
@@ -32,7 +31,7 @@ function AnnoucField() {
     forms.append('title', Title)
     forms.append('poster', Poster)
 
-    return await fetch(`${url}/annouc`, {
+    return await fetch(`${url}/annoucs.php`, {
       method: 'POST',
       body: forms
     })

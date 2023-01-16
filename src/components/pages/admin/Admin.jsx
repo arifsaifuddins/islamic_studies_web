@@ -12,6 +12,9 @@ import TeacherField from './fields/Teacher'
 import VisMissField from './fields/VisMiss'
 
 const Admin = () => {
+  const node = import.meta.env.VITE_NURL
+  const php = import.meta.env.VITE_PURL
+
   return (
     <>
       <Helmet>
@@ -25,7 +28,7 @@ const Admin = () => {
           <h2 className='px-3 py-1 absolute xl:right-0 right-4 rounded-bl-lg bg-yellow-600 w-max text-white'>برامج كلية الدراسات الإسلامية</h2>
           <div className="mx-auto  lg:w-[900px] w-full text-end leading-9 py-32">
             <div className="relative w-full mx-auto p-3 rounded-lg shadow">
-              <PostField />
+              <PostField url={php} />
             </div>
           </div>
         </div>
@@ -35,10 +38,10 @@ const Admin = () => {
           <h2 className='px-3 py-1 absolute xl:left-0 left-4 rounded-br-lg bg-yellow-600 w-max text-white'>إعلانات ومشرف كلية الدراسات الإسلامية</h2>
           <div className="mx-auto flex flex-col gap-8 xl:flex-row lg:w-[900px] w-full text-end leading-9 py-32">
             <div className="relative w-full mx-auto p-3 rounded-lg bg-white h-max shadow">
-              <AdminField />
+              <AdminField url={node} />
             </div>
             <div className="relative w-full mx-auto p-3 rounded-lg bg-white h-max shadow">
-              <AnnoucField />
+              <AnnoucField url={php} />
             </div>
           </div>
         </div>
@@ -48,10 +51,10 @@ const Admin = () => {
           <h2 className='px-3 py-1 absolute xl:right-0 right-4 rounded-bl-lg bg-yellow-600 w-max text-white'>التعريف والهيكل الوظيفي للكلية</h2>
           <div className="mx-auto flex flex-col gap-8 xl:flex-row lg:w-[900px] w-full text-end leading-9 py-32">
             <div className="relative w-full mx-auto p-3 rounded-lg shadow h-max">
-              <VisMissField />
+              <VisMissField url={node} />
             </div>
             <div className="relative w-full mx-auto p-3 rounded-lg shadow h-max">
-              <HaikalField />
+              <HaikalField url={node} />
             </div>
           </div>
         </div>
@@ -61,10 +64,10 @@ const Admin = () => {
           <h2 className='px-3 py-1 absolute xl:left-0 left-4 rounded-br-lg bg-yellow-600 w-max text-white'>التسجيل والقبول والشروط للكلية</h2>
           <div className="mx-auto flex flex-col gap-8 xl:flex-row lg:w-[900px] w-full text-end leading-9 py-32">
             <div className="relative w-full mx-auto p-3 rounded-lg bg-white h-max shadow">
-              <TasjeelField />
+              <TasjeelField url={node} />
             </div>
             <div className="relative w-full mx-auto p-3 rounded-lg bg-white h-max shadow">
-              <FeesField />
+              <FeesField url={node} />
             </div>
           </div>
         </div>
@@ -74,10 +77,10 @@ const Admin = () => {
           <h2 className='px-3 py-1 absolute xl:right-0 right-4 rounded-bl-lg bg-yellow-600 w-max text-white'>التعريف والهيكل الوظيفي للكلية</h2>
           <div className="mx-auto flex flex-col gap-8 xl:flex-row lg:w-[900px] w-full text-end leading-9 py-32">
             <div className="relative w-full mx-auto p-3 rounded-lg shadow h-max">
-              <KuliatField />
+              <KuliatField url={php} />
             </div>
             <div className="relative w-full mx-auto p-3 rounded-lg shadow h-max">
-              <MawadField />
+              <MawadField url={node} />
             </div>
           </div>
         </div>
@@ -87,7 +90,7 @@ const Admin = () => {
           <h2 className='px-3 py-1 absolute xl:left-0 left-4 rounded-br-lg bg-yellow-600 w-max text-white'>التسجيل والقبول والشروط للكلية</h2>
           <div className="mx-auto flex flex-col gap-8 xl:flex-row lg:w-[900px] w-full text-end leading-9 py-32">
             <div className="relative w-full mx-auto p-3 rounded-lg bg-white h-max shadow">
-              <TeacherField />
+              <TeacherField url={php} />
             </div>
           </div>
         </div>

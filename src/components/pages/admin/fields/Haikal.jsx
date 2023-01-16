@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { FiPlus } from "react-icons/fi"
 import { useNavigate } from "react-router-dom"
 
-function HaikalField() {
+function HaikalField({ url }) {
 
   const [Category, setCategory] = useState(null)
   const [Desc, setDesc] = useState(null)
@@ -21,14 +21,11 @@ function HaikalField() {
     }
   }, [Category, Desc, Mission])
 
-  const url = import.meta.env.VITE_URL
-  const nav = useNavigate()
-
   const submitHaikal = async () => {
     setCommited(false)
     document.body.classList.add('cursor-wait')
     document.body.classList.remove('cursor-default')
-    let mission
+    let works
 
     if (document.querySelector('.haikals')) {
       let Mis = []
@@ -38,7 +35,7 @@ function HaikalField() {
             Mis.push(data.value)
           }
         })
-      mission = Mis
+      works = Mis
     }
 
     return await fetch(`${url}/haikal/`, {
@@ -48,9 +45,9 @@ function HaikalField() {
       },
       method: 'POST',
       body: JSON.stringify({
-        category: Category,
+        category: document.querySelector('.vissis').value || parseInt(Category),
         description: Desc,
-        mission: mission
+        works
       })
     })
       .then(r => r.json())
@@ -60,7 +57,6 @@ function HaikalField() {
         setErrored(true)
         document.body.classList.add('cursor-default')
         document.body.classList.remove('cursor-wait')
-        nav('/')
       }).catch(j => {
         setError(j.message)
         document.body.classList.add('cursor-default')

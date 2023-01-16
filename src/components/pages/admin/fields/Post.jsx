@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-function PostField() {
+function PostField({ url }) {
 
   const [Errored, setErrored] = useState(false)
   const [Error, setError] = useState(null)
@@ -11,7 +11,6 @@ function PostField() {
   const [Category, setCategory] = useState(null)
   const [Poster, setPoster] = useState(null)
 
-  const url = import.meta.env.VITE_URL
   const nav = useNavigate()
 
   useEffect(() => {
@@ -41,7 +40,7 @@ function PostField() {
     forms.append('date', `${d}/${m}/${y}`)
     forms.append('body', document.querySelector('#x').value)
 
-    return await fetch(`${url}/program/`, {
+    return await fetch(`${url}/programs.php`, {
       method: 'POST',
       body: forms
     })

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-function TeacherField() {
+function TeacherField({ url }) {
 
   const [Errored, setErrored] = useState(false)
   const [Error, setError] = useState(null)
@@ -20,7 +20,6 @@ function TeacherField() {
   const [Poster, setPoster] = useState(null)
   const [CV, setCV] = useState(null)
 
-  const url = import.meta.env.VITE_URL
   const nav = useNavigate()
 
   useEffect(() => {
@@ -52,7 +51,7 @@ function TeacherField() {
     forms.append('poster', Poster)
     forms.append('cv', CV)
 
-    return await fetch(`${url}/haiah/`, {
+    return await fetch(`${url}/teachers.php`, {
       method: 'POST',
       body: forms
     })
@@ -72,7 +71,6 @@ function TeacherField() {
           setErrored(true)
           document.body.classList.remove('cursor-wait')
           document.body.classList.add('cursor-default')
-          nav('/')
         }
       }).catch(j => {
         document.body.classList.remove('cursor-wait')

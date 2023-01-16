@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-function AdminField() {
+function AdminField({ url }) {
   const [Name, setName] = useState(null)
   const [Email, setEmail] = useState(null)
   const [Pass, setPass] = useState(null)
@@ -31,13 +31,11 @@ function AdminField() {
 
   }, [Email, Pass, Name, Conf])
 
-  const url = import.meta.env.VITE_URL
-
   const submitAdmin = async () => {
     setCommited(false)
     document.body.classList.add('cursor-wait')
 
-    return await fetch(`${url}/admin/`, {
+    return await fetch(`${url}/admin/register`, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -55,7 +53,6 @@ function AdminField() {
         setCommited(true)
         setErrored(true)
         document.body.classList.add('cursor-default')
-        nav('/')
       }).catch(j => {
         setError(j.message)
         document.body.classList.add('cursor-default')

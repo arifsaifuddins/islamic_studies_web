@@ -1,4 +1,5 @@
-const url = import.meta.env.VITE_URL
+const node = import.meta.env.VITE_NURL
+const php = import.meta.env.VITE_PURL
 
 // queries api methods
 /**

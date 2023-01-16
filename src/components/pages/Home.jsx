@@ -9,7 +9,7 @@ const Home = () => {
   const l = [1, 2, 3, 4]
   const r = [3, 4]
 
-  const url = import.meta.env.VITE_URL
+  const url = import.meta.env.VITE_NURL
 
   const [modalIsOpen, setIsOpen] = useState(false)
   const [cookie, setCookie] = useCookies()

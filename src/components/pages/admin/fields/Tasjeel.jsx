@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react"
-import { FiPlus } from "react-icons/fi"
-import { useNavigate } from "react-router-dom"
 
 function TasjeelField({ url }) {
 
@@ -18,8 +16,6 @@ function TasjeelField({ url }) {
       setCommited(false)
     }
   }, [sharat])
-
-  const nav = useNavigate()
 
   const submitTasjeel = async () => {
     setCommited(false)
@@ -41,6 +37,7 @@ function TasjeelField({ url }) {
         setError(j.message)
         setCommited(true)
         setErrored(true)
+        document.querySelector('.shar').value = ''
         document.body.classList.add('cursor-default')
         document.body.classList.remove('cursor-wait')
       }).catch(j => {

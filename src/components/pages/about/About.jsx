@@ -1,7 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useEffect } from 'react'
 import { Helmet } from 'react-helmet'
+import apis from '../../apis'
+import { ConfirmAlert } from '../../confirm'
+import { useCookies } from 'react-cookie'
+import { FiTrash } from 'react-icons/fi'
 
 const About = () => {
+  const [VisMis, setVisMis] = useState(null)
+  const [cookies] = useCookies()
+
+  useEffect(() => {
+    apis.getVismis().then(a => setVisMis(a.data))
+  }, [])
+
+  const vision = VisMis?.filter(a => a.category == '1')
+  const mission = VisMis?.filter(a => a.category == '2')
+  const risalat = VisMis?.filter(a => a.category == '3')
+  const qiyam = VisMis?.filter(a => a.category == '4')
+
   return (
     <>
       <Helmet>
@@ -41,36 +58,114 @@ const About = () => {
         <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
           <h2 className='px-3 py-1 absolute xl:left-0 left-4 rounded-br-lg bg-yellow-600 w-max text-white'>الرؤيات والأهداف لكلية الدراسات الإسلامية</h2>
           <div className="mx-auto lg:w-[900px] w-full text-end leading-9 py-32">
-            <h2 className='text-2xl font-bold text-yellow-600 mb-12'>رؤيات الكلية</h2>
-            <ul>
-              <li className='flex flex-row-reverse relative mb-6' data-aos="fade-up">
-                <div className="h-6 w-6 rounded-full bg-yellow-600 absolute -top-3"></div>
-                <p className='py-2 px-6 rounded-lg bg-white mr-3 w-full'>التميز في الدراسات الإسلامية، في إطار من الأصالة والمعاصرة، وطنياً وإقليمياً وعالمياً</p>
-              </li>
-              <li className='flex flex-row-reverse relative mb-6' data-aos="fade-up">
-                <div className="h-6 w-6 rounded-full bg-yellow-600 absolute -top-3"></div>
-                <p className='py-2 px-6 rounded-lg bg-white mr-3 w-full'>تقديم خدمة تعليمية وبحثية متميزة، في الدراسات الإسلامية؛ تسهم في البناء المعرفي والحضاري، وطنياً وإقليمياً وعالمياً، على أسس تتسم بالوسطية والاعتدال</p>
-              </li>
-              <li className='flex flex-row-reverse relative mb-6' data-aos="fade-up">
-                <div className="h-6 w-6 rounded-full bg-yellow-600 absolute -top-3"></div>
-                <p className='py-2 px-6 rounded-lg bg-white mr-3 w-full'>التميز والكفاءة، الأصالة والمعاصرة، الوسطية والاعتدال</p>
-              </li>
-            </ul>
-            <h2 className='text-2xl font-bold text-yellow-600 mb-12 mt-32'>أهداف الكلية</h2>
-            <ul>
-              <li className='flex flex-row-reverse relative mb-6' data-aos="fade-up">
-                <div className="h-6 w-6 rounded-full bg-yellow-600 absolute -top-3"></div>
-                <p className='py-2 px-6 rounded-lg bg-white mr-3 w-full'>التميز في الدراسات الإسلامية، في إطار من الأصالة والمعاصرة، وطنياً وإقليمياً وعالمياً</p>
-              </li>
-              <li className='flex flex-row-reverse relative mb-6' data-aos="fade-up">
-                <div className="h-6 w-6 rounded-full bg-yellow-600 absolute -top-3"></div>
-                <p className='py-2 px-6 rounded-lg bg-white mr-3 w-full'>تقديم خدمة تعليمية وبحثية متميزة، في الدراسات الإسلامية؛ تسهم في البناء المعرفي والحضاري، وطنياً وإقليمياً وعالمياً، على أسس تتسم بالوسطية والاعتدال</p>
-              </li>
-              <li className='flex flex-row-reverse relative mb-6' data-aos="fade-up">
-                <div className="h-6 w-6 rounded-full bg-yellow-600 absolute -top-3"></div>
-                <p className='py-2 px-6 rounded-lg bg-white mr-3 w-full'>التميز والكفاءة، الأصالة والمعاصرة، الوسطية والاعتدال</p>
-              </li>
-            </ul>
+            {
+              vision?.length > 0 && (
+                <>
+                  <h2 className='text-2xl font-bold text-yellow-600 mb-12'>رؤيات الكلية</h2>
+                  {
+                    vision?.map(a => {
+                      return (
+                        <ul key={a._id}>
+                          <li className='flex flex-row-reverse relative mb-6' data-aos="fade-up">
+                            {
+                              cookies.admin && cookies.id_admin && (
+                                <button onClick={() => ConfirmAlert(a._id, 'vismis')} className="h-8 w-8 rounded-br-lg rounded-tl-lg text-xl flex items-center justify-center font-bold bg-red-600 absolute left-0">
+                                  <FiTrash color='white' />
+                                </button>
+                              )
+                            }
+
+                            <div className="h-6 w-6 rounded-full bg-yellow-600 absolute -top-3"></div>
+                            <p className='py-2 px-6 rounded-lg bg-white mr-3 w-full'>{a.point}</p>
+                          </li>
+                        </ul>
+                      )
+                    })
+                  }
+                </>
+              )
+            }
+            {
+              mission?.length > 0 && (
+                <>
+                  <h2 className='text-2xl mt-20 font-bold text-yellow-600 mb-12'>أهداف الكلية</h2>
+                  {
+                    mission?.map(a => {
+                      return (
+                        <ul key={a._id}>
+                          <li className='flex flex-row-reverse relative mb-6' data-aos="fade-up">
+                            {
+                              cookies.admin && cookies.id_admin && (
+                                <button onClick={() => ConfirmAlert(a._id, 'vismis')} className="h-8 w-8 rounded-br-lg rounded-tl-lg text-xl flex items-center justify-center font-bold bg-red-600 absolute left-0">
+                                  <FiTrash color='white' />
+                                </button>
+                              )
+                            }
+
+                            <div className="h-6 w-6 rounded-full bg-yellow-600 absolute -top-3"></div>
+                            <p className='py-2 px-6 rounded-lg bg-white mr-3 w-full'>{a.point}</p>
+                          </li>
+                        </ul>
+                      )
+                    })
+                  }
+                </>
+              )
+            }
+            {
+              risalat?.length > 0 && (
+                <>
+                  <h2 className='text-2xl mt-20 font-bold text-yellow-600 mb-12'>رسالات الكلية</h2>
+                  {
+                    risalat?.map(a => {
+                      return (
+                        <ul key={a._id}>
+                          <li className='flex flex-row-reverse relative mb-6' data-aos="fade-up">
+                            {
+                              cookies.admin && cookies.id_admin && (
+                                <button onClick={() => ConfirmAlert(a._id, 'vismis')} className="h-8 w-8 rounded-br-lg rounded-tl-lg text-xl flex items-center justify-center font-bold bg-red-600 absolute left-0">
+                                  <FiTrash color='white' />
+                                </button>
+                              )
+                            }
+
+                            <div className="h-6 w-6 rounded-full bg-yellow-600 absolute -top-3"></div>
+                            <p className='py-2 px-6 rounded-lg bg-white mr-3 w-full'>{a.point}</p>
+                          </li>
+                        </ul>
+                      )
+                    })
+                  }
+                </>
+              )
+            }
+            {
+              qiyam?.length > 0 && (
+                <>
+                  <h2 className='text-2xl mt-20 font-bold text-yellow-600 mb-12'>قيم الكلية</h2>
+                  {
+                    qiyam?.map(a => {
+                      return (
+                        <ul key={a._id}>
+                          <li className='flex flex-row-reverse relative mb-6' data-aos="fade-up">
+                            {
+                              cookies.admin && cookies.id_admin && (
+                                <button onClick={() => ConfirmAlert(a._id, 'vismis')} className="h-8 w-8 rounded-br-lg rounded-tl-lg text-xl flex items-center justify-center font-bold bg-red-600 absolute left-0">
+                                  <FiTrash color='white' />
+                                </button>
+                              )
+                            }
+
+                            <div className="h-6 w-6 rounded-full bg-yellow-600 absolute -top-3"></div>
+                            <p className='py-2 px-6 rounded-lg bg-white mr-3 w-full'>{a.point}</p>
+                          </li>
+                        </ul>
+                      )
+                    })
+                  }
+                </>
+              )
+            }
           </div>
         </div>
       </div>

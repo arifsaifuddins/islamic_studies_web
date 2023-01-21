@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import { FiPlus } from "react-icons/fi"
-import { useNavigate } from "react-router-dom"
 
 function HaikalField({ url }) {
 
@@ -55,6 +54,8 @@ function HaikalField({ url }) {
         setError(j.message)
         setCommited(true)
         setErrored(true)
+        document.querySelector('.missis').value = ''
+        document.querySelector('.descis').value = ''
         document.body.classList.add('cursor-default')
         document.body.classList.remove('cursor-wait')
       }).catch(j => {

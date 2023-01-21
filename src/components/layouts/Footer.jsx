@@ -14,7 +14,7 @@ const Footer = () => {
           <p>.</p>
           <a className='hover:text-yellow-600 hidden sm:inline' href='https://iua.edu.sd' target="_blank">جامعة إفريقيا العالمية</a>
           <p className='hidden sm:block'>.</p>
-          <Link className='hover:text-yellow-600' to="/admin">فيه</Link>
+          <Link className='hover:text-yellow-600' to="/admin">إشراف</Link>
           <p>.</p>
           <a className='hover:text-yellow-600' href='https://github.com/ariefsaifuddien/islamic_studies_web'>
             <FiGithub />

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { useNavigate } from "react-router-dom"
 
 function AdminField({ url }) {
   const [Name, setName] = useState(null)
@@ -10,8 +9,6 @@ function AdminField({ url }) {
   const [Errored, setErrored] = useState(false)
   const [Error, setError] = useState(null)
   const [Commited, setCommited] = useState(false)
-
-  const nav = useNavigate()
 
   useEffect(() => {
 
@@ -52,6 +49,10 @@ function AdminField({ url }) {
         setError(j.message)
         setCommited(true)
         setErrored(true)
+        document.querySelector('.mailed').value = ''
+        document.querySelector('.passed').value = ''
+        document.querySelector('.named').value = ''
+        document.querySelector('.confed').value = ''
         document.body.classList.add('cursor-default')
       }).catch(j => {
         setError(j.message)

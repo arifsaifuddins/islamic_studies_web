@@ -60,7 +60,7 @@ function PostField({ url }) {
           setErrored(true)
           document.body.classList.remove('cursor-wait')
           document.body.classList.add('cursor-default')
-          nav('/')
+          nav('/programs')
         }
       }).catch(j => {
         document.body.classList.remove('cursor-wait')

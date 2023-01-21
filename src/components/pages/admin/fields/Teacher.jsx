@@ -71,6 +71,7 @@ function TeacherField({ url }) {
           setErrored(true)
           document.body.classList.remove('cursor-wait')
           document.body.classList.add('cursor-default')
+          nav('/haiah')
         }
       }).catch(j => {
         document.body.classList.remove('cursor-wait')
@@ -142,21 +143,24 @@ function TeacherField({ url }) {
             <label htmlFor="qism" className="my-2 block font-bold text-yellow-600">: قسم الهيئة</label>
             <select required type="text" id="qism" onChange={(e) => setQism(e.target.value)} className="qisms bg-transparent p-3 rounded-lg  border text-end outline-none border-yellow-600 w-[100%]" >
               <option value="ameed">عميد الكلية</option>
-              <option value="naibameed">نائب العميد</option>
+              <option value="naib_ameed">نائب العميد</option>
               <option value="musajil">مسجل الكلية</option>
-              <option value="qismdakwah">قسم الدعوة والسيرة</option>
-              <option value="qismhadith">قسم السنة وعلوم الحديث</option>
-              <option value="qismakidah">قسم العقيدة والفكر الإسلامي</option>
+              <option value="rais_qism_dakwah">رئيس قسم الدعوة والسيرة</option>
+              <option value="rais_qism_hadith">رئيس قسم السنة وعلوم الحديث</option>
+              <option value="rais_qism_akidah">رئيس قسم العقيدة والفكر الإسلامي</option>
+              <option value="qism_dakwah">قسم الدعوة والسيرة</option>
+              <option value="qism_hadith">قسم السنة وعلوم الحديث</option>
+              <option value="qism_akidah">قسم العقيدة والفكر الإسلامي</option>
             </select>
           </div>
           <div className="w-full">
             <label htmlFor="daragah" className="my-2 block font-bold text-yellow-600">: الدرجة العلمية</label>
             <select required type="text" id="daragah" onChange={(e) => setDaragah(e.target.value)} className="darajah bg-transparent p-3 rounded-lg  border text-end outline-none border-yellow-600 w-[100%]" >
-              <option value="ustaz">أستاذ</option>
-              <option value="musharik">مشارك</option>
-              <option value="muhadir">محاضر</option>
-              <option value="musaid">مساعد</option>
-              <option value="mutadarib">متدرب</option>
+              <option value="أستاذ">أستاذ</option>
+              <option value="مشارك">مشارك</option>
+              <option value="محاضر">محاضر</option>
+              <option value="مساعد">مساعد</option>
+              <option value="متدرب">متدرب</option>
             </select>
           </div>
         </div>

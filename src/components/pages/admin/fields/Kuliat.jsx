@@ -66,7 +66,7 @@ function kuliatField({ url }) {
           setErrored(true)
           document.body.classList.remove('cursor-wait')
           document.body.classList.add('cursor-default')
-          nav('/')
+          nav('/kuliat')
         }
       }).catch(j => {
         document.body.classList.remove('cursor-wait')

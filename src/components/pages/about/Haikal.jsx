@@ -1,8 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useEffect } from 'react'
 import { Helmet } from 'react-helmet'
-import { FiMonitor, FiUser, FiUserCheck } from 'react-icons/fi'
+import { FiMonitor, FiUser, FiUserCheck, FiTrash } from 'react-icons/fi'
+import apis from '../../apis'
+import { useCookies } from 'react-cookie'
+import { ConfirmAlert } from '../../confirm'
 
 const Haikal = () => {
+  const [cookies] = useCookies()
+  const [Haikal, setHaikal] = useState(null)
+
+  useEffect(() => {
+    apis.getHaikal().then(a => setHaikal(a.data))
+  }, [])
+
   return (
     <>
       <Helmet>
@@ -63,76 +74,36 @@ const Haikal = () => {
         <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
           <h2 className='px-3 py-1 absolute xl:left-0 left-4 rounded-br-lg bg-yellow-600 w-max text-white'>الهيكل الوظيفي لكلية الدراسات الإسلامية</h2>
           <div className="mx-auto lg:w-[900px] w-full px-2 md:px-0 text-lg text-end leading-9 py-32">
-            <div className="relative mb-24">
-              <h2 className='text-lg text-white px-4 py-1 rounded-full w-max bg-yellow-600 absolute -right-3 -top-5'>مجلس كلية الدراسات الإسلامية</h2>
-              <ul className='pt-3 flex flex-col gap-4 rounded-lg overflow-hidden'>
-                <li className='flex flex-row-reverse bg-white rounded-lg'>
-                  <p className='py-2 px-6 text-yellow-600'>تقدالحضاري، وطنياً وإقليمياً وعالمياً، على أسس تتسم بالوسطية والاعتدال</p>
-                </li>
-                <li className='flex flex-row-reverse bg-white border-r-8 rounded-l-lg w-full border-yellow-600'>
-                  <p className='py-2 px-6'>التميز في الدراسات الإسلامية، في إطار من الأصالة والمعاصرةيم خدمة تعليمية وبحثية متميزة، في الدراسات الإسلامية؛ تسهم في البناء المعرفي و، وطنياً وإقليمياً وعالمياً</p>
-                </li>
-                <li className='flex flex-row-reverse bg-white border-r-8 rounded-l-lg w-full border-yellow-600'>
-                  <p className='py-2 px-6'>التميز في الدراسات الإسلامية، في إطار من الأصالة والمعاصرةيم خدمة تعليمية وبحثية متميزة، في الدراسات الإسلامية؛ تسهم في البناء المعرفي و، وطنياً وإقليمياً وعالمياً</p>
-                </li>
-              </ul>
-            </div>
-            <div className="relative mb-24">
-              <h2 className='text-lg text-white px-4 py-1 rounded-full w-max bg-yellow-600 absolute -right-3 -top-5'>مجلس كلية الدراسات الإسلامية</h2>
-              <ul className='pt-3 flex flex-col gap-4 rounded-lg overflow-hidden'>
-                <li className='flex flex-row-reverse bg-white rounded-lg'>
-                  <p className='py-2 px-6'>التميز في الدراسات الإسلامية، في إطار من الأصالة والمعاصرة، وطنياً وإقليمياً وعالمياً</p>
-                </li>
-                <li className='flex flex-row-reverse bg-white rounded-lg'>
-                  <p className='py-2 px-6'>تقديم خدمة تعليمية وبحثية متميزة، في الدراسات الإسلامية؛ تسهم في البناء المعرفي والحضاري، وطنياً وإقليمياً وعالمياً، على أسس تتسم بالوسطية والاعتدال</p>
-                </li>
-                <li className='flex flex-row-reverse bg-white rounded-lg'>
-                  <p className='py-2 px-6'>التميز والكفاءة، الأصالة والمعاصرة، الوسطية والاعتدال</p>
-                </li>
-              </ul>
-            </div>
-            <div className="relative mb-24">
-              <h2 className='text-lg text-white px-4 py-1 rounded-full w-max bg-yellow-600 absolute -right-3 -top-5'>مجلس كلية الدراسات الإسلامية</h2>
-              <ul className='pt-3 flex flex-col gap-4 rounded-lg overflow-hidden'>
-                <li className='flex flex-row-reverse bg-white rounded-lg'>
-                  <p className='py-2 px-6'>التميز في الدراسات الإسلامية، في إطار من الأصالة والمعاصرة، وطنياً وإقليمياً وعالمياً</p>
-                </li>
-                <li className='flex flex-row-reverse bg-white rounded-lg'>
-                  <p className='py-2 px-6'>تقديم خدمة تعليمية وبحثية متميزة، في الدراسات الإسلامية؛ تسهم في البناء المعرفي والحضاري، وطنياً وإقليمياً وعالمياً، على أسس تتسم بالوسطية والاعتدال</p>
-                </li>
-                <li className='flex flex-row-reverse bg-white rounded-lg'>
-                  <p className='py-2 px-6'>التميز والكفاءة، الأصالة والمعاصرة، الوسطية والاعتدال</p>
-                </li>
-              </ul>
-            </div>
-            <div className="relative mb-24">
-              <h2 className='text-lg text-white px-4 py-1 rounded-full w-max bg-yellow-600 absolute -right-3 -top-5'>مجلس كلية الدراسات الإسلامية</h2>
-              <ul className='pt-3 flex flex-col gap-4 rounded-lg overflow-hidden'>
-                <li className='flex flex-row-reverse bg-white rounded-lg'>
-                  <p className='py-2 px-6'>التميز في الدراسات الإسلامية، في إطار من الأصالة والمعاصرة، وطنياً وإقليمياً وعالمياً</p>
-                </li>
-                <li className='flex flex-row-reverse bg-white rounded-lg'>
-                  <p className='py-2 px-6'>تقديم خدمة تعليمية وبحثية متميزة، في الدراسات الإسلامية؛ تسهم في البناء المعرفي والحضاري، وطنياً وإقليمياً وعالمياً، على أسس تتسم بالوسطية والاعتدال</p>
-                </li>
-                <li className='flex flex-row-reverse bg-white rounded-lg'>
-                  <p className='py-2 px-6'>التميز والكفاءة، الأصالة والمعاصرة، الوسطية والاعتدال</p>
-                </li>
-              </ul>
-            </div>
-            <div className="relative mb-24">
-              <h2 className='text-lg text-white px-4 py-1 rounded-full w-max bg-yellow-600 absolute -right-3 -top-5'>مجلس كلية الدراسات الإسلامية</h2>
-              <ul className='pt-3 flex flex-col gap-4 rounded-lg overflow-hidden'>
-                <li className='flex flex-row-reverse bg-white rounded-lg'>
-                  <p className='py-2 px-6'>التميز في الدراسات الإسلامية، في إطار من الأصالة والمعاصرة، وطنياً وإقليمياً وعالمياً</p>
-                </li>
-                <li className='flex flex-row-reverse bg-white rounded-lg'>
-                  <p className='py-2 px-6'>تقديم خدمة تعليمية وبحثية متميزة، في الدراسات الإسلامية؛ تسهم في البناء المعرفي والحضاري، وطنياً وإقليمياً وعالمياً، على أسس تتسم بالوسطية والاعتدال</p>
-                </li>
-                <li className='flex flex-row-reverse bg-white rounded-lg'>
-                  <p className='py-2 px-6'>التميز والكفاءة، الأصالة والمعاصرة، الوسطية والاعتدال</p>
-                </li>
-              </ul>
-            </div>
+            {
+              Haikal != null && Haikal.map(a => {
+                return (
+                  <div key={a._id} className="relative mb-24">
+                    <h2 className='text-lg text-white px-4 py-1 rounded-full z-10 w-max bg-yellow-600 absolute -right-3 -top-5'>{a.position}</h2>
+                    <ul className='pt-3 flex flex-col gap-4 rounded-lg overflow-hidden'>
+                      <li className='flex flex-row-reverse bg-white rounded-lg relative'>
+                        {
+                          cookies.admin && cookies.id_admin && (
+                            <button onClick={() => ConfirmAlert(a._id, 'haikal')} className="h-8 w-8 rounded-br-lg rounded-tl-lg text-xl flex items-center justify-center font-bold bg-red-600 absolute left-0">
+                              <FiTrash color='white' />
+                            </button>
+                          )
+                        }
+                        <p className='py-2 px-6 text-yellow-600'>{a.description}</p>
+                      </li>
+                      {
+                        a.works.map((a, i) => {
+                          return (
+                            <li key={i} className='flex flex-row-reverse bg-white border-r-8 rounded-l-lg w-full border-yellow-600'>
+                              <p className='py-2 px-6'>{a}</p>
+                            </li>
+                          )
+                        })
+                      }
+                    </ul>
+                  </div>
+                )
+              })
+            }
           </div>
         </div>
       </div>

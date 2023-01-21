@@ -3,13 +3,14 @@ import apis from './apis'
 
 export const ConfirmAlert = (id, each) => {
 
-  confirmAlert({
-    title: 'تأكيد الحذف',
-    message: 'هل تأكدت من حذف هذا؟',
+  return confirmAlert({
+    title: 'تأكيد العملية',
+    message: 'هل تأكدت من هذا؟',
     buttons: [
       {
         label: 'نعم',
         onClick: () => {
+
           if (each == 'admin') {
             window.history.back()
             apis.delAdmin(id)

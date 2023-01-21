@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { useNavigate } from "react-router-dom"
 
 function FeesField({ url }) {
   const [Program, setProgram] = useState(null)
@@ -40,6 +39,9 @@ function FeesField({ url }) {
         setError(j.message)
         setCommited(true)
         setErrored(true)
+        document.querySelector('.categor').value = ''
+        document.querySelector('.dollar').value = ''
+        document.querySelector('.pound').value = ''
         document.body.classList.add('cursor-default')
         document.body.classList.remove('cursor-wait')
       }).catch(j => {

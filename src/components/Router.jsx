@@ -8,11 +8,11 @@ import Haikal from './pages/about/Haikal'
 import Hadith from './pages/bachelor/Hadith'
 import Dakwah from './pages/bachelor/Dakwah'
 import Aqidah from './pages/bachelor/Aqidah'
-import Programs from './pages/Programs'
 import Contact from './pages/Contact'
 import Qobul from './pages/Qobul'
 import Kuliat from './pages/Kuliat'
-import Program from './pages/Program'
+import Program from './pages/program/Program'
+import Programs from './pages/program/Programs'
 import Bachelors from './pages/bachelor/Bachelors'
 import DiplomaWasit from './pages/dirasatulya/DiplomasWasit'
 import DiplomaUlya from './pages/dirasatulya/DiplomasUlya'
@@ -23,6 +23,9 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import Login from './pages/admin/Login'
 import Admin from './pages/admin/Admin'
+import Category from './pages/program/Category'
+import Search from './pages/program/Search'
+import All from './pages/program/All'
 
 const Routers = () => {
   const [admin, setAdmin] = useState(false)
@@ -43,7 +46,12 @@ const Routers = () => {
         <Route path="/qobul" element={<Qobul />} />
         <Route path="/kuliat" element={<Kuliat />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/programs" element={<Programs />} />
+
+        <Route path="/programs" element={<Programs />} >
+          <Route index element={<All />} />
+          <Route path="c/:category" element={<Category />} />
+          <Route path="s/:search" element={<Search />} />
+        </Route>
         <Route path="/programs/:id" element={<Program />} />
 
         <Route path="/about" element={<About />} />

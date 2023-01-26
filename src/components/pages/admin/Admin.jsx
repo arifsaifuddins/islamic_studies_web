@@ -125,7 +125,7 @@ const Admin = () => {
                         <h1 className="text-2xl mt-4 font-bold text-yellow-600">{Admin.name}</h1>
                         <p>@{Admin.email}</p>
                         <div onClick={() => {
-                          removeCookie('admin'); removeCookie('id_admin'); window.history.back()
+                          removeCookie('admin'); removeCookie('id_admin'); location.reload()
                         }} className='mt-10 w-72 cursor-pointer justify-center bg-red-600 py-1 text-white rounded-lg flex flex-row-reverse mx-auto  items-center gap-2'><FiLogOut /> الخروج عن الإشراف</div>
                       </div>
                     )

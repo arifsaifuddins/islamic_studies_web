@@ -46,7 +46,7 @@ const Home = () => {
   }, [])
 
   useEffect(() => {
-    apis.getAnnoucementOne(Id).then(a => setAnnouc(a.data[0]))
+    apis.getAnnoucementOne(Id).then(a => setAnnouc(a.data))
   }, [Id])
 
   const close = () => {
@@ -61,19 +61,23 @@ const Home = () => {
 
   return (
     <>
-      <Modal isOpen={AnnoucIsOpen} onRequestClose={() => close()} style={{ content: { transform: 'translate(-50%, -50%)', top: '50%', right: 'auto', left: '50%', bottom: 'auto', marginRight: '-50%', padding: 0 } }} >
-        {
-          cookie.admin && cookie.id_admin && (
-            <button onClick={() => ConfirmAlert(Annoucs?.id, 'annouc')} className="h-8 w-8 rounded-bl-lg text-xl flex items-center justify-center font-bold bg-red-600 absolute right-0">
-              <FiTrash color='white' />
+      {
+        Annouc != null && (
+          <Modal isOpen={AnnoucIsOpen} onRequestClose={() => close()} style={{ content: { transform: 'translate(-50%, -50%)', top: '50%', right: 'auto', left: '50%', bottom: 'auto', marginRight: '-50%', padding: 0 } }} >
+            {
+              cookie.admin && cookie.id_admin && (
+                <button onClick={() => ConfirmAlert(Annouc[0]?.id, 'annouc')} className="h-8 w-8 rounded-bl-lg text-xl flex items-center justify-center font-bold bg-red-600 absolute right-0">
+                  <FiTrash color='white' />
+                </button>
+              )
+            }
+            <button onClick={() => close()} className="h-8 w-8 rounded-br-lg text-xl flex items-center justify-center font-bold bg-red-600 absolute ">
+              <FiX color='white' />
             </button>
-          )
-        }
-        <button onClick={() => close()} className="h-8 w-8 rounded-br-lg text-xl flex items-center justify-center font-bold bg-red-600 absolute ">
-          <FiX color='white' />
-        </button>
-        <img src={`${php}/assets/${Annouc?.poster}`} alt={Annouc?.title} className='md:h-[95vh]' />
-      </Modal>
+            <img src={`${php}/assets/${Annouc[0]?.poster}`} alt={Annouc[0]?.title} className='md:h-[95vh]' />
+          </Modal>
+        )
+      }
       <div className='pb-72 pt-28 bg-stone-700 bg-opacity-50 text-white px-4'>
         <div className="flex flex-col font-bold gap-3 items-center mx-auto mt-10">
           <h1 className='lg:text-6xl md:text-5xl text-center text-4xl text-yellow-400 mb-4'>الدراسات الإسلامية</h1>
@@ -115,12 +119,12 @@ const Home = () => {
           <div className="pt-40 md:pb-10 pb-8 flex lg:flex-row-reverse flex-col items-center justify-around md:gap-10 gap-8" data-aos="fade-up">
             {
               Programs != null && m.map((e) => {
-                const body = Programs[e]?.body.replace(/<[^>]+>/g, '').trim()
+                const bd = Programs[e]?.body.replace(/<[^>]+>/g, '')
                 return (
                   <Link to={`/programs/${Programs[e]?.id_post}`} key={e} className="flex flex-row-reverse  lg:w-80 w-full px-4 lg:px-0 py-3 md:gap-6 gap-4">
                     <img src={`${php}/assets/${Programs[e]?.poster}`} alt={Programs[e]?.title} className='object-cover h-32 w-32' />
                     <div className="text-end">
-                      <h2 className='font-bold md:text-xl text-lg text-yellow-600 underline'>{(body.replaceAll('&nbsp;', '').trim().length < 50) ? body.replaceAll('&nbsp;', '').trim() : body.replaceAll('&nbsp;', '').trim().slice(0, 50)}</h2>
+                      <h2 className='font-bold md:text-xl text-lg text-yellow-600 underline'>{(bd?.replaceAll('&nbsp;', '').trim().length < 50) ? bd?.replaceAll('&nbsp;', '').trim() : bd?.replaceAll('&nbsp;', '').trim().slice(0, 50)}</h2>
                       <p className="pt-2 flex flex-row-reverse gap-3 items-center">
                         <FiCalendar />
                         <span>{Programs[e]?.date}</span>
@@ -134,12 +138,12 @@ const Home = () => {
           <div className="pb-40 flex lg:flex-row-reverse flex-col items-center justify-around md:gap-10 gap-8" data-aos="fade-up">
             {
               Programs != null && r.map((e) => {
-                const body = Programs[e]?.body.replace(/<[^>]+>/g, '').trim()
+                const bod = Programs[e]?.body.replace(/<[^>]+>/g, '').trim()
                 return (
                   <Link to={`/programs/${Programs[e]?.id_post}`} key={e} className="flex flex-row-reverse  lg:w-80 w-full px-4 lg:px-0 py-3 md:gap-6 gap-4">
                     <img src={`${php}/assets/${Programs[e]?.poster}`} alt={Programs[e]?.title} className='object-cover h-32 w-32' />
                     <div className="text-end">
-                      <h2 className='font-bold md:text-xl text-lg text-yellow-600 underline'>{(body.replaceAll('&nbsp;', '').trim().length < 50) ? body.replaceAll('&nbsp;', '').trim() : body.replaceAll('&nbsp;', '').trim().slice(0, 50)}</h2>
+                      <h2 className='font-bold md:text-xl text-lg text-yellow-600 underline'>{(bod?.replaceAll('&nbsp;', '').trim().length < 50) ? bod?.replaceAll('&nbsp;', '').trim() : bod?.replaceAll('&nbsp;', '').trim().slice(0, 50)}</h2>
                       <p className="pt-2 flex flex-row-reverse gap-3 items-center">
                         <FiCalendar />
                         <span>{Programs[e]?.date}</span>

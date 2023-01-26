@@ -15,8 +15,6 @@ const Program = () => {
     apis.getProgram(id).then(a => setBlog(a.data))
   }, [])
 
-  console.log(Blog)
-
   return (
     <>
       <Helmet>

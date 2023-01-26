@@ -68,55 +68,55 @@ const Haiah = () => {
                 <div className="flex flex-col gap-4 relative">
                   {
                     cookies.admin && cookies.id_admin && (
-                      <button onClick={() => ConfirmAlert(Haiah[0].id, 'haiah')} className="h-8 w-8 rounded-br-lg text-xl flex items-center justify-center font-bold bg-red-600 absolute left-0">
+                      <button onClick={() => ConfirmAlert(Haiah[0]?.id, 'haiah')} className="h-8 w-8 rounded-br-lg text-xl flex items-center justify-center font-bold bg-red-600 absolute left-0">
                         <FiTrash color='white' />
                       </button>
                     )
                   }
-                  <img src={`${php}/assets/${Haiah[0].poster}`} alt={Haiah[0].name} className='object-cover w-72 h-72' />
-                  <div onClick={() => downloadFile(`${php}/assets/${Haiah[0].cv}`, Haiah[0].name + '.pdf')} className='w-72 cursor-pointer justify-center bg-yellow-600 py-2 text-white rounded-lg flex flex-row-reverse mx-auto  items-center gap-2'>CV | السيرة الذاتية </div>
+                  <img src={`${php}/assets/${Haiah[0]?.poster}`} alt={Haiah[0]?.name} className='object-cover w-72 h-72' />
+                  <div onClick={() => downloadFile(`${php}/assets/${Haiah[0]?.cv}`, Haiah[0]?.name + '.pdf')} className='w-72 cursor-pointer justify-center bg-yellow-600 py-2 text-white rounded-lg flex flex-row-reverse mx-auto  items-center gap-2'>CV | السيرة الذاتية </div>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <h1 className='font-bold text-yellow-600 text-xl'>{Haiah[0].name}</h1>
+                  <h1 className='font-bold text-yellow-600 text-xl'>{Haiah[0]?.name}</h1>
                   <div className="items-center flex flex-row-reverse gap-2">
                     <p className='text-yellow-600'>الدرجة العلمية</p>
                     <span>:</span>
-                    <p>{Haiah[0].position}</p>
+                    <p>{Haiah[0]?.position}</p>
                   </div>
                   <div className="items-center flex flex-row-reverse gap-2">
                     <p className='text-yellow-600'>تاريخ الميلاد</p>
                     <span>:</span>
-                    <p>{Haiah[0].birth}</p>
+                    <p>{Haiah[0]?.birth}</p>
                   </div>
                   <div className="items-center flex flex-row-reverse gap-2">
                     <p className='text-yellow-600'>الدولة</p>
                     <span>:</span>
-                    <p>{Haiah[0].country}</p>
+                    <p>{Haiah[0]?.country}</p>
                   </div>
                   <div className="items-center flex flex-row-reverse gap-2">
                     <p className='text-yellow-600'>العوان</p>
                     <span>:</span>
-                    <p>{Haiah[0].address}</p>
+                    <p>{Haiah[0]?.address}</p>
                   </div>
                   <div className="items-center flex flex-row-reverse gap-2">
                     <p className='text-yellow-600'>الجنس</p>
                     <span>:</span>
-                    <p>{Haiah[0].gender}</p>
+                    <p>{Haiah[0]?.gender}</p>
                   </div>
                   <div className="items-center flex flex-row-reverse gap-2">
                     <p className='text-yellow-600'>الحالة الزوجية</p>
                     <span>:</span>
-                    <p>{Haiah[0].status}</p>
+                    <p>{Haiah[0]?.status}</p>
                   </div>
                   <div className="items-center flex flex-row-reverse gap-2">
                     <p className='text-yellow-600'>البريد الإلكتروني</p>
                     <span>:</span>
-                    <p>{Haiah[0].email}</p>
+                    <p>{Haiah[0]?.email}</p>
                   </div>
                   <div className="items-center flex flex-row-reverse gap-2">
                     <p className='text-yellow-600'>الهاتف</p>
                     <span>:</span>
-                    <p>{Haiah[0].phone}</p>
+                    <p>{Haiah[0]?.phone}</p>
                   </div>
                 </div>
               </div>
@@ -133,35 +133,35 @@ const Haiah = () => {
           <div className="mx-auto lg:w-[900px] w-full text-end leading-9 py-32">
             <div className="flex flex-col items-center md:flex-row-reverse gap-6 justify-between mb-20">
               {
-                Ameed !== null && (
-                  <a href='#' onClick={() => { open(); setId(Ameed[0].id) }} className="flex cursor-pointer hover:bg-slate-50 flex-col items-center px-6 py-4 w-full mx-auto pt-12 rounded-lg shadow bg-white">
+                Ameed != null && (
+                  <a href='#' onClick={() => { open(); setId(Ameed[0]?.id) }} className="flex cursor-pointer hover:bg-slate-50 flex-col items-center px-6 py-4 w-full mx-auto pt-12 rounded-lg shadow bg-white">
                     <div className="p-4 rounded-lg bg-purple-400 mb-4 text-white w-max text-2xl">
                       <FiUser />
                     </div>
                     <h3 className='text-yellow-600 font-bold'>عميد الكلية</h3>
-                    <h3 className='hover:underline hover:text-yellow-600'>{Ameed[0].name}</h3>
+                    <h3 className='hover:underline hover:text-yellow-600'>{Ameed[0]?.name}</h3>
                   </a>
                 )
               }
               {
-                Musajil !== null && (
-                  <a href='#' onClick={() => { open(); setId(Musajil[0].id) }} className="flex cursor-pointer hover:bg-slate-50 flex-col items-center px-6 py-4 w-full mx-auto pt-12 rounded-lg shadow bg-white">
+                Musajil != null && (
+                  <a href='#' onClick={() => { open(); setId(Musajil[0]?.id) }} className="flex cursor-pointer hover:bg-slate-50 flex-col items-center px-6 py-4 w-full mx-auto pt-12 rounded-lg shadow bg-white">
                     <div className="p-4 rounded-lg bg-red-400 mb-4 text-white w-max text-2xl">
                       <FiMonitor />
                     </div>
                     <h3 className='text-yellow-600 font-bold'>مسجل الكلية</h3>
-                    <h3 className='hover:underline hover:text-yellow-600'>{Musajil[0].name}</h3>
+                    <h3 className='hover:underline hover:text-yellow-600'>{Musajil[0]?.name}</h3>
                   </a>
                 )
               }
               {
-                NaibAmeed !== null && (
-                  <a href='#' onClick={() => { open(); setId(NaibAmeed[0].id) }} className="flex cursor-pointer hover:bg-slate-50 flex-col items-center px-6 py-4 w-full mx-auto pt-12 rounded-lg shadow bg-white">
+                NaibAmeed != null && (
+                  <a href='#' onClick={() => { open(); setId(NaibAmeed[0]?.id) }} className="flex cursor-pointer hover:bg-slate-50 flex-col items-center px-6 py-4 w-full mx-auto pt-12 rounded-lg shadow bg-white">
                     <div className="p-4 rounded-lg bg-purple-400 mb-4 text-white w-max text-2xl">
                       <FiUser />
                     </div>
                     <h3 className='text-yellow-600 font-bold'>نائب العميد</h3>
-                    <h3 className='hover:underline hover:text-yellow-600'>{NaibAmeed[0].name}</h3>
+                    <h3 className='hover:underline hover:text-yellow-600'>{NaibAmeed[0]?.name}</h3>
                   </a>
                 )
               }
@@ -176,8 +176,8 @@ const Haiah = () => {
                 </li>
                 {
                   RaisQismHadith != null && (
-                    <a href="#"><li onClick={() => { open(); setId(RaisQismHadith[0].id) }} className='flex hover:bg-slate-50 flex-row-reverse items-center gap-6 border-b-4 px-6 py-2'>
-                      <p className='hover:underline hover:text-yellow-600 cursor-pointer w-[65%]'>{RaisQismHadith[0].name}</p>
+                    <a href="#"><li onClick={() => { open(); setId(RaisQismHadith[0]?.id) }} className='flex hover:bg-slate-50 flex-row-reverse items-center gap-6 border-b-4 px-6 py-2'>
+                      <p className='hover:underline hover:text-yellow-600 cursor-pointer w-[65%]'>{RaisQismHadith[0]?.name}</p>
                       <div className='border-2 h-6 border-gray-600' />
                       <p className='w-[30%] text-center'>رئيس</p>
                     </li>
@@ -208,8 +208,8 @@ const Haiah = () => {
                 </li>
                 {
                   RaisQismDakwah != null && (
-                    <a href="#"><li onClick={() => { open(); setId(RaisQismDakwah[0].id) }} className='flex hover:bg-slate-50 flex-row-reverse items-center gap-6 border-b-4 px-6 py-2'>
-                      <p className='hover:underline hover:text-yellow-600 cursor-pointer w-[65%]'>{RaisQismDakwah[0].name}</p>
+                    <a href="#"><li onClick={() => { open(); setId(RaisQismDakwah[0]?.id) }} className='flex hover:bg-slate-50 flex-row-reverse items-center gap-6 border-b-4 px-6 py-2'>
+                      <p className='hover:underline hover:text-yellow-600 cursor-pointer w-[65%]'>{RaisQismDakwah[0]?.name}</p>
                       <div className='border-2 h-6 border-gray-600' />
                       <p className='w-[30%] text-center'>رئيس</p>
                     </li>
@@ -240,8 +240,8 @@ const Haiah = () => {
                 </li>
                 {
                   RaisQismAkidah != null && (
-                    <a href="#"><li onClick={() => { open(); setId(RaisQismAkidah[0].id) }} className='flex hover:bg-slate-50 flex-row-reverse items-center gap-6 border-b-4 px-6 py-2'>
-                      <p className='hover:underline hover:text-yellow-600 cursor-pointer w-[65%]'>{RaisQismAkidah[0].name}</p>
+                    <a href="#"><li onClick={() => { open(); setId(RaisQismAkidah[0]?.id) }} className='flex hover:bg-slate-50 flex-row-reverse items-center gap-6 border-b-4 px-6 py-2'>
+                      <p className='hover:underline hover:text-yellow-600 cursor-pointer w-[65%]'>{RaisQismAkidah[0]?.name}</p>
                       <div className='border-2 h-6 border-gray-600' />
                       <p className='w-[30%] text-center'>رئيس</p>
                     </li>

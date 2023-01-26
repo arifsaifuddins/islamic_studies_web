@@ -121,7 +121,7 @@ const Home = () => {
               Programs != null && m.map((e) => {
                 return (
                   <Link to={`/programs/${Programs[e]?.id_post}`} key={e} className="flex flex-row-reverse  lg:w-80 w-full px-4 lg:px-0 py-3 md:gap-6 gap-4">
-                    <img src={`${php}/assets/${Programs[e]?.poster}`} alt={Programs[e]?.title} className='object-cover h-32 w-32' />
+                    <img src={`${php}/assets/${Programs[e]?.poster}`} alt={Programs[e]?.title} className='object-center h-32 w-32' />
                     <div className="text-end">
                       <h2 className='font-bold md:text-xl text-lg text-yellow-600 underline'>{Programs[e]?.title}</h2>
                       <p className="pt-2 flex flex-row-reverse gap-3 items-center">
@@ -139,7 +139,7 @@ const Home = () => {
               Programs != null && r.map((e) => {
                 return (
                   <Link to={`/programs/${Programs[e]?.id_post}`} key={e} className="flex flex-row-reverse  lg:w-80 w-full px-4 lg:px-0 py-3 md:gap-6 gap-4">
-                    <img src={`${php}/assets/${Programs[e]?.poster}`} alt={Programs[e]?.title} className='object-cover h-32 w-32' />
+                    <img src={`${php}/assets/${Programs[e]?.poster}`} alt={Programs[e]?.title} className='object-center h-32 w-32' />
                     <div className="text-end">
                       <h2 className='font-bold md:text-xl text-lg text-yellow-600 underline'>{Programs[e]?.title}</h2>
                       <p className="pt-2 flex flex-row-reverse gap-3 items-center">

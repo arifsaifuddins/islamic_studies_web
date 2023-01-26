@@ -119,12 +119,11 @@ const Home = () => {
           <div className="pt-40 md:pb-10 pb-8 flex lg:flex-row-reverse flex-col items-center justify-around md:gap-10 gap-8" data-aos="fade-up">
             {
               Programs != null && m.map((e) => {
-                const bd = Programs[e]?.body.replace(/<[^>]+>/g, '')
                 return (
                   <Link to={`/programs/${Programs[e]?.id_post}`} key={e} className="flex flex-row-reverse  lg:w-80 w-full px-4 lg:px-0 py-3 md:gap-6 gap-4">
                     <img src={`${php}/assets/${Programs[e]?.poster}`} alt={Programs[e]?.title} className='object-cover h-32 w-32' />
                     <div className="text-end">
-                      <h2 className='font-bold md:text-xl text-lg text-yellow-600 underline'>{(bd?.replaceAll('&nbsp;', '').trim().length < 50) ? bd?.replaceAll('&nbsp;', '').trim() : bd?.replaceAll('&nbsp;', '').trim().slice(0, 50)}</h2>
+                      <h2 className='font-bold md:text-xl text-lg text-yellow-600 underline'>{Programs[e]?.title}</h2>
                       <p className="pt-2 flex flex-row-reverse gap-3 items-center">
                         <FiCalendar />
                         <span>{Programs[e]?.date}</span>
@@ -138,12 +137,11 @@ const Home = () => {
           <div className="pb-40 flex lg:flex-row-reverse flex-col items-center justify-around md:gap-10 gap-8" data-aos="fade-up">
             {
               Programs != null && r.map((e) => {
-                const bod = Programs[e]?.body.replace(/<[^>]+>/g, '').trim()
                 return (
                   <Link to={`/programs/${Programs[e]?.id_post}`} key={e} className="flex flex-row-reverse  lg:w-80 w-full px-4 lg:px-0 py-3 md:gap-6 gap-4">
                     <img src={`${php}/assets/${Programs[e]?.poster}`} alt={Programs[e]?.title} className='object-cover h-32 w-32' />
                     <div className="text-end">
-                      <h2 className='font-bold md:text-xl text-lg text-yellow-600 underline'>{(bod?.replaceAll('&nbsp;', '').trim().length < 50) ? bod?.replaceAll('&nbsp;', '').trim() : bod?.replaceAll('&nbsp;', '').trim().slice(0, 50)}</h2>
+                      <h2 className='font-bold md:text-xl text-lg text-yellow-600 underline'>{Programs[e]?.title}</h2>
                       <p className="pt-2 flex flex-row-reverse gap-3 items-center">
                         <FiCalendar />
                         <span>{Programs[e]?.date}</span>

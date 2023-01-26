@@ -11,7 +11,7 @@ const Search = () => {
 
   useEffect(() => {
     apis.searchProgram(search, Page).then(a => setBlogs(a))
-  }, [Page])
+  }, [Page, search])
 
   return (
     <>

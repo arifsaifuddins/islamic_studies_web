@@ -11,7 +11,7 @@ const Category = () => {
 
   useEffect(() => {
     apis.getProgramCategories(category, Page).then(a => setBlogs(a))
-  }, [Page])
+  }, [Page, category])
 
   return (
     <>

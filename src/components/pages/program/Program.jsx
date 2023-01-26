@@ -42,9 +42,9 @@ const Program = () => {
                 </div>
                 <img src={`${php}/assets/${Blog[0].poster}`} alt={Blog[0].title} className='object-cover w-full' />
                 <p className="text-end lg:text-4xl text-3xl my-12 leading-normal font-bold text-yellow-600">{Blog[0].title}</p>
-                <article>
+                <div className='flex flex-col items-end text-end'>
                   {parse(Blog[0].body)}
-                </article>
+                </div>
               </div>
             )
           }

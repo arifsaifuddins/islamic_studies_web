@@ -85,12 +85,12 @@ class Apis {
   }
 
   getProgramCategories = async (key, page) => {
-    return await fetch(`${php}/programs.php?category=${key}page=${page}&perpage=10`)
+    return await fetch(`${php}/programs.php?category=${key}&page=${page}&perpage=10`)
       .then(j => j.json())
   }
 
   searchProgram = async (key, page) => {
-    return await fetch(`${php}/programs.php?s=${key}page=${page}&perpage=10`)
+    return await fetch(`${php}/programs.php?s=${key}&page=${page}&perpage=10`)
       .then(j => j.json())
   }
 

@@ -68,7 +68,7 @@ const Routers = () => {
         <Route path="/master" element={<Masters />} />
         <Route path="/doctoral" element={<Doctorals />} />
 
-        <Route path="/admin" element={admin ? <Admin /> : <Admin />} />
+        <Route path="/admin" element={admin ? <Admin /> : <Login />} />
         <Route path="*" element={<Blank />} />
       </Routes>
     </>

@@ -11,6 +11,7 @@ trix-editor {
   padding: 0.4em 0.6em;
   min-height: 5em;
   outline: none;
+  text-align: right;
 }
 
 trix-toolbar * {
@@ -255,6 +256,7 @@ trix-toolbar .trix-dialog__link-fields .trix-button-group {
 }
 
 trix-editor [data-trix-mutable]:not(.attachment__caption-editor) {
+  display: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -274,35 +276,43 @@ trix-editor [data-trix-mutable] ::selection {
 }
 
 trix-editor [data-trix-mutable].attachment__caption-editor:focus::-moz-selection {
+  display: none;
   background: highlight;
 }
 
 trix-editor [data-trix-mutable].attachment__caption-editor:focus::selection {
+  display: none;
   background: highlight;
 }
 
 trix-editor [data-trix-mutable].attachment.attachment--file {
+  display: none;
   box-shadow: 0 0 0 2px highlight;
   border-color: transparent;
 }
 
 trix-editor [data-trix-mutable].attachment img {
+  display: none;
   box-shadow: 0 0 0 2px highlight;
 }
 
 trix-editor .attachment {
+  display: none;
   position: relative;
 }
 
 trix-editor .attachment:hover {
+  display: none;
   cursor: default;
 }
 
 trix-editor .attachment--preview .attachment__caption:hover {
+  display: none;
   cursor: text;
 }
 
 trix-editor .attachment__progress {
+  display: none;
   position: absolute;
   z-index: 1;
   height: 20px;
@@ -314,11 +324,12 @@ trix-editor .attachment__progress {
 }
 
 trix-editor .attachment__progress[value="100"] {
+  display: none;
   opacity: 0;
 }
 
 trix-editor .attachment__caption-editor {
-  display: inline-block;
+  display: none;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -334,6 +345,7 @@ trix-editor .attachment__caption-editor {
 }
 
 trix-editor .attachment__toolbar {
+  display: none;
   position: absolute;
   z-index: 1;
   top: -0.9em;
@@ -410,10 +422,12 @@ trix-editor .trix-button--remove:hover::before {
 }
 
 trix-editor .attachment__metadata-container {
+  display: none;
   position: relative;
 }
 
 trix-editor .attachment__metadata {
+  display: none;
   position: absolute;
   left: 50%;
   top: 2em;
@@ -427,6 +441,7 @@ trix-editor .attachment__metadata {
 }
 
 trix-editor .attachment__metadata .attachment__name {
+  display: none;
   display: inline-block;
   max-width: 100%;
   vertical-align: bottom;
@@ -436,15 +451,18 @@ trix-editor .attachment__metadata .attachment__name {
 }
 
 trix-editor .attachment__metadata .attachment__size {
+  display: none;
   margin-left: 0.2em;
   white-space: nowrap;
 }
 
 .trix-content {
+  text-align: end;
   line-height: 1.5;
 }
 
 .trix-content * {
+  text-align: end;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -496,41 +514,49 @@ trix-editor .attachment__metadata .attachment__size {
 }
 
 .trix-content .attachment {
+  display: none;
   display: inline-block;
   position: relative;
   max-width: 100%;
 }
 
 .trix-content .attachment a {
+  display: none;
   color: inherit;
   text-decoration: none;
 }
 
 .trix-content .attachment a:hover,
 .trix-content .attachment a:visited:hover {
+  display: none;
   color: inherit;
 }
 
 .trix-content .attachment__caption {
+  display: none;
   text-align: center;
 }
 
 .trix-content .attachment__caption .attachment__name+.attachment__size::before {
+  display: none;
   content: ' · ';
 }
 
 .trix-content .attachment--preview {
+  display: none;
   width: 100%;
   text-align: center;
 }
 
 .trix-content .attachment--preview .attachment__caption {
+  display: none;
   color: #666;
   font-size: 0.9em;
   line-height: 1.2;
 }
 
 .trix-content .attachment--file {
+  display: none;
   color: #333;
   line-height: 1;
   margin: 0 2px 2px 2px;
@@ -540,12 +566,14 @@ trix-editor .attachment__metadata .attachment__size {
 }
 
 .trix-content .attachment-gallery {
+  display: none;
   display: flex;
   flex-wrap: wrap;
   position: relative;
 }
 
 .trix-content .attachment-gallery .attachment {
+  display: none;
   flex: 1 0 33%;
   padding: 0 0.5em;
   max-width: 33%;
@@ -553,6 +581,7 @@ trix-editor .attachment__metadata .attachment__size {
 
 .trix-content .attachment-gallery.attachment-gallery--2 .attachment,
 .trix-content .attachment-gallery.attachment-gallery--4 .attachment {
+  display: none;
   flex-basis: 50%;
   max-width: 50%;
 }

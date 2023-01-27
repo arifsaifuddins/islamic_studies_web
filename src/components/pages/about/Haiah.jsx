@@ -64,7 +64,7 @@ const Haiah = () => {
           <h1 className=' font-bold pb-2 border-b-2'>السيرة الذاتية</h1>
           {
             Haiah != null && (
-              <div className="flex flex-row gap-4 my-2">
+              <div className="flex flex-col sm:flex-row gap-4 my-2">
                 <div className="flex flex-col gap-4 relative">
                   {
                     cookies.admin && cookies.id_admin && (

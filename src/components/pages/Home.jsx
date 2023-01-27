@@ -66,15 +66,15 @@ const Home = () => {
           <Modal isOpen={AnnoucIsOpen} onRequestClose={() => close()} style={{ content: { transform: 'translate(-50%, -50%)', top: '50%', right: 'auto', left: '50%', bottom: 'auto', marginRight: '-50%', padding: 0 } }} >
             {
               cookie.admin && cookie.id_admin && (
-                <button onClick={() => ConfirmAlert(Annouc[0]?.id, 'annouc')} className="h-8 w-8 rounded-bl-lg text-xl flex items-center justify-center font-bold bg-red-600 absolute left-0">
+                <button onClick={() => ConfirmAlert(Annouc[0]?.id, 'annouc')} className="h-8 w-8 rounded-bl-lg text-xl flex items-center justify-center font-bold bg-red-600 absolute right-0">
                   <FiTrash color='white' />
                 </button>
               )
             }
-            <button onClick={() => close()} className="h-8 w-8 rounded-br-lg text-xl flex items-center justify-center font-bold bg-red-600 absolute ">
+            <button onClick={() => close()} className="h-8 w-8 rounded-br-lg text-xl flex items-center justify-center font-bold bg-red-600 absolute left-0">
               <FiX color='white' />
             </button>
-            <img src={`${php}/assets/${Annouc[0]?.poster}`} alt={Annouc[0]?.title} className='md:h-[95vh]' />
+            <img src={`${php}/assets/${Annouc[0]?.poster}`} alt={Annouc[0]?.title} className='h-[95vh] overflow-y-scroll' />
           </Modal>
         )
       }

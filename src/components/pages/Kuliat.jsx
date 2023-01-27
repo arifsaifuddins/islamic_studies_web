@@ -27,7 +27,7 @@ const Kuliat = () => {
       <div className="bg-white border-t-4 border-yellow-600">
         <div className="mx-auto  xl:w-[1200px] w-full px-4 xl:px-0 relative">
           <h2 className='px-3 py-1 absolute xl:right-0 right-4 rounded-bl-lg bg-yellow-600 w-max text-white'>الكليات المنتسبة للدراسات الإسلامية</h2>
-          <div className="mx-auto lg:w-[900px] w-full text-end py-32 leading-9">
+          <div className="mx-auto lg:w-[900px] w-full py-32 leading-9">
             {
               Kuliat != null && Kuliat?.map(a => {
                 return (

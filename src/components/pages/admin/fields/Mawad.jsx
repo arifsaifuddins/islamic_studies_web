@@ -65,8 +65,8 @@ function MawadField({ url }) {
           <p onClick={() => setErrored(false)} className="text-yellow-600 hover:text-yellow-700 text-2xl cursor-pointer">&times;</p>
         </div>
       }
-      <label htmlFor="categor" className="my-2 block font-bold text-yellow-600">: البرنامج</label>
-      <select required id="categor" onChange={(e) => setProgram(e.target.value)} className="progm bg-transparent p-3 text-end rounded-lg  border outline-none border-yellow-600 w-[100%]" >
+      <label htmlFor="categor" className="my-2 block font-bold text-yellow-600">البرنامج :</label>
+      <select required id="categor" onChange={(e) => setProgram(e.target.value)} className="progm bg-transparent p-3  rounded-lg  border outline-none border-yellow-600 w-[100%]" >
         <option value="all_major">جميع التخصصات</option>
         <option value="dakwah_bachelor">قسم السنة وعلوم الحديث</option>
         <option value="hadith_bachelor">قسم الدعوة والسيرة</option>
@@ -80,8 +80,8 @@ function MawadField({ url }) {
         <option value="akidah_master">العقيدة والفكر الإسلامي (الماجستير)</option>
         <option value="phd">الدكتوراه</option>
       </select>
-      <label htmlFor="categori" className="my-2 block font-bold text-yellow-600">: الفصل الدراسي</label>
-      <select required id="categori" onChange={(e) => setClass(e.target.value)} className="classes bg-transparent p-3 text-end rounded-lg  border outline-none border-yellow-600 w-[100%]" >
+      <label htmlFor="categori" className="my-2 block font-bold text-yellow-600">الفصل الدراسي :</label>
+      <select required id="categori" onChange={(e) => setClass(e.target.value)} className="classes bg-transparent p-3  rounded-lg  border outline-none border-yellow-600 w-[100%]" >
         <option value="1">الأول</option>
         <option value="2">الثاني</option>
         <option value="3">الثالث</option>
@@ -91,10 +91,10 @@ function MawadField({ url }) {
         <option value="7">السابع</option>
         <option value="8">الثامن</option>
       </select>
-      <label htmlFor="madah" className="my-2 block font-bold text-yellow-600">: المادة</label>
-      <input type="text" required id="madah" onChange={(e) => setMadah(e.target.value)} placeholder="المادة" className="madah bg-transparent py-1 p-3 text-end rounded-lg  border outline-none border-yellow-600 w-[100%] mb-2" />
-      <label htmlFor="time" className="my-2 block font-bold text-yellow-600">: الساعة</label>
-      <input type="number" required id="time" onChange={(e) => setTime(e.target.value)} placeholder="الساعة " className="time bg-transparent py-1 p-3 text-end rounded-lg  border outline-none border-yellow-600 w-[100%] mb-2" />
+      <label htmlFor="madah" className="my-2 block font-bold text-yellow-600">المادة :</label>
+      <input type="text" required id="madah" onChange={(e) => setMadah(e.target.value)} placeholder="المادة" className="madah bg-transparent py-1 p-3  rounded-lg  border outline-none border-yellow-600 w-[100%] mb-2" />
+      <label htmlFor="time" className="my-2 block font-bold text-yellow-600">الساعة :</label>
+      <input type="number" required id="time" onChange={(e) => setTime(e.target.value)} placeholder="الساعة " className="time bg-transparent py-1 p-3  rounded-lg  border outline-none border-yellow-600 w-[100%] mb-2" />
       {
         (Commited == false) ? <p className="bmiss cursor-not-allowed text-center mt-4 bg-yellow-800 text-slate-400 py-1 rounded-lg font-bold w-[100%]">إضافة المواد الدراسية</p> : <p className="cursor-pointer text-center mt-4 bg-yellow-600 text-white py-1 rounded-lg hover:bg-yellow-700 font-bold w-[100%]" onClick={() => submitStudies()}>إضافة المواد الدراسية</p>
       }

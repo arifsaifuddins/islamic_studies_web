@@ -82,22 +82,22 @@ function PostField({ url }) {
       }
       <div>
         <div className="w-full">
-          <input required type="text" onChange={(e) => setTitle(e.target.value)} id="titlepost" placeholder="موضوع البرنامج" className="tit text-end bg-transparent py-1 pr-3 mt-4 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
+          <input required type="text" onChange={(e) => setTitle(e.target.value)} id="titlepost" placeholder="موضوع البرنامج" className="tit  bg-transparent py-1 pr-3 mt-4 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
         </div>
         <div className="flex justify-around items-center md:gap-8 md:flex-row flex-col">
           <div className="w-full">
-            <label htmlFor="postfile" className="my-2 block font-bold text-yellow-600">: الصورة</label>
-            <input required onChange={(e) => setPoster(e.target.files[0])} type="file" id="postfile" className="pos bg-transparent py-1 pl-3 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
+            <label htmlFor="postfile" className="my-2 block font-bold text-yellow-600">الصورة :</label>
+            <input required onChange={(e) => setPoster(e.target.files[0])} type="file" id="postfile" className="pos bg-transparent py-1 pr-3 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
           </div>
           <div className="w-full">
-            <label htmlFor="authorpost" className="my-2 block font-bold text-yellow-600">: نوع البرامح</label>
-            <select required type="text" id="authorpost" onChange={(e) => setCategory(e.target.value)} className="cat bg-transparent p-3 rounded-lg  border text-end outline-none border-yellow-600 w-[100%]" >
-              <option value="program">البرامج</option>
-              <option value="news">الأخبار</option>
-              <option value="muktamar">المؤتمرات</option>
-              <option value="bachelor">البكالوريوس</option>
-              <option value="master">الماجستير</option>
-              <option value="phd">الدكتوراه</option>
+            <label htmlFor="authorpost" className="my-2 block font-bold text-yellow-600">نوع البرامح :</label>
+            <select required type="text" id="authorpost" onChange={(e) => setCategory(e.target.value)} className="cat bg-transparent p-3 rounded-lg  border  outline-none border-yellow-600 w-[100%]" >
+              <option value="البرامج">البرامج</option>
+              <option value="الأخبار">الأخبار</option>
+              <option value="المؤتمرات">المؤتمرات</option>
+              <option value="البكالوريوس">البكالوريوس</option>
+              <option value="الماجستير">الماجستير</option>
+              <option value="الدكتوراه">الدكتوراه</option>
             </select>
           </div>
         </div>
@@ -105,7 +105,7 @@ function PostField({ url }) {
           (Poster != null) && <img src={URL.createObjectURL(Poster)} alt="blog" className="mt-4 w-full" />
         }
         <div className="w-full mt-10">
-          <label htmlFor="x" className="my-2 block font-bold text-yellow-600">: المعلومات</label>
+          <label htmlFor="x" className="my-2 block font-bold text-yellow-600">المعلومات :</label>
           <textarea id="x" name="content" className="hidden"></textarea>
           <trix-editor input="x"></trix-editor>
         </div>

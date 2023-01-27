@@ -60,11 +60,11 @@ const Haiah = () => {
         <button onClick={() => close()} className="h-8 w-8 rounded-br-lg text-xl flex items-center justify-center font-bold bg-red-600 absolute ">
           <FiX color='white' />
         </button>
-        <div className='w-max text-black py-2 px-6 text-end'>
-          <h1 className='text-end font-bold pb-2 border-b-2'>السيرة الذاتية</h1>
+        <div className='w-max text-black py-2 px-6 '>
+          <h1 className=' font-bold pb-2 border-b-2'>السيرة الذاتية</h1>
           {
             Haiah != null && (
-              <div className="flex flex-row-reverse gap-4 my-2">
+              <div className="flex flex-row gap-4 my-2">
                 <div className="flex flex-col gap-4 relative">
                   {
                     cookies.admin && cookies.id_admin && (
@@ -74,46 +74,46 @@ const Haiah = () => {
                     )
                   }
                   <img src={`${php}/assets/${Haiah[0]?.poster}`} alt={Haiah[0]?.name} className='object-cover w-72 h-72' />
-                  <div onClick={() => downloadFile(`${php}/assets/${Haiah[0]?.cv}`, Haiah[0]?.name + '.pdf')} className='w-72 cursor-pointer justify-center bg-yellow-600 py-2 text-white rounded-lg flex flex-row-reverse mx-auto  items-center gap-2'>CV | السيرة الذاتية </div>
+                  <div onClick={() => downloadFile(`${php}/assets/${Haiah[0]?.cv}`, Haiah[0]?.name + '.pdf')} className='w-72 cursor-pointer justify-center bg-yellow-600 py-2 text-white rounded-lg flex flex-row mx-auto  items-center gap-2'>CV | السيرة الذاتية </div>
                 </div>
                 <div className="flex flex-col gap-2">
                   <h1 className='font-bold text-yellow-600 text-xl'>{Haiah[0]?.name}</h1>
-                  <div className="items-center flex flex-row-reverse gap-2">
+                  <div className="items-center flex flex-row gap-2">
                     <p className='text-yellow-600'>الدرجة العلمية</p>
                     <span>:</span>
                     <p>{Haiah[0]?.position}</p>
                   </div>
-                  <div className="items-center flex flex-row-reverse gap-2">
+                  <div className="items-center flex flex-row gap-2">
                     <p className='text-yellow-600'>تاريخ الميلاد</p>
                     <span>:</span>
                     <p>{Haiah[0]?.birth}</p>
                   </div>
-                  <div className="items-center flex flex-row-reverse gap-2">
+                  <div className="items-center flex flex-row gap-2">
                     <p className='text-yellow-600'>الدولة</p>
                     <span>:</span>
                     <p>{Haiah[0]?.country}</p>
                   </div>
-                  <div className="items-center flex flex-row-reverse gap-2">
+                  <div className="items-center flex flex-row gap-2">
                     <p className='text-yellow-600'>العوان</p>
                     <span>:</span>
                     <p>{Haiah[0]?.address}</p>
                   </div>
-                  <div className="items-center flex flex-row-reverse gap-2">
+                  <div className="items-center flex flex-row gap-2">
                     <p className='text-yellow-600'>الجنس</p>
                     <span>:</span>
                     <p>{Haiah[0]?.gender}</p>
                   </div>
-                  <div className="items-center flex flex-row-reverse gap-2">
+                  <div className="items-center flex flex-row gap-2">
                     <p className='text-yellow-600'>الحالة الزوجية</p>
                     <span>:</span>
                     <p>{Haiah[0]?.status}</p>
                   </div>
-                  <div className="items-center flex flex-row-reverse gap-2">
+                  <div className="items-center flex flex-row gap-2">
                     <p className='text-yellow-600'>البريد الإلكتروني</p>
                     <span>:</span>
                     <p>{Haiah[0]?.email}</p>
                   </div>
-                  <div className="items-center flex flex-row-reverse gap-2">
+                  <div className="items-center flex flex-row gap-2">
                     <p className='text-yellow-600'>الهاتف</p>
                     <span>:</span>
                     <p>{Haiah[0]?.phone}</p>
@@ -129,9 +129,9 @@ const Haiah = () => {
       </div>
       <div className="bg-white border-t-4 border-yellow-600">
         <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
-          <h2 className='px-3 py-1 absolute xl:right-0 right-4 rounded-bl-lg bg-yellow-600 w-max text-white'>هيئة التدريس لكلية الدراسات الإسلامية</h2>
-          <div className="mx-auto lg:w-[900px] w-full text-end leading-9 py-32">
-            <div className="flex flex-col items-center md:flex-row-reverse gap-6 justify-between mb-20">
+          <h2 className='px-3 py-1 absolute rounded-bl-lg bg-yellow-600 w-max text-white'>هيئة التدريس لكلية الدراسات الإسلامية</h2>
+          <div className="mx-auto lg:w-[900px] w-full  leading-9 py-32">
+            <div className="flex flex-col items-center md:flex-row gap-6 justify-between mb-20">
               {
                 Ameed != null && (
                   <a href='#' onClick={() => { open(); setId(Ameed[0]?.id) }} className="flex cursor-pointer hover:bg-slate-50 flex-col items-center px-6 py-4 w-full mx-auto pt-12 rounded-lg shadow bg-white">
@@ -169,14 +169,14 @@ const Haiah = () => {
             <div className="mt-20">
               <h2 className='text-lg text-yellow-600 shadow font-bold w-full px-4 py-2 border-2 bg-white border-yellow-600 text-center'>قسم السنة وعلوم الحديث</h2>
               <ul className='bg-white border-x'>
-                <li className='flex flex-row-reverse items-center font-bold gap-6 border-b-4 px-6 py-2 text-yellow-600'>
+                <li className='flex flex-row items-center font-bold gap-6 border-b-4 px-6 py-2 text-yellow-600'>
                   <p className='w-[65%] text-center'>الأسماء</p>
                   <div className='border-2 h-6 border-yellow-600' />
                   <p className='w-[30%] text-center'>الدرجة</p>
                 </li>
                 {
                   RaisQismHadith != null && (
-                    <a href="#"><li onClick={() => { open(); setId(RaisQismHadith[0]?.id) }} className='flex hover:bg-slate-50 flex-row-reverse items-center gap-6 border-b-4 px-6 py-2'>
+                    <a href="#"><li onClick={() => { open(); setId(RaisQismHadith[0]?.id) }} className='flex hover:bg-slate-50 flex-row items-center gap-6 border-b-4 px-6 py-2'>
                       <p className='hover:underline hover:text-yellow-600 cursor-pointer w-[65%]'>{RaisQismHadith[0]?.name}</p>
                       <div className='border-2 h-6 border-gray-600' />
                       <p className='w-[30%] text-center'>رئيس</p>
@@ -187,7 +187,7 @@ const Haiah = () => {
                 {
                   QismHadith != null && QismHadith.map(a => {
                     return (
-                      <a href="#"><li onClick={() => { open(); setId(a.id) }} className='flex hover:bg-slate-50 flex-row-reverse items-center gap-6 border-b-4 px-6 py-2'>
+                      <a href="#"><li onClick={() => { open(); setId(a.id) }} className='flex hover:bg-slate-50 flex-row items-center gap-6 border-b-4 px-6 py-2'>
                         <p className='hover:underline hover:text-yellow-600 cursor-pointer w-[65%]'>{a.name}</p>
                         <div className='border-2 h-6 border-gray-600' />
                         <p className='w-[30%] text-center'>{a.position}</p>
@@ -201,14 +201,14 @@ const Haiah = () => {
             <div className="mt-20">
               <h2 className='text-lg text-yellow-600 shadow font-bold w-full px-4 py-2 border-2 bg-white border-yellow-600 text-center'>قسم الدعوة والسيرة</h2>
               <ul className='bg-white border-x'>
-                <li className='flex flex-row-reverse items-center font-bold gap-6 border-b-4 px-6 py-2 text-yellow-600'>
+                <li className='flex flex-row items-center font-bold gap-6 border-b-4 px-6 py-2 text-yellow-600'>
                   <p className='w-[65%] text-center'>الأسماء</p>
                   <div className='border-2 h-6 border-yellow-600' />
                   <p className='w-[30%] text-center'>الدرجة</p>
                 </li>
                 {
                   RaisQismDakwah != null && (
-                    <a href="#"><li onClick={() => { open(); setId(RaisQismDakwah[0]?.id) }} className='flex hover:bg-slate-50 flex-row-reverse items-center gap-6 border-b-4 px-6 py-2'>
+                    <a href="#"><li onClick={() => { open(); setId(RaisQismDakwah[0]?.id) }} className='flex hover:bg-slate-50 flex-row items-center gap-6 border-b-4 px-6 py-2'>
                       <p className='hover:underline hover:text-yellow-600 cursor-pointer w-[65%]'>{RaisQismDakwah[0]?.name}</p>
                       <div className='border-2 h-6 border-gray-600' />
                       <p className='w-[30%] text-center'>رئيس</p>
@@ -219,7 +219,7 @@ const Haiah = () => {
                 {
                   QismDakwah != null && QismDakwah.map(a => {
                     return (
-                      <a href="#"><li onClick={() => { open(); setId(a.id) }} className='flex hover:bg-slate-50 flex-row-reverse items-center gap-6 border-b-4 px-6 py-2'>
+                      <a href="#"><li onClick={() => { open(); setId(a.id) }} className='flex hover:bg-slate-50 flex-row items-center gap-6 border-b-4 px-6 py-2'>
                         <p className='hover:underline hover:text-yellow-600 cursor-pointer w-[65%]'>{a.name}</p>
                         <div className='border-2 h-6 border-gray-600' />
                         <p className='w-[30%] text-center'>{a.position}</p>
@@ -233,14 +233,14 @@ const Haiah = () => {
             <div className="mt-20">
               <h2 className='text-lg text-yellow-600 shadow font-bold w-full px-4 py-2 border-2 bg-white border-yellow-600 text-center'>قسم العقيدة والفكر الإسلامي</h2>
               <ul className='bg-white border-x'>
-                <li className='flex flex-row-reverse items-center font-bold gap-6 border-b-4 px-6 py-2 text-yellow-600'>
+                <li className='flex flex-row items-center font-bold gap-6 border-b-4 px-6 py-2 text-yellow-600'>
                   <p className='w-[65%] text-center'>الأسماء</p>
                   <div className='border-2 h-6 border-yellow-600' />
                   <p className='w-[30%] text-center'>الدرجة</p>
                 </li>
                 {
                   RaisQismAkidah != null && (
-                    <a href="#"><li onClick={() => { open(); setId(RaisQismAkidah[0]?.id) }} className='flex hover:bg-slate-50 flex-row-reverse items-center gap-6 border-b-4 px-6 py-2'>
+                    <a href="#"><li onClick={() => { open(); setId(RaisQismAkidah[0]?.id) }} className='flex hover:bg-slate-50 flex-row items-center gap-6 border-b-4 px-6 py-2'>
                       <p className='hover:underline hover:text-yellow-600 cursor-pointer w-[65%]'>{RaisQismAkidah[0]?.name}</p>
                       <div className='border-2 h-6 border-gray-600' />
                       <p className='w-[30%] text-center'>رئيس</p>
@@ -251,7 +251,7 @@ const Haiah = () => {
                 {
                   QismAkidah != null && QismAkidah.map(a => {
                     return (
-                      <a href="#"><li onClick={() => { open(); setId(a.id) }} className='flex hover:bg-slate-50 flex-row-reverse items-center gap-6 border-b-4 px-6 py-2'>
+                      <a href="#"><li onClick={() => { open(); setId(a.id) }} className='flex hover:bg-slate-50 flex-row items-center gap-6 border-b-4 px-6 py-2'>
                         <p className='hover:underline hover:text-yellow-600 cursor-pointer w-[65%]'>{a.name}</p>
                         <div className='border-2 h-6 border-gray-600' />
                         <p className='w-[30%] text-center'>{a.position}</p>

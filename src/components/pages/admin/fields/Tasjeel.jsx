@@ -59,10 +59,10 @@ function TasjeelField({ url }) {
         </div>
       }
       <div className="sharat">
-        <div className="flex flex-row-reverse justify-between items-end text-yellow-600 font-bold my-3">
-          <label htmlFor="sharat" className="block">: الشروط</label>
+        <div className="flex flex-row justify-between text-yellow-600 font-bold my-3">
+          <label htmlFor="sharat" className="block">الشروط :</label>
         </div>
-        <textarea required id="sharat" onChange={(e) => setSharat(e.target.value)} placeholder="شروط القبول أو التسجيل" className="shar sharats bg-transparent py-1 pr-3 rounded-lg text-end border outline-none border-yellow-600 w-[100%]" />
+        <textarea required id="sharat" onChange={(e) => setSharat(e.target.value)} placeholder="شروط القبول أو التسجيل" className="shar sharats bg-transparent py-1 pr-3 rounded-lg border outline-none border-yellow-600 w-[100%]" />
       </div>
       {
         (Commited == false) ? <p className="bmiss cursor-not-allowed text-center mt-4 bg-yellow-800 text-slate-400 py-1 rounded-lg font-bold w-[100%]">إضافة الشرط الواحد</p> : <p className="cursor-pointer text-center mt-4 bg-yellow-600 text-white py-1 rounded-lg hover:bg-yellow-700 font-bold w-[100%]" onClick={() => submitTasjeel()}>إضافة الشرط الواحد</p>

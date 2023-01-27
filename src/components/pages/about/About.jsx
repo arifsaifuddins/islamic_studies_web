@@ -29,8 +29,8 @@ const About = () => {
       </div>
       <div className="bg-white border-t-4 border-yellow-600">
         <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
-          <h2 className='px-3 py-1 absolute xl:right-0 right-4 rounded-bl-lg bg-yellow-600 w-max text-white'>عن كلية الدراسات الإسلامية</h2>
-          <div className="mx-auto  lg:w-[900px] w-full text-end leading-9 py-32">
+          <h2 className='px-3 py-1 absolute rounded-bl-lg bg-yellow-600 w-max text-white'>عن كلية الدراسات الإسلامية</h2>
+          <div className="mx-auto  lg:w-[900px] w-full leading-9 py-32">
             <img src="/exmp.jpg" alt="photo" className='object-cover w-full mb-14 h-60' />
             <p className="mb-12">
               جاء إنشاء هذه الكلية تلبية لحاجة أبناء المسلمين في مختلف بقاع العالم للتزود بسلاح العلم الشرعي، والمعارف الإسلامية، وتأهيلهم وتنمية قدراتهم لأداء دورهم للقيام بواجب الدعوة الإسلامية في بلادهم، وفق أهداف الجامعة ورسالتها، وخصوصية طلابها
@@ -57,7 +57,7 @@ const About = () => {
       <div className="bg-slate-100 border-t-4 border-yellow-600">
         <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
           <h2 className='px-3 py-1 absolute xl:left-0 left-4 rounded-br-lg bg-yellow-600 w-max text-white'>الرؤيات والأهداف لكلية الدراسات الإسلامية</h2>
-          <div className="mx-auto lg:w-[900px] w-full text-end leading-9 py-32">
+          <div className="mx-auto lg:w-[900px] w-full leading-9 py-32">
             {
               vision?.length > 0 && (
                 <>
@@ -66,7 +66,7 @@ const About = () => {
                     vision?.map(a => {
                       return (
                         <ul key={a._id}>
-                          <li className='flex flex-row-reverse relative mb-6' data-aos="fade-up">
+                          <li className='flex flex-row relative mb-6' data-aos="fade-up">
                             {
                               cookies.admin && cookies.id_admin && (
                                 <button onClick={() => ConfirmAlert(a._id, 'vismis')} className="h-8 w-8 rounded-br-lg rounded-tl-lg text-xl flex items-center justify-center font-bold bg-red-600 absolute left-0">
@@ -93,7 +93,7 @@ const About = () => {
                     mission?.map(a => {
                       return (
                         <ul key={a._id}>
-                          <li className='flex flex-row-reverse relative mb-6' data-aos="fade-up">
+                          <li className='flex flex-row relative mb-6' data-aos="fade-up">
                             {
                               cookies.admin && cookies.id_admin && (
                                 <button onClick={() => ConfirmAlert(a._id, 'vismis')} className="h-8 w-8 rounded-br-lg rounded-tl-lg text-xl flex items-center justify-center font-bold bg-red-600 absolute left-0">
@@ -120,7 +120,7 @@ const About = () => {
                     risalat?.map(a => {
                       return (
                         <ul key={a._id}>
-                          <li className='flex flex-row-reverse relative mb-6' data-aos="fade-up">
+                          <li className='flex flex-row relative mb-6' data-aos="fade-up">
                             {
                               cookies.admin && cookies.id_admin && (
                                 <button onClick={() => ConfirmAlert(a._id, 'vismis')} className="h-8 w-8 rounded-br-lg rounded-tl-lg text-xl flex items-center justify-center font-bold bg-red-600 absolute left-0">
@@ -147,7 +147,7 @@ const About = () => {
                     qiyam?.map(a => {
                       return (
                         <ul key={a._id}>
-                          <li className='flex flex-row-reverse relative mb-6' data-aos="fade-up">
+                          <li className='flex flex-row relative mb-6' data-aos="fade-up">
                             {
                               cookies.admin && cookies.id_admin && (
                                 <button onClick={() => ConfirmAlert(a._id, 'vismis')} className="h-8 w-8 rounded-br-lg rounded-tl-lg text-xl flex items-center justify-center font-bold bg-red-600 absolute left-0">

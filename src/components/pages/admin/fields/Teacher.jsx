@@ -92,56 +92,56 @@ function TeacherField({ url }) {
         </div>
       }
       <div>
-        <div className="flex md:flex-row-reverse justify-around items-center md:gap-8 flex-col">
+        <div className="flex md:flex-row justify-around items-center md:gap-8 flex-col">
           <div className="w-full">
-            <label htmlFor="namehai" className="my-2 block font-bold text-yellow-600">: الاسم</label>
-            <input required type="text" onChange={(e) => setName(e.target.value)} id="namehai" placeholder="الاسم" className="names text-end bg-transparent py-1 pr-3 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
+            <label htmlFor="namehai" className="my-2 block font-bold text-yellow-600">الاسم :</label>
+            <input required type="text" onChange={(e) => setName(e.target.value)} id="namehai" placeholder="الاسم" className="names  bg-transparent py-1 pr-3 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
           </div>
           <div className="w-full">
-            <label htmlFor="country" className="my-2 block font-bold text-yellow-600">: الدولة</label>
-            <input required type="text" onChange={(e) => setCountry(e.target.value)} id="country" placeholder="الدولة" className="text-end bg-transparent py-1 pr-3 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
-          </div>
-        </div>
-        <div className="flex md:flex-row-reverse justify-around items-center md:gap-8 flex-col">
-          <div className="w-full">
-            <label htmlFor="address" className="my-2 block font-bold text-yellow-600">: العنوان</label>
-            <input required type="text" onChange={(e) => setAddress(e.target.value)} id="address" placeholder="العنوان" className="text-end bg-transparent py-1 pr-3 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
-          </div>
-          <div className="w-full">
-            <label htmlFor="birth" className="my-2 block font-bold text-yellow-600">: تاريخ الميلاد</label>
-            <input required type="date" onChange={(e) => setDate(e.target.value)} id="birth" className="text-end bg-transparent py-1 pr-3 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
+            <label htmlFor="country" className="my-2 block font-bold text-yellow-600">الدولة :</label>
+            <input required type="text" onChange={(e) => setCountry(e.target.value)} id="country" placeholder="الدولة" className=" bg-transparent py-1 pr-3 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
           </div>
         </div>
-        <div className="flex md:flex-row-reverse justify-around items-center md:gap-8 flex-col">
+        <div className="flex md:flex-row justify-around items-center md:gap-8 flex-col">
           <div className="w-full">
-            <label htmlFor="emailhai" className="my-2 block font-bold text-yellow-600">: البريد الإلكتروني</label>
-            <input required type="text" onChange={(e) => setEmail(e.target.value)} id="emailhai" placeholder="البريد الإلكتروني" className="text-end bg-transparent py-1 pr-3 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
+            <label htmlFor="address" className="my-2 block font-bold text-yellow-600">العنوان :</label>
+            <input required type="text" onChange={(e) => setAddress(e.target.value)} id="address" placeholder="العنوان" className=" bg-transparent py-1 pr-3 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
           </div>
           <div className="w-full">
-            <label htmlFor="phone" className="my-2 block font-bold text-yellow-600">: الهاتف</label>
-            <input required type="number" onChange={(e) => setPhone(e.target.value)} id="phone" placeholder="الهاتف" className="text-end bg-transparent py-1 pr-3 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
+            <label htmlFor="birth" className="my-2 block font-bold text-yellow-600">تاريخ الميلاد :</label>
+            <input required type="date" onChange={(e) => setDate(e.target.value)} id="birth" className=" bg-transparent py-1 pr-3 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
           </div>
         </div>
-        <div className="flex md:flex-row-reverse justify-around items-center md:gap-8 flex-col">
+        <div className="flex md:flex-row justify-around items-center md:gap-8 flex-col">
           <div className="w-full">
-            <label htmlFor="status" className="my-2 block font-bold text-yellow-600">: حالة اجتماعية</label>
-            <select required type="text" id="status" onChange={(e) => setStatus(e.target.value)} className="status bg-transparent p-3 rounded-lg  border text-end outline-none border-yellow-600 w-[100%]" >
+            <label htmlFor="emailhai" className="my-2 block font-bold text-yellow-600">البريد الإلكتروني :</label>
+            <input required type="text" onChange={(e) => setEmail(e.target.value)} id="emailhai" placeholder="البريد الإلكتروني" className=" bg-transparent py-1 pr-3 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
+          </div>
+          <div className="w-full">
+            <label htmlFor="phone" className="my-2 block font-bold text-yellow-600">الهاتف :</label>
+            <input required type="number" onChange={(e) => setPhone(e.target.value)} id="phone" placeholder="الهاتف" className=" bg-transparent py-1 pr-3 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
+          </div>
+        </div>
+        <div className="flex md:flex-row justify-around items-center md:gap-8 flex-col">
+          <div className="w-full">
+            <label htmlFor="status" className="my-2 block font-bold text-yellow-600">حالة اجتماعية :</label>
+            <select required type="text" id="status" onChange={(e) => setStatus(e.target.value)} className="status bg-transparent p-3 rounded-lg  border  outline-none border-yellow-600 w-[100%]" >
               <option value="متزوج">متزوج</option>
               <option value="عازب">عازب</option>
             </select>
           </div>
           <div className="w-full">
-            <label htmlFor="gender" className="my-2 block font-bold text-yellow-600">: جنس</label>
-            <select required type="text" id="gender" onChange={(e) => setGender(e.target.value)} className="gender bg-transparent p-3 rounded-lg  border text-end outline-none border-yellow-600 w-[100%]" >
+            <label htmlFor="gender" className="my-2 block font-bold text-yellow-600">جنس :</label>
+            <select required type="text" id="gender" onChange={(e) => setGender(e.target.value)} className="gender bg-transparent p-3 rounded-lg  border  outline-none border-yellow-600 w-[100%]" >
               <option value="ذكر">ذكر</option>
               <option value="أنثى">أنثى</option>
             </select>
           </div>
         </div>
-        <div className="flex md:flex-row-reverse justify-around items-center md:gap-8 flex-col">
+        <div className="flex md:flex-row justify-around items-center md:gap-8 flex-col">
           <div className="w-full">
-            <label htmlFor="qism" className="my-2 block font-bold text-yellow-600">: قسم الهيئة</label>
-            <select required type="text" id="qism" onChange={(e) => setQism(e.target.value)} className="qisms bg-transparent p-3 rounded-lg  border text-end outline-none border-yellow-600 w-[100%]" >
+            <label htmlFor="qism" className="my-2 block font-bold text-yellow-600">قسم الهيئة :</label>
+            <select required type="text" id="qism" onChange={(e) => setQism(e.target.value)} className="qisms bg-transparent p-3 rounded-lg  border  outline-none border-yellow-600 w-[100%]" >
               <option value="ameed">عميد الكلية</option>
               <option value="naib_ameed">نائب العميد</option>
               <option value="musajil">مسجل الكلية</option>
@@ -154,8 +154,8 @@ function TeacherField({ url }) {
             </select>
           </div>
           <div className="w-full">
-            <label htmlFor="daragah" className="my-2 block font-bold text-yellow-600">: الدرجة العلمية</label>
-            <select required type="text" id="daragah" onChange={(e) => setDaragah(e.target.value)} className="darajah bg-transparent p-3 rounded-lg  border text-end outline-none border-yellow-600 w-[100%]" >
+            <label htmlFor="daragah" className="my-2 block font-bold text-yellow-600">الدرجة العلمية :</label>
+            <select required type="text" id="daragah" onChange={(e) => setDaragah(e.target.value)} className="darajah bg-transparent p-3 rounded-lg  border  outline-none border-yellow-600 w-[100%]" >
               <option value="أستاذ">أستاذ</option>
               <option value="مشارك">مشارك</option>
               <option value="محاضر">محاضر</option>
@@ -164,14 +164,14 @@ function TeacherField({ url }) {
             </select>
           </div>
         </div>
-        <div className="flex md:flex-row-reverse justify-around items-center md:gap-8 flex-col">
+        <div className="flex md:flex-row justify-around items-center md:gap-8 flex-col">
           <div className="w-full">
-            <label htmlFor="posting" className="my-2 block font-bold text-yellow-600">: الصورة</label>
-            <input required onChange={(e) => setPoster(e.target.files[0])} type="file" id="posting" className="posimg bg-transparent py-1 pl-3 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
+            <label htmlFor="posting" className="my-2 block font-bold text-yellow-600">الصورة :</label>
+            <input required onChange={(e) => setPoster(e.target.files[0])} type="file" id="posting" className="posimg bg-transparent py-1 pr-3 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
           </div>
           <div className="w-full">
-            <label htmlFor="postfile" className="my-2 block font-bold text-yellow-600">: السيرة الذاتية</label>
-            <input required onChange={(e) => setCV(e.target.files[0])} type="file" id="postfile" className="postfile bg-transparent py-1 pl-3 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
+            <label htmlFor="postfile" className="my-2 block font-bold text-yellow-600">السيرة الذاتية :</label>
+            <input required onChange={(e) => setCV(e.target.files[0])} type="file" id="postfile" className="postfile bg-transparent py-1 pr-3 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
           </div>
         </div>
         {

@@ -72,12 +72,12 @@ function AnnoucField({ url }) {
         </div>
       }
       <div className="w-full">
-        <input required type="text" onChange={(e) => setTitle(e.target.value)} id="titlepost" placeholder="موضوع الإعلام" className="titl text-end bg-transparent py-1 pr-3 mt-4 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
+        <input required type="text" onChange={(e) => setTitle(e.target.value)} id="titlepost" placeholder="موضوع الإعلام" className="titl bg-transparent py-1 pr-3 mt-4 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
       </div>
       <div className="flex justify-around items-center md:gap-8 md:flex-row flex-col">
         <div className="w-full">
-          <label htmlFor="postfile" className="my-2 block font-bold text-yellow-600">: الصورة</label>
-          <input required onChange={(e) => setPoster(e.target.files[0])} type="file" id="postfile" className="pos bg-transparent py-1 pl-3 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
+          <label htmlFor="postfile" className="my-2 block font-bold text-yellow-600">الصورة :</label>
+          <input required onChange={(e) => setPoster(e.target.files[0])} type="file" id="postfile" className="pos bg-transparent py-1 pr-3 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
         </div>
       </div>
       {

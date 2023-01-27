@@ -30,15 +30,15 @@ const Hadith = () => {
       </div>
       <div className="bg-white border-t-4 border-yellow-600">
         <div className="mx-auto  xl:w-[1200px] w-full px-4 xl:px-0 relative">
-          <h2 className='px-3 py-1 absolute xl:right-0 right-4 rounded-bl-lg bg-yellow-600 w-max text-white'>قسم السنة وعلوم الحديث</h2>
-          <div className="mx-auto lg:w-[900px] w-full text-end leading-9 py-32">
+          <h2 className='px-3 py-1 absolute rounded-bl-lg bg-yellow-600 w-max text-white'>قسم السنة وعلوم الحديث</h2>
+          <div className="mx-auto lg:w-[900px] w-full leading-9 py-32">
             {
               hadith_bachelor_5?.length > 0 && (
                 <>
                   <div className="mb-20">
                     <h2 className='text-lg text-white w-full px-4 py-2 bg-yellow-600 text-center'>الفصل الدراسي الخامس</h2>
                     <ul className='bg-white border-x'>
-                      <li className='flex flex-row-reverse items-center font-bold gap-6 border-b-4 px-6 py-2 text-yellow-600'>
+                      <li className='flex flex-row items-center font-bold gap-6 border-b-4 px-6 py-2 text-yellow-600'>
                         <p className='w-[65%] text-center'>المواد الدراسية</p>
                         <div className='border-2 h-6 border-yellow-600' />
                         <p className='w-[30%] text-center'>الساعات</p>
@@ -46,7 +46,7 @@ const Hadith = () => {
                       {
                         hadith_bachelor_5?.map(a => {
                           return (
-                            <li key={a._id} className='flex flex-row-reverse relative items-center gap-6 border-b-4 px-6 py-2'>
+                            <li key={a._id} className='flex flex-row relative items-center gap-6 border-b-4 px-6 py-2'>
                               {
                                 cookies.admin && cookies.id_admin && (
                                   <button onClick={() => ConfirmAlert(a._id, 'studies')} className="h-8 w-8 rounded-r-lg text-xl flex items-center justify-center font-bold bg-red-600 absolute left-0">
@@ -72,7 +72,7 @@ const Hadith = () => {
                   <div className="mb-20">
                     <h2 className='text-lg text-white w-full px-4 py-2 bg-yellow-600 text-center'>الفصل الدراسي السادس</h2>
                     <ul className='bg-white border-x'>
-                      <li className='flex flex-row-reverse items-center font-bold gap-6 border-b-4 px-6 py-2 text-yellow-600'>
+                      <li className='flex flex-row items-center font-bold gap-6 border-b-4 px-6 py-2 text-yellow-600'>
                         <p className='w-[65%] text-center'>المواد الدراسية</p>
                         <div className='border-2 h-6 border-yellow-600' />
                         <p className='w-[30%] text-center'>الساعات</p>
@@ -80,7 +80,7 @@ const Hadith = () => {
                       {
                         hadith_bachelor_6?.map(a => {
                           return (
-                            <li key={a._id} className='flex flex-row-reverse relative items-center gap-6 border-b-4 px-6 py-2'>
+                            <li key={a._id} className='flex flex-row relative items-center gap-6 border-b-4 px-6 py-2'>
                               {
                                 cookies.admin && cookies.id_admin && (
                                   <button onClick={() => ConfirmAlert(a._id, 'studies')} className="h-8 w-8 rounded-r-lg text-xl flex items-center justify-center font-bold bg-red-600 absolute left-0">
@@ -106,7 +106,7 @@ const Hadith = () => {
                   <div className="mb-20">
                     <h2 className='text-lg text-white w-full px-4 py-2 bg-yellow-600 text-center'>الفصل الدراسي السابع</h2>
                     <ul className='bg-white border-x'>
-                      <li className='flex flex-row-reverse items-center font-bold gap-6 border-b-4 px-6 py-2 text-yellow-600'>
+                      <li className='flex flex-row items-center font-bold gap-6 border-b-4 px-6 py-2 text-yellow-600'>
                         <p className='w-[65%] text-center'>المواد الدراسية</p>
                         <div className='border-2 h-6 border-yellow-600' />
                         <p className='w-[30%] text-center'>الساعات</p>
@@ -114,7 +114,7 @@ const Hadith = () => {
                       {
                         hadith_bachelor_7?.map(a => {
                           return (
-                            <li key={a._id} className='flex flex-row-reverse relative items-center gap-6 border-b-4 px-6 py-2'>
+                            <li key={a._id} className='flex flex-row relative items-center gap-6 border-b-4 px-6 py-2'>
                               {
                                 cookies.admin && cookies.id_admin && (
                                   <button onClick={() => ConfirmAlert(a._id, 'studies')} className="h-8 w-8 rounded-r-lg text-xl flex items-center justify-center font-bold bg-red-600 absolute left-0">
@@ -140,7 +140,7 @@ const Hadith = () => {
                   <div className="mb-20">
                     <h2 className='text-lg text-white w-full px-4 py-2 bg-yellow-600 text-center'>الفصل الدراسي لثامن</h2>
                     <ul className='bg-white border-x'>
-                      <li className='flex flex-row-reverse items-center font-bold gap-6 border-b-4 px-6 py-2 text-yellow-600'>
+                      <li className='flex flex-row items-center font-bold gap-6 border-b-4 px-6 py-2 text-yellow-600'>
                         <p className='w-[65%] text-center'>المواد الدراسية</p>
                         <div className='border-2 h-6 border-yellow-600' />
                         <p className='w-[30%] text-center'>الساعات</p>
@@ -148,7 +148,7 @@ const Hadith = () => {
                       {
                         hadith_bachelor_8?.map(a => {
                           return (
-                            <li key={a._id} className='flex flex-row-reverse relative items-center gap-6 border-b-4 px-6 py-2'>
+                            <li key={a._id} className='flex flex-row relative items-center gap-6 border-b-4 px-6 py-2'>
                               {
                                 cookies.admin && cookies.id_admin && (
                                   <button onClick={() => ConfirmAlert(a._id, 'studies')} className="h-8 w-8 rounded-r-lg text-xl flex items-center justify-center font-bold bg-red-600 absolute left-0">

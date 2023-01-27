@@ -66,7 +66,7 @@ const Home = () => {
           <Modal isOpen={AnnoucIsOpen} onRequestClose={() => close()} style={{ content: { transform: 'translate(-50%, -50%)', top: '50%', right: 'auto', left: '50%', bottom: 'auto', marginRight: '-50%', padding: 0 } }} >
             {
               cookie.admin && cookie.id_admin && (
-                <button onClick={() => ConfirmAlert(Annouc[0]?.id, 'annouc')} className="h-8 w-8 rounded-bl-lg text-xl flex items-center justify-center font-bold bg-red-600 absolute right-0">
+                <button onClick={() => ConfirmAlert(Annouc[0]?.id, 'annouc')} className="h-8 w-8 rounded-bl-lg text-xl flex items-center justify-center font-bold bg-red-600 absolute left-0">
                   <FiTrash color='white' />
                 </button>
               )
@@ -84,15 +84,15 @@ const Home = () => {
           <p className='md:text-2xl text-xl text-center'>الموقع الرسمي لكلية الدراسات الإسلامية بجامعة إفريقيا العالمية</p>
           <p className='md:text-xl text-md text-yellow-400'>الخرطوم - السودان</p>
 
-          <div className="flex sm:flex-row-reverse w-full flex-col justify-center items-center gap-4 mt-32 sm:mt-14">
-            <Link to="/programs" className='w-[80%] justify-center sm:w-max sm:px-8 py-2 border-4 hover:border-yellow-600 border-yellow-400 hover:bg-yellow-600 bg-yellow-400 rounded-lg flex flex-row-reverse text-slate-700 items-center gap-2'><FiBriefcase /> انظر البرامج</Link>
-            <Link to='/contact' className='w-[80%] justify-center sm:w-max sm:px-8 py-2 border-4 hover:border-yellow-600 border-yellow-400 rounded-lg flex flex-row-reverse items-center gap-2'><FiPhone /> اتصل بنا</Link>
+          <div className="flex sm:flex-row w-full flex-col justify-center items-center gap-4 mt-32 sm:mt-14">
+            <Link to="/programs" className='w-[80%] justify-center sm:w-max sm:px-8 py-2 border-4 hover:border-yellow-600 border-yellow-400 hover:bg-yellow-600 bg-yellow-400 rounded-lg flex flex-row text-slate-700 items-center gap-2'><FiBriefcase /> انظر البرامج</Link>
+            <Link to='/contact' className='w-[80%] justify-center sm:w-max sm:px-8 py-2 border-4 hover:border-yellow-600 border-yellow-400 rounded-lg flex flex-row items-center gap-2'><FiPhone /> اتصل بنا</Link>
           </div>
         </div>
       </div>
       <div className="bg-white border-t-4 border-yellow-600">
         <div className="mx-auto xl:w-[1200px] w-[100vw] px-4 xl:px-0 relative">
-          <h2 className='px-3 py-1 absolute xl:right-0 right-4 rounded-bl-lg bg-yellow-600 w-max text-white'>إعلانات كلية الدراسات الإسلامية</h2>
+          <h2 className='px-3 py-1 absolute rounded-bl-lg bg-yellow-600 w-max text-white'>إعلانات كلية الدراسات الإسلامية</h2>
           <div className="mx-auto overflow-x-scroll">
             <div className="py-40 flex flex-row items-center mx-auto w-max sm:w-full sm:justify-around gap-6">
               {
@@ -115,16 +115,16 @@ const Home = () => {
       </div>
       <div className="bg-slate-100 border-t-4 border-yellow-600">
         <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
-          <h2 className='px-3 py-1 absolute rounded-br-lg bg-yellow-600 w-max text-white'>أخبار كلية الدراسات الإسلامية</h2>
-          <div className="pt-40 md:pb-10 pb-8 flex lg:flex-row-reverse flex-col items-center justify-around md:gap-10 gap-8" data-aos="fade-up">
+          <h2 className='px-3 py-1 absolute  xl:left-0 left-4 rounded-br-lg bg-yellow-600 w-max text-white'>أخبار كلية الدراسات الإسلامية</h2>
+          <div className="pt-40 md:pb-10 pb-8 flex lg:flex-row flex-col items-center justify-around md:gap-10 gap-8" data-aos="fade-up">
             {
               Programs != null && m.map((e) => {
                 return (
-                  <Link to={`/programs/${Programs[e]?.id_post}`} key={e} className="flex flex-row-reverse  lg:w-80 w-full px-4 lg:px-0 py-3 md:gap-6 gap-4">
-                    <img src={`${php}/assets/${Programs[e]?.poster}`} alt={Programs[e]?.title} className='object-center h-32 w-32' />
-                    <div className="text-end">
+                  <Link to={`/programs/${Programs[e]?.id_post}`} key={e} className="flex flex-row  lg:w-80 w-full px-4 lg:px-0 py-3 md:gap-6 gap-4">
+                    <img src={`${php}/assets/${Programs[e]?.poster}`} alt={Programs[e]?.title} className='object-cover aspect-square h-32' />
+                    <div className="text-start">
                       <h2 className='font-bold md:text-xl text-lg text-yellow-600 underline'>{Programs[e]?.title}</h2>
-                      <p className="pt-2 flex flex-row-reverse gap-3 items-center">
+                      <p className="pt-2 flex flex-row gap-3 items-center">
                         <FiCalendar />
                         <span>{Programs[e]?.date}</span>
                       </p>
@@ -134,15 +134,15 @@ const Home = () => {
               })
             }
           </div>
-          <div className="pb-40 flex lg:flex-row-reverse flex-col items-center justify-around md:gap-10 gap-8" data-aos="fade-up">
+          <div className="pb-40 flex lg:flex-row flex-col items-center justify-around md:gap-10 gap-8" data-aos="fade-up">
             {
               Programs != null && r.map((e) => {
                 return (
-                  <Link to={`/programs/${Programs[e]?.id_post}`} key={e} className="flex flex-row-reverse  lg:w-80 w-full px-4 lg:px-0 py-3 md:gap-6 gap-4">
-                    <img src={`${php}/assets/${Programs[e]?.poster}`} alt={Programs[e]?.title} className='object-center h-32 w-32' />
-                    <div className="text-end">
+                  <Link to={`/programs/${Programs[e]?.id_post}`} key={e} className="flex flex-row  lg:w-80 w-full px-4 lg:px-0 py-3 md:gap-6 gap-4">
+                    <img src={`${php}/assets/${Programs[e]?.poster}`} alt={Programs[e]?.title} className='object-cover aspect-square h-32' />
+                    <div className="text-start">
                       <h2 className='font-bold md:text-xl text-lg text-yellow-600 underline'>{Programs[e]?.title}</h2>
-                      <p className="pt-2 flex flex-row-reverse gap-3 items-center">
+                      <p className="pt-2 flex flex-row gap-3 items-center">
                         <FiCalendar />
                         <span>{Programs[e]?.date}</span>
                       </p>
@@ -155,11 +155,11 @@ const Home = () => {
         </div>
         <div className="bg-white border-t-4 border-yellow-600">
           <div className="mx-auto  xl:w-[1200px] w-full px-4 xl:px-0 relative leading-normal">
-            <h2 className='px-3 py-1 absolute xl:right-0 right-4 rounded-bl-lg bg-yellow-600 w-max text-white'>نشاطات كلية الدراسات الإسلامية</h2>
+            <h2 className='px-3 py-1 absolute rounded-bl-lg bg-yellow-600 w-max text-white'>نشاطات كلية الدراسات الإسلامية</h2>
             <div className="pb-20 pt-40">
-              <div className="flex lg:flex-row flex-col items-center justify-between py-3 lg:gap-28 gap-10">
+              <div className="flex lg:flex-row-reverse flex-col items-center justify-between py-3 lg:gap-28 gap-10">
                 <img src="/exmp.jpg" alt="photo" className='object-cover h-[500px] w-[450px]' data-aos="fade-up" />
-                <div className="lg:text-end sm:text-center text-end">
+                <div className="lg:text-start sm:text-center text-start">
                   <h2 className='font-bold lg:text-5xl md:text-4xl text-3xl text-yellow-600 mb-4'>الطلاب والطالبات</h2>
                   <p className="md:text-xl text-md pt-2">تعد هذه الكلية من أكثرها عددا من الطلاب والطالبات المسجلين من جميع أنحاء قارة الآسيا والإفريقيا</p>
                   <h3 className='text-lg md:block hidden mt-4 text-red-500'>الطلاب والطالبات</h3>
@@ -167,9 +167,9 @@ const Home = () => {
               </div>
             </div>
             <div className="pb-20">
-              <div className="flex lg:flex-row-reverse flex-col items-center justify-between py-3 lg:gap-28 gap-10">
+              <div className="flex lg:flex-row flex-col items-center justify-between py-3 lg:gap-28 gap-10">
                 <img src="/exmp.jpg" alt="photo" className='object-cover h-[500px] w-[450px]' data-aos="fade-up" />
-                <div className="lg:text-end sm:text-center text-end">
+                <div className="lg:text-start sm:text-center text-start">
                   <h2 className='font-bold lg:text-5xl md:text-4xl text-3xl text-yellow-600 mb-4'>الامتحانات الإليكترونية</h2>
                   <p className="md:text-xl text-md pt-2">نشاطات الطلاب والطالبات في الامتحانات الإليكترونية في الفصول الدراسية الفردية والزوجية</p>
                   <h3 className='text-lg md:block hidden mt-4 text-red-500'>الامتحانات الإليكترونية</h3>
@@ -181,8 +181,8 @@ const Home = () => {
       </div>
       <div className="bg-slate-100 border-t-4 border-yellow-600">
         <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
-          <h2 className='px-3 py-1 absolute rounded-br-lg bg-yellow-600 w-max text-white'>أقسام كلية الدراسات الإسلامية</h2>
-          <div className="py-40 flex lg:flex-row-reverse flex-col items-center justify-around gap-8" data-aos="fade-down">
+          <h2 className='px-3 py-1 absolute xl:left-0 left-4 rounded-br-lg bg-yellow-600 w-max text-white'>أقسام كلية الدراسات الإسلامية</h2>
+          <div className="py-40 flex lg:flex-row flex-col items-center justify-around gap-8" data-aos="fade-down">
             <Link to="/hadith" className="flex flex-col w-full items-center px-4 pb-6 pt-16 rounded-lg shadow bg-white">
               <div className="p-4 rounded-lg bg-purple-400 mb-4 text-white w-max text-2xl">
                 <FiBookOpen />
@@ -209,7 +209,7 @@ const Home = () => {
       </div>
       <div className="bg-white border-t-4 border-yellow-600">
         <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
-          <h2 className='px-3 py-1 absolute xl:right-0 right-4 rounded-bl-lg bg-yellow-600 w-max text-white'>عدد زائري موقع الكلية</h2>
+          <h2 className='px-3 py-1 absolute rounded-bl-lg bg-yellow-600 w-max text-white'>عدد زائري موقع الكلية</h2>
           <div className="py-40 flex flex-col items-center gap-4 justify-center">
             <h1 className='md:text-6xl font-bold text-5xl' data-aos="fade-right">{Visit}</h1>
             <span>مرات من الزيارة</span>

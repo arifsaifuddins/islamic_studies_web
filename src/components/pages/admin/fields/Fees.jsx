@@ -63,10 +63,10 @@ function FeesField({ url }) {
             <p onClick={() => setErrored(false)} className="text-yellow-600 hover:text-yellow-700 text-2xl cursor-pointer">&times;</p>
           </div>
         }
-        <input required type="text" onChange={(e) => setProgram(e.target.value)} name="Program" placeholder="البرامج الدراسية" className="categor my-4 bg-transparent py-1 text-end pr-3 rounded-lg mt-4 border outline-none border-yellow-600 w-[100%]" />
+        <input required type="text" onChange={(e) => setProgram(e.target.value)} name="Program" placeholder="البرامج الدراسية" className="categor my-4 bg-transparent py-1 pr-3 rounded-lg mt-4 border outline-none border-yellow-600 w-[100%]" />
         <div className="flex flex-row-reverse gap-4">
-          <input required type="number" onChange={(e) => setDollar(e.target.value)} placeholder="الدولار " className="dollar mb-4 bg-transparent py-1 text-end pr-3 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
-          <input required type="number" onChange={(e) => setPound(e.target.value)} onKeyUp={(e) => e.which === 13 && submitFees()} placeholder="الجنيه " className="pound mb-4 bg-transparent py-1 text-end pr-3 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
+          <input required type="number" onChange={(e) => setDollar(e.target.value)} placeholder="الدولار " className="dollar mb-4 bg-transparent py-1 pr-3 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
+          <input required type="number" onChange={(e) => setPound(e.target.value)} onKeyUp={(e) => e.which === 13 && submitFees()} placeholder="الجنيه " className="pound mb-4 bg-transparent py-1 pr-3 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
         </div>
         {
           (Commited == false) ? <p className="bprogram cursor-not-allowed text-center mt-4 bg-yellow-800 text-slate-400 py-1 pl-3 rounded-lg font-bold w-[100%]">إضافة الرسوم</p> : <p className="cursor-pointer text-center mt-4 bg-yellow-600 text-white py-1 pl-3 rounded-lg hover:bg-yellow-700 font-bold w-[100%]" onClick={() => submitFees()}>إضافة الرسوم</p>

@@ -41,8 +41,8 @@ const Admin = () => {
       </div>
       <div className="bg-white border-t-4 border-yellow-600">
         <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
-          <h2 className='px-3 py-1 absolute xl:right-0 right-4 rounded-bl-lg bg-yellow-600 w-max text-white'>برامج كلية الدراسات الإسلامية</h2>
-          <div className="mx-auto  lg:w-[900px] w-full text-end leading-9 py-32">
+          <h2 className='px-3 py-1 absolute rounded-bl-lg bg-yellow-600 w-max text-white'>برامج كلية الدراسات الإسلامية</h2>
+          <div className="mx-auto  lg:w-[900px] w-full leading-9 py-32">
             <div className="relative w-full mx-auto p-3 rounded-lg shadow">
               <PostField url={php} />
             </div>
@@ -52,7 +52,7 @@ const Admin = () => {
       <div className="bg-slate-100 border-t-4 border-yellow-600">
         <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
           <h2 className='px-3 py-1 absolute xl:left-0 left-4 rounded-br-lg bg-yellow-600 w-max text-white'>إعلانات ومشرف كلية الدراسات الإسلامية</h2>
-          <div className="mx-auto flex flex-col gap-8 xl:flex-row lg:w-[900px] w-full text-end leading-9 py-32">
+          <div className="mx-auto flex flex-col gap-8 xl:flex-row lg:w-[900px] w-full leading-9 py-32">
             <div className="relative w-full mx-auto p-3 rounded-lg bg-white h-max shadow">
               <AdminField url={node} />
             </div>
@@ -64,8 +64,8 @@ const Admin = () => {
       </div>
       <div className="bg-white border-t-4 border-yellow-600">
         <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
-          <h2 className='px-3 py-1 absolute xl:right-0 right-4 rounded-bl-lg bg-yellow-600 w-max text-white'>التعريف والهيكل الوظيفي للكلية</h2>
-          <div className="mx-auto flex flex-col gap-8 xl:flex-row lg:w-[900px] w-full text-end leading-9 py-32">
+          <h2 className='px-3 py-1 absolute rounded-bl-lg bg-yellow-600 w-max text-white'>التعريف والهيكل الوظيفي للكلية</h2>
+          <div className="mx-auto flex flex-col gap-8 xl:flex-row lg:w-[900px] w-full leading-9 py-32">
             <div className="relative w-full mx-auto p-3 rounded-lg shadow h-max">
               <VisMissField url={node} />
             </div>
@@ -78,7 +78,7 @@ const Admin = () => {
       <div className="bg-slate-100 border-t-4 border-yellow-600">
         <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
           <h2 className='px-3 py-1 absolute xl:left-0 left-4 rounded-br-lg bg-yellow-600 w-max text-white'>التسجيل والقبول والشروط للكلية</h2>
-          <div className="mx-auto flex flex-col gap-8 xl:flex-row lg:w-[900px] w-full text-end leading-9 py-32">
+          <div className="mx-auto flex flex-col gap-8 xl:flex-row lg:w-[900px] w-full leading-9 py-32">
             <div className="relative w-full mx-auto p-3 rounded-lg bg-white h-max shadow">
               <TasjeelField url={node} />
             </div>
@@ -90,8 +90,8 @@ const Admin = () => {
       </div>
       <div className="bg-white border-t-4 border-yellow-600">
         <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
-          <h2 className='px-3 py-1 absolute xl:right-0 right-4 rounded-bl-lg bg-yellow-600 w-max text-white'>التعريف والهيكل الوظيفي للكلية</h2>
-          <div className="mx-auto flex flex-col gap-8 xl:flex-row lg:w-[900px] w-full text-end leading-9 py-32">
+          <h2 className='px-3 py-1 absolute rounded-bl-lg bg-yellow-600 w-max text-white'>التعريف والهيكل الوظيفي للكلية</h2>
+          <div className="mx-auto flex flex-col gap-8 xl:flex-row lg:w-[900px] w-full leading-9 py-32">
             <div className="relative w-full mx-auto p-3 rounded-lg shadow h-max">
               <KuliatField url={php} />
             </div>
@@ -104,7 +104,7 @@ const Admin = () => {
       <div className="bg-slate-100 border-t-4 border-yellow-600">
         <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
           <h2 className='px-3 py-1 absolute xl:left-0 left-4 rounded-br-lg bg-yellow-600 w-max text-white'>التسجيل والقبول والشروط للكلية</h2>
-          <div className="mx-auto flex flex-col gap-8 xl:flex-row lg:w-[900px] w-full text-end leading-9 py-32">
+          <div className="mx-auto flex flex-col gap-8 xl:flex-row lg:w-[900px] w-full leading-9 py-32">
             <div className="relative w-full mx-auto p-3 rounded-lg bg-white h-max shadow">
               <TeacherField url={php} />
             </div>
@@ -113,8 +113,8 @@ const Admin = () => {
       </div>
       <div className="bg-white border-t-4 border-yellow-600">
         <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
-          <h2 className='px-3 py-1 absolute xl:right-0 right-4 rounded-bl-lg bg-yellow-600 w-max text-white'>المشرفون المسجلون</h2>
-          <div className="mx-auto flex flex-col gap-8 xl:flex-row lg:w-[900px] w-full text-end leading-9 py-32">
+          <h2 className='px-3 py-1 absolute rounded-bl-lg bg-yellow-600 w-max text-white'>المشرفون المسجلون</h2>
+          <div className="mx-auto flex flex-col gap-8 xl:flex-row lg:w-[900px] w-full leading-9 py-32">
             <div className="relative w-full mx-auto p-3 rounded-lg shadow h-max">
               <div className=" overflow-hidden w-full">
                 <h1 className="text-center text-xl pb-6 pt-2 font-bold ">دخلت إشرافا</h1>
@@ -126,7 +126,7 @@ const Admin = () => {
                         <p>@{Admin.email}</p>
                         <div onClick={() => {
                           removeCookie('admin'); removeCookie('id_admin'); location.reload()
-                        }} className='mt-10 w-72 cursor-pointer justify-center bg-red-600 py-1 text-white rounded-lg flex flex-row-reverse mx-auto  items-center gap-2'><FiLogOut /> الخروج عن الإشراف</div>
+                        }} className='mt-10 w-72 cursor-pointer justify-center bg-red-600 py-1 text-white rounded-lg flex flex-row mx-auto  items-center gap-2'><FiLogOut /> الخروج عن الإشراف</div>
                       </div>
                     )
                   }

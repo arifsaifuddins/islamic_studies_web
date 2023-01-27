@@ -28,10 +28,10 @@ const Qobul = () => {
       </div>
       <div className="bg-white border-t-4 border-yellow-600">
         <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
-          <h2 className='px-3 py-1 absolute xl:right-0 right-4 rounded-bl-lg bg-yellow-600 w-max text-white'>رسوم كلية الدراسات الإسلامية</h2>
-          <div className="mx-auto lg:w-[900px] w-full text-end leading-9 py-32">
+          <h2 className='px-3 py-1 absolute rounded-bl-lg bg-yellow-600 w-max text-white'>رسوم كلية الدراسات الإسلامية</h2>
+          <div className="mx-auto lg:w-[900px] w-full text-start leading-9 py-32">
             <ul className='bg-white mt-4 border-t border-x'>
-              <li className='flex flex-row-reverse items-center font-bold gap-8 border-b-4 px-4 py-2 text-yellow-600'>
+              <li className='flex flex-row items-center font-bold gap-8 border-b-4 px-4 py-2 text-yellow-600'>
                 <p className='md:w-[50%] w-full text-center'>الكليات الدراسية</p>
                 <div className='border-2 hidden md:block h-6 border-yellow-600' />
                 <p className=' hidden md:block w-[20%] text-center'>الدولار</p>
@@ -41,7 +41,7 @@ const Qobul = () => {
               {
                 Fee != null && Fee?.map(a => {
                   return (
-                    <li key={a._id} className='flex md:flex-row-reverse relative flex-col items-center gap-8 border-b-4 px-4 py-2'>
+                    <li key={a._id} className='flex md:flex-row relative flex-col items-center gap-8 border-b-4 px-4 py-2'>
                       {
                         cookies.admin && cookies.id_admin && (
                           <button onClick={() => ConfirmAlert(Fee?._id, 'fees')} className="h-8 w-8 rounded-r-lg text-xl flex items-center justify-center font-bold bg-red-600 absolute left-0">
@@ -49,8 +49,8 @@ const Qobul = () => {
                           </button>
                         )
                       }
-                      <p className='md:w-[50%] w-full text-center md:text-end'>{a.name}</p>
-                      <div className="p-1 rounded-lg w-full flex flex-row-reverse items-center justify-around md:hidden border">
+                      <p className='md:w-[50%] w-full text-center md:text-start'>{a.name}</p>
+                      <div className="p-1 rounded-lg w-full flex flex-row items-center justify-around md:hidden border">
                         <p className='md:hidden text-center'>{a.dollar}</p>
                         <div className='border-2 md:hidden h-6 border-gray-600' />
                         <p className='md:hidden text-center'>{a.pound}</p>
@@ -70,13 +70,13 @@ const Qobul = () => {
       <div className="bg-slate-100 border-t-4 border-yellow-600">
         <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
           <h2 className='px-3 py-1 absolute xl:left-0 left-4 rounded-br-lg bg-yellow-600 w-max text-white'>شروط كلية الدراسات الإسلامية</h2>
-          <div className="mx-auto lg:w-[900px] w-full text-end leading-9 py-32">
+          <div className="mx-auto lg:w-[900px] w-full text-start leading-9 py-32">
             <h2 className='text-2xl font-bold text-yellow-600 mb-12'>شروط التسجيل والقبول</h2>
             <ul>
               {
                 Sharat != null && Sharat?.map(a => {
                   return (
-                    <li key={a._id} className='flex flex-row-reverse relative mb-4' data-aos="fade-up">
+                    <li key={a._id} className='flex flex-row relative mb-4' data-aos="fade-up">
                       {
                         cookies.admin && cookies.id_admin && (
                           <button onClick={() => ConfirmAlert(Sharat?._id, 'tasjeel')} className="h-8 w-8 rounded-br-lg rounded-tl-lg text-xl flex items-center justify-center font-bold bg-red-600 absolute left-0">

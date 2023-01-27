@@ -59,8 +59,8 @@ function VisMissField({ url }) {
           <p onClick={() => setErrored(false)} className="text-yellow-600 hover:text-yellow-700 text-2xl cursor-pointer">&times;</p>
         </div>
       }
-      <label htmlFor="category" className="my-2 block font-bold text-yellow-600">: النوع</label>
-      <select required id="category" onChange={(e) => setCategory(e.target.value)} className="viss bg-transparent p-3 text-end rounded-lg  border outline-none border-yellow-600 w-[100%]" >
+      <label htmlFor="category" className="my-2 block font-bold text-yellow-600">النوع :</label>
+      <select required id="category" onChange={(e) => setCategory(e.target.value)} className="viss bg-transparent p-3  rounded-lg  border outline-none border-yellow-600 w-[100%]" >
         <option value="1">الروية</option>
         <option value="2">الهدف</option>
         <option value="3">الرسالة</option>
@@ -68,10 +68,10 @@ function VisMissField({ url }) {
       </select>
 
       <div className="misi">
-        <div className="flex flex-row-reverse justify-between items-end text-yellow-600 font-bold my-3">
-          <label htmlFor="mission" className="block">: المعلومات</label>
+        <div className="flex flex-row justify-between text-yellow-600 font-bold my-3">
+          <label htmlFor="mission" className="block">المعلومات :</label>
         </div>
-        <textarea required id="mission" onChange={(e) => setPoint(e.target.value)} placeholder='الرؤية أو الهدف أو القيمة' className="mis misis bg-transparent py-1 pr-3 rounded-lg text-end border outline-none border-yellow-600 w-[100%]" />
+        <textarea required id="mission" onChange={(e) => setPoint(e.target.value)} placeholder='الرؤية أو الهدف أو القيمة' className="mis misis bg-transparent py-1 pr-3 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
       </div>
       {
         (Commited == false) ? <p className="bmiss cursor-not-allowed text-center mt-4 bg-yellow-800 text-slate-400 py-1 rounded-lg font-bold w-[100%]">إضافة الرؤيات أو الأهداف</p> : <p className="cursor-pointer text-center mt-4 bg-yellow-600 text-white py-1 rounded-lg hover:bg-yellow-700 font-bold w-[100%]" onClick={() => submitVisMiss()}>إضافة الرؤيات أو الأهداف</p>

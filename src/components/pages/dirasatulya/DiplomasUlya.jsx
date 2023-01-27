@@ -29,15 +29,15 @@ const DiplomaUlya = () => {
       </div>
       <div className="bg-white border-t-4 border-yellow-600">
         <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
-          <h2 className='px-3 py-1 absolute xl:right-0 right-4 rounded-bl-lg bg-yellow-600 w-max text-white'>دبلوم الدراسات الإسلامية</h2>
-          <div className="mx-auto lg:w-[900px] w-full text-end leading-9 py-32">
+          <h2 className='px-3 py-1 absolute rounded-bl-lg bg-yellow-600 w-max text-white'>دبلوم الدراسات الإسلامية</h2>
+          <div className="mx-auto lg:w-[900px] w-full leading-9 py-32">
             {
               diploma_ulya_dirasat_1?.length > 0 && (
                 <>
                   <div className="mb-20">
                     <h2 className='text-lg text-white w-full px-4 py-2 bg-yellow-600 text-center'>الفصل الدراسي الأول</h2>
                     <ul className='bg-white border-x'>
-                      <li className='flex flex-row-reverse items-center font-bold gap-6 border-b-4 px-6 py-2 text-yellow-600'>
+                      <li className='flex flex-row items-center font-bold gap-6 border-b-4 px-6 py-2 text-yellow-600'>
                         <p className='w-[65%] text-center'>المواد الدراسية</p>
                         <div className='border-2 h-6 border-yellow-600' />
                         <p className='w-[30%] text-center'>الساعات</p>
@@ -45,7 +45,7 @@ const DiplomaUlya = () => {
                       {
                         diploma_ulya_dirasat_1?.map(a => {
                           return (
-                            <li key={a._id} className='flex flex-row-reverse items-center gap-6 border-b-4 px-6 py-2'>
+                            <li key={a._id} className='flex flex-row items-center gap-6 border-b-4 px-6 py-2'>
                               <p className='w-[65%]'>{a.madah}</p>
                               <div className='border-2 h-6 border-gray-600' />
                               <p className='w-[30%] text-center'>{a.time}</p>
@@ -64,7 +64,7 @@ const DiplomaUlya = () => {
                   <div className="mb-20">
                     <h2 className='text-lg text-white w-full px-4 py-2 bg-yellow-600 text-center'>الفصل الدراسي الثاني</h2>
                     <ul className='bg-white border-x'>
-                      <li className='flex flex-row-reverse items-center font-bold gap-6 border-b-4 px-6 py-2 text-yellow-600'>
+                      <li className='flex flex-row items-center font-bold gap-6 border-b-4 px-6 py-2 text-yellow-600'>
                         <p className='w-[65%] text-center'>المواد الدراسية</p>
                         <div className='border-2 h-6 border-yellow-600' />
                         <p className='w-[30%] text-center'>الساعات</p>
@@ -72,7 +72,7 @@ const DiplomaUlya = () => {
                       {
                         diploma_ulya_dirasat_2?.map(a => {
                           return (
-                            <li key={a._id} className='flex flex-row-reverse items-center gap-6 border-b-4 px-6 py-2'>
+                            <li key={a._id} className='flex flex-row items-center gap-6 border-b-4 px-6 py-2'>
                               <p className='w-[65%]'>{a.madah}</p>
                               <div className='border-2 h-6 border-gray-600' />
                               <p className='w-[30%] text-center'>{a.time}</p>
@@ -91,14 +91,14 @@ const DiplomaUlya = () => {
       <div className="bg-slate-100 border-t-4 border-yellow-600">
         <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
           <h2 className='px-3 py-1 absolute xl:left-0 left-4 rounded-br-lg bg-yellow-600 w-max text-white'>دبلوم الدعوة والسيرة العالي (الضباط)</h2>
-          <div className="mx-auto lg:w-[900px] w-full text-end leading-9 py-32">
+          <div className="mx-auto lg:w-[900px] w-full leading-9 py-32">
             {
               diploma_ulya_dakwah_1?.length > 0 && (
                 <>
                   <div className="mb-20">
                     <h2 className='text-lg text-white w-full px-4 py-2 bg-yellow-600 text-center'>الفصل الدراسي الأول</h2>
                     <ul className='bg-white border-x'>
-                      <li className='flex flex-row-reverse items-center font-bold gap-6 border-b-4 px-6 py-2 text-yellow-600'>
+                      <li className='flex flex-row items-center font-bold gap-6 border-b-4 px-6 py-2 text-yellow-600'>
                         <p className='w-[65%] text-center'>المواد الدراسية</p>
                         <div className='border-2 h-6 border-yellow-600' />
                         <p className='w-[30%] text-center'>الساعات</p>
@@ -106,7 +106,7 @@ const DiplomaUlya = () => {
                       {
                         diploma_ulya_dakwah_1?.map(a => {
                           return (
-                            <li key={a._id} className='flex flex-row-reverse items-center gap-6 border-b-4 px-6 py-2'>
+                            <li key={a._id} className='flex flex-row items-center gap-6 border-b-4 px-6 py-2'>
                               <p className='w-[65%]'>{a.madah}</p>
                               <div className='border-2 h-6 border-gray-600' />
                               <p className='w-[30%] text-center'>{a.time}</p>
@@ -125,7 +125,7 @@ const DiplomaUlya = () => {
                   <div className="mb-20">
                     <h2 className='text-lg text-white w-full px-4 py-2 bg-yellow-600 text-center'>الفصل الدراسي الثاني</h2>
                     <ul className='bg-white border-x'>
-                      <li className='flex flex-row-reverse items-center font-bold gap-6 border-b-4 px-6 py-2 text-yellow-600'>
+                      <li className='flex flex-row items-center font-bold gap-6 border-b-4 px-6 py-2 text-yellow-600'>
                         <p className='w-[65%] text-center'>المواد الدراسية</p>
                         <div className='border-2 h-6 border-yellow-600' />
                         <p className='w-[30%] text-center'>الساعات</p>
@@ -133,7 +133,7 @@ const DiplomaUlya = () => {
                       {
                         diploma_ulya_dakwah_2?.map(a => {
                           return (
-                            <li key={a._id} className='flex flex-row-reverse items-center gap-6 border-b-4 px-6 py-2'>
+                            <li key={a._id} className='flex flex-row items-center gap-6 border-b-4 px-6 py-2'>
                               <p className='w-[65%]'>{a.madah}</p>
                               <div className='border-2 h-6 border-gray-600' />
                               <p className='w-[30%] text-center'>{a.time}</p>

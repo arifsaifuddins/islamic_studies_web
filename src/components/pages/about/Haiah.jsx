@@ -57,7 +57,7 @@ const Haiah = () => {
         <title>Islamic Teachers | هيئة التدريس</title>
       </Helmet>
       <Modal isOpen={HaiahIsOpen} onRequestClose={() => close()} style={{ content: { transform: 'translate(-50%, -50%)', top: '50%', right: 'auto', left: '50%', bottom: 'auto', marginRight: '-50%', padding: 0 } }} >
-        <button onClick={() => close()} className="h-8 w-8 rounded-br-lg text-xl flex items-center justify-center font-bold bg-red-600 absolute ">
+        <button onClick={() => close()} className="h-8 w-8 rounded-br-lg text-xl flex items-center justify-center font-bold bg-red-600 left-0 absolute ">
           <FiX color='white' />
         </button>
         <div className='w-max text-black py-2 px-6 '>
@@ -74,10 +74,10 @@ const Haiah = () => {
                     )
                   }
                   <img src={`${php}/assets/${Haiah[0]?.poster}`} alt={Haiah[0]?.name} className='object-cover w-72 h-72' />
-                  <div onClick={() => downloadFile(`${php}/assets/${Haiah[0]?.cv}`, Haiah[0]?.name + '.pdf')} className='w-72 cursor-pointer justify-center bg-yellow-600 py-2 text-white rounded-lg flex flex-row mx-auto  items-center gap-2'>CV | السيرة الذاتية </div>
+                  <div onClick={() => downloadFile(`${php}/assets/${Haiah[0]?.cv}`, Haiah[0]?.name + '.pdf')} className='lg:w-72 w-full cursor-pointer justify-center bg-yellow-600 py-2 text-white rounded-lg flex flex-row mx-auto  items-center gap-2'>CV | السيرة الذاتية </div>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <h1 className='font-bold text-yellow-600 text-xl'>{Haiah[0]?.name}</h1>
+                  <h1 className='font-bold text-yellow-600 mb-2 text-xl'>{Haiah[0]?.name}</h1>
                   <div className="items-center flex flex-row gap-2">
                     <p className='text-yellow-600'>الدرجة العلمية</p>
                     <span>:</span>

@@ -166,8 +166,8 @@ const Header = () => {
         </div>
         <div className="flex flex-col w-full text-slate-800 pb-40 px-4 h-[100vh] overflow-y-scroll">
           <div className="py-3 text-yellow-600 flex justify-between items-center w-full border-b">
-            <FiChevronDown />
             <p>عن الكلية</p>
+            <FiChevronDown />
           </div>
           <div className="flex-col flex w-full p-2 gap-2 border-b">
             <Link to="/about" className='w-full rounded-lg border hover:underline p-2' onClick={() => sidebar()}>التعريف بالكلية</Link>
@@ -175,8 +175,8 @@ const Header = () => {
             <Link to="/haiah" className='w-full rounded-lg border hover:underline p-2' onClick={() => sidebar()}>هيئة التدريس للكلية</Link>
           </div>
           <div className="py-3 text-yellow-600 flex justify-between items-center w-full border-b">
-            <FiChevronDown />
             <p>البكالوريوس</p>
+            <FiChevronDown />
           </div>
           <div className="flex-col  w-full p-2 gap-2 border-b flex">
             <Link to="/allqism" className='w-full rounded-lg border hover:underline p-2' onClick={() => sidebar()}>جميع التخصصات</Link>
@@ -185,8 +185,8 @@ const Header = () => {
             <Link to="/aqidah" className='w-full rounded-lg border hover:underline p-2' onClick={() => sidebar()}>قسم العقيدة والفكر الإسلامي</Link>
           </div>
           <div className="py-3 text-yellow-600 flex justify-between items-center w-full border-b">
-            <FiChevronDown />
             <p>الدراسات العليا</p>
+            <FiChevronDown />
           </div>
           <div className="flex-col  w-full p-2 gap-2 border-b flex">
             <Link to="/diplomawasit" className='w-full rounded-lg border hover:underline p-2' onClick={() => sidebar()}>الدبلومات الوسيطة</Link>

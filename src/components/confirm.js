@@ -9,56 +9,46 @@ export const ConfirmAlert = (id, each) => {
     buttons: [
       {
         label: 'نعم',
-        onClick: async () => {
+        onClick: () => {
 
           if (each == 'admin') {
-            await apis.delAdmin(id)
-            location.reload()
+            apis.delAdmin(id).then(a => a.json()).then(_ => location.reload())
           }
 
           if (each == 'annouc') {
-            await apis.delAnnoucement(id)
-            location.reload()
+            apis.delAnnoucement(id).then(a => a.json()).then(_ => location.reload())
           }
 
           if (each == 'vismis') {
-            await apis.delVismis(id)
-            location.reload()
+            apis.delVismis(id).then(a => a.json()).then(_ => location.reload())
           }
 
           if (each == 'fees') {
-            await apis.delFees(id)
-            location.reload()
+            apis.delFees(id).then(a => a.json()).then(_ => location.reload())
           }
 
           if (each == 'haiah') {
-            await apis.delHaiah(id)
-            location.reload()
+            apis.delHaiah(id).then(a => a.json()).then(_ => location.reload())
           }
 
           if (each == 'haikal') {
-            await apis.delHaikal(id)
-            location.reload()
+            apis.delHaikal(id).then(a => a.json()).then(_ => location.reload())
           }
 
           if (each == 'kuliat') {
-            await apis.delKuliat(id)
-            location.reload()
+            apis.delKuliat(id).then(a => a.json()).then(_ => location.reload())
           }
 
           if (each == 'program') {
-            await apis.delProgram(id)
-            location.reload()
+            apis.delProgram(id).then(a => a.json()).then(_ => location.reload())
           }
 
           if (each == 'studies') {
-            await apis.delStudies(id)
-            location.reload()
+            apis.delStudies(id).then(a => a.json()).then(_ => location.reload())
           }
 
           if (each == 'tasjeel') {
-            await apis.delTasjeel(id)
-            location.reload()
+            apis.delTasjeel(id).then(a => a.json()).then(_ => location.reload())
           }
         }
       },

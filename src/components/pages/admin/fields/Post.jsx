@@ -82,7 +82,7 @@ function PostField({ url }) {
       }
       <div>
         <div className="w-full">
-          <input required type="text" onChange={(e) => setTitle(e.target.value)} id="titlepost" placeholder="موضوع البرنامج" className="tit  bg-transparent py-1 pr-3 mt-4 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
+          <input required type="text" onChange={(e) => setTitle(e.target.value)} placeholder="موضوع البرنامج" className="tit  bg-transparent py-1 pr-3 mt-4 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
         </div>
         <div className="flex justify-around items-center md:gap-8 md:flex-row flex-col">
           <div className="w-full">

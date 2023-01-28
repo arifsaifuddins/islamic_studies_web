@@ -100,70 +100,60 @@ class Apis {
     return await fetch(`${node}/admin/${id}`, {
       method: 'DELETE'
     })
-      .then(j => j.json())
   }
 
   delVismis = async (id) => {
     return await fetch(`${node}/about/${id}`, {
       method: 'DELETE'
     })
-      .then(j => j.json())
   }
 
   delHaikal = async (id) => {
     return await fetch(`${node}/haikal/${id}`, {
       method: 'DELETE'
     })
-      .then(j => j.json())
   }
 
   delStudies = async (id) => {
     return await fetch(`${node}/studies/${id}`, {
       method: 'DELETE'
     })
-      .then(j => j.json())
   }
 
   delTasjeel = async (id) => {
     return await fetch(`${node}/tasjeel/${id}`, {
       method: 'DELETE'
     })
-      .then(j => j.json())
   }
 
   delFees = async (id) => {
     return await fetch(`${node}/fees/${id}`, {
       method: 'DELETE'
     })
-      .then(j => j.json())
   }
 
   delHaiah = async (id) => {
     return await fetch(`${php}/teachers.php?id=${id}`, {
       method: 'DELETE'
     })
-      .then(j => j.json())
   }
 
   delKuliat = async (id) => {
     return await fetch(`${php}/kuliats.php?id=${id}`, {
       method: 'DELETE'
     })
-      .then(j => j.json())
   }
 
   delAnnoucement = async (id) => {
     return await fetch(`${php}/annoucs.php?id=${id}`, {
       method: 'DELETE'
     })
-      .then(j => j.json())
   }
 
   delProgram = async (id) => {
-    return await fetch(`${url}/programs.php?id=${id}`, {
+    return await fetch(`${php}/programs.php?id=${id}`, {
       method: 'DELETE'
     })
-      .then(j => j.json())
   }
 }
 

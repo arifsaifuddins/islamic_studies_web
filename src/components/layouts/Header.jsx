@@ -103,7 +103,7 @@ const Header = () => {
       <div className="bg-white py-2">
         <div className="flex w-full xl:w-[1200px] mx-auto xl:px-2 text-xs xl:text-sm px-4 items-center justify-between">
           <a href='https://iua.edu.sd' target="_blank" className='hover:text-yellow-600 hover:underline'>جامعة إفريقيا العالمية</a>
-          <h3 className='flex gap-2 items-center'>{`${H} . ${M} . ${S}`} <FiClock /></h3>
+          <h3 className='flex gap-2 items-center'>{`${S} . ${M} . ${H}`} <FiClock /></h3>
         </div>
       </div>
       <nav className='bg-opacity-40 bg-yellow-600 sticky shadow top-0 navbar z-50'>
@@ -155,7 +155,7 @@ const Header = () => {
         <div className="bg-white py-2 border-b">
           <div className="flex w-full xl:w-[1200px] mx-auto xl:px-2 text-xs xl:text-sm px-4 items-center justify-between">
             <a href='https://iua.edu.sd' target="_blank" className='hover:text-yellow-600 hover:underline'>جامعة إفريقيا العالمية</a>
-            <h3 className='flex gap-2 items-center'>{`${H} . ${M} . ${S}`} <FiClock /></h3>
+            <h3 className='flex gap-2 items-center'>{`${S} . ${M} . ${H}`} <FiClock /></h3>
           </div>
         </div>
         <div className="flex flex-row justify-between items-center px-4 py-5 border-b">

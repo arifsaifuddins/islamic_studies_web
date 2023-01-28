@@ -1,64 +1,64 @@
 import { confirmAlert } from "react-confirm-alert"
-import apis from './apis'
+import apis from './apis.js'
 
 export const ConfirmAlert = (id, each) => {
 
   return confirmAlert({
     title: 'تأكيد العملية',
-    message: 'هل تأكدت من هذا؟',
+    message: 'هل تأكدت من حذف هذا؟',
     buttons: [
       {
         label: 'نعم',
-        onClick: () => {
+        onClick: async () => {
 
           if (each == 'admin') {
-            window.history.back()
-            apis.delAdmin(id)
+            await apis.delAdmin(id)
+            location.reload()
           }
 
           if (each == 'annouc') {
-            window.history.back()
-            apis.delAnnoucement(id)
+            await apis.delAnnoucement(id)
+            location.reload()
           }
 
           if (each == 'vismis') {
-            window.history.back()
-            apis.delVismis(id)
+            await apis.delVismis(id)
+            location.reload()
           }
 
           if (each == 'fees') {
-            window.history.back()
-            apis.delFees(id)
+            await apis.delFees(id)
+            location.reload()
           }
 
           if (each == 'haiah') {
-            window.history.back()
-            apis.delHaiah(id)
+            await apis.delHaiah(id)
+            location.reload()
           }
 
           if (each == 'haikal') {
-            window.history.back()
-            apis.delHaikal(id)
+            await apis.delHaikal(id)
+            location.reload()
           }
 
           if (each == 'kuliat') {
-            window.history.back()
-            apis.delKuliat(id)
+            await apis.delKuliat(id)
+            location.reload()
           }
 
           if (each == 'program') {
-            window.history.back()
-            apis.delProgram(id)
+            await apis.delProgram(id)
+            location.reload()
           }
 
           if (each == 'studies') {
-            window.history.back()
-            apis.delStudies(id)
+            await apis.delStudies(id)
+            location.reload()
           }
 
           if (each == 'tasjeel') {
-            window.history.back()
-            apis.delTasjeel(id)
+            await apis.delTasjeel(id)
+            location.reload()
           }
         }
       },

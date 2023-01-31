@@ -29,7 +29,7 @@ const Program = () => {
           {
             Blog != null && (
               <div className="mx-auto lg:w-[900px] w-full  leading-9 py-32">
-                <Link className="text-red-600 underline hover:text-red-800 font-bold text-xl" to={`/programs/c/${Blog[0].category}`}>{Blog[0].category} #</Link>
+                <Link className="text-red-600 underline hover:text-red-800 font-bold text-xl" to={`/programs/c/${Blog[0].category}`}># {Blog[0].category}</Link>
                 <div className="pt-4 pb-6 flex flex-row gap-6 items-center">
                   <p className="flex flex-row gap-3 items-center">
                     <FiCalendar />

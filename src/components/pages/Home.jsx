@@ -9,9 +9,6 @@ import { ConfirmAlert } from '../confirm'
 const Home = () => {
 
   const
-    l = [0, 1, 2, 3],
-    m = [0, 1],
-    r = [2, 3],
     node = import.meta.env.VITE_NURL,
     php = import.meta.env.VITE_PURL,
     [AnnoucIsOpen, setAnnoucIsOpen] = useState(false),
@@ -25,7 +22,7 @@ const Home = () => {
   useEffect(() => {
 
     if (!cookie.visit) {
-      setCookie('visit', 'visited', { path: '/', maxAge: 10000 * 12 })
+      setCookie('visit', 'visited', { path: '/', maxAge: 10000 * 24 })
 
       fetch(`${node}/visit/`, {
         method: 'POST',
@@ -96,15 +93,11 @@ const Home = () => {
           <div className="mx-auto overflow-x-scroll">
             <div className="py-40 flex flex-row items-center mx-auto w-max sm:w-full sm:justify-around gap-6">
               {
-                l.map((e) => {
+                Annoucs != null && Annoucs?.map(a => {
                   return (
-                    <div className="shadow cursor-pointer" key={e}>
-                      {
-                        Annoucs != null && (
-                          <a href="#"> <img src={`${php}/assets/${Annoucs[e]?.poster}`} alt={Annoucs[e]?.title} className='object-cover h-72 w-52 hover:scale-110' onClick={() => { setId(Annoucs[e]?.id); open() }} />
-                          </a>
-                        )
-                      }
+                    <div className="shadow cursor-pointer" key={a.id}>
+                      <a href="#"> <img src={`${php}/assets/${a?.poster}`} alt={a?.title} className='object-cover h-72 w-52 hover:scale-110' onClick={() => { setId(a?.id); open() }} />
+                      </a>
                     </div>
                   )
                 })
@@ -118,38 +111,62 @@ const Home = () => {
           <h2 className='px-3 py-1 absolute  xl:left-0 left-4 rounded-br-lg bg-yellow-600 w-max text-white'>أخبار كلية الدراسات الإسلامية</h2>
           <div className="pt-40 md:pb-10 pb-8 flex lg:flex-row flex-col items-center justify-around md:gap-10 gap-8" data-aos="fade-up">
             {
-              Programs != null && m.map((e) => {
-                return (
-                  <Link to={`/programs/${Programs[e]?.id_post}`} key={e} className="flex flex-row  lg:w-80 w-full px-4 lg:px-0 py-3 md:gap-6 gap-4">
-                    <img src={`${php}/assets/${Programs[e]?.poster}`} alt={Programs[e]?.title} className='object-cover aspect-square h-32' />
-                    <div className="text-start">
-                      <h2 className='font-bold md:text-xl text-lg text-yellow-600 underline'>{Programs[e]?.title}</h2>
-                      <p className="pt-2 flex flex-row gap-3 items-center">
-                        <FiCalendar />
-                        <span>{Programs[e]?.date}</span>
-                      </p>
-                    </div>
-                  </Link>
-                )
-              })
+              Programs != null && Programs[0] != null && (
+                <Link to={`/programs/${Programs[0]?.id_post}`} className="flex flex-row  lg:w-80 w-full px-4 lg:px-0 py-3 md:gap-6 gap-4">
+                  <img src={`${php}/assets/${Programs[0]?.poster}`} alt={Programs[0]?.title} className='object-cover aspect-square h-32' />
+                  <div className="text-start">
+                    <h2 className='font-bold md:text-xl text-lg text-yellow-600 underline'>{Programs[0]?.title}</h2>
+                    <p className="pt-2 flex flex-row gap-3 items-center">
+                      <FiCalendar />
+                      <span>{Programs[0]?.date}</span>
+                    </p>
+                  </div>
+                </Link>
+              )
+            }
+            {
+              Programs != null && Programs[1] != null && (
+                <Link to={`/programs/${Programs[1]?.id_post}`} className="flex flex-row  lg:w-80 w-full px-4 lg:px-0 py-3 md:gap-6 gap-4">
+                  <img src={`${php}/assets/${Programs[1]?.poster}`} alt={Programs[1]?.title} className='object-cover aspect-square h-32' />
+                  <div className="text-start">
+                    <h2 className='font-bold md:text-xl text-lg text-yellow-600 underline'>{Programs[1]?.title}</h2>
+                    <p className="pt-2 flex flex-row gap-3 items-center">
+                      <FiCalendar />
+                      <span>{Programs[1]?.date}</span>
+                    </p>
+                  </div>
+                </Link>
+              )
             }
           </div>
           <div className="pb-40 flex lg:flex-row flex-col items-center justify-around md:gap-10 gap-8" data-aos="fade-up">
             {
-              Programs != null && r.map((e) => {
-                return (
-                  <Link to={`/programs/${Programs[e]?.id_post}`} key={e} className="flex flex-row  lg:w-80 w-full px-4 lg:px-0 py-3 md:gap-6 gap-4">
-                    <img src={`${php}/assets/${Programs[e]?.poster}`} alt={Programs[e]?.title} className='object-cover aspect-square h-32' />
-                    <div className="text-start">
-                      <h2 className='font-bold md:text-xl text-lg text-yellow-600 underline'>{Programs[e]?.title}</h2>
-                      <p className="pt-2 flex flex-row gap-3 items-center">
-                        <FiCalendar />
-                        <span>{Programs[e]?.date}</span>
-                      </p>
-                    </div>
-                  </Link>
-                )
-              })
+              Programs != null && Programs[2] != null && (
+                <Link to={`/programs/${Programs[2]?.id_post}`} className="flex flex-row  lg:w-80 w-full px-4 lg:px-0 py-3 md:gap-6 gap-4">
+                  <img src={`${php}/assets/${Programs[2]?.poster}`} alt={Programs[2]?.title} className='object-cover aspect-square h-32' />
+                  <div className="text-start">
+                    <h2 className='font-bold md:text-xl text-lg text-yellow-600 underline'>{Programs[2]?.title}</h2>
+                    <p className="pt-2 flex flex-row gap-3 items-center">
+                      <FiCalendar />
+                      <span>{Programs[2]?.date}</span>
+                    </p>
+                  </div>
+                </Link>
+              )
+            }
+            {
+              Programs != null && Programs[3] != null && (
+                <Link to={`/programs/${Programs[3]?.id_post}`} className="flex flex-row  lg:w-80 w-full px-4 lg:px-0 py-3 md:gap-6 gap-4">
+                  <img src={`${php}/assets/${Programs[3]?.poster}`} alt={Programs[3]?.title} className='object-cover aspect-square h-32' />
+                  <div className="text-start">
+                    <h2 className='font-bold md:text-xl text-lg text-yellow-600 underline'>{Programs[3]?.title}</h2>
+                    <p className="pt-2 flex flex-row gap-3 items-center">
+                      <FiCalendar />
+                      <span>{Programs[3]?.date}</span>
+                    </p>
+                  </div>
+                </Link>
+              )
             }
           </div>
         </div>

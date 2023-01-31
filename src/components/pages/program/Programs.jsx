@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet-async'
 import { FiSearch, FiSliders } from 'react-icons/fi'
 import { Link, Outlet, useNavigate } from 'react-router-dom'
 

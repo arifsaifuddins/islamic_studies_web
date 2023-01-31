@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
-import { Helmet } from "react-helmet"
+import { Helmet } from 'react-helmet-async'
 import { useCookies } from "react-cookie"
 import { FiEye } from "react-icons/fi"
 

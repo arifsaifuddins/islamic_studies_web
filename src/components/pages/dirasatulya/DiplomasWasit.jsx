@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet-async'
 import apis from '../../apis'
 import { useCookies } from 'react-cookie'
 import { FiTrash } from 'react-icons/fi'

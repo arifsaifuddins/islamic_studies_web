@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react'
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet-async'
 import apis from '../../apis'
 import { ConfirmAlert } from '../../confirm'
 import { useCookies } from 'react-cookie'

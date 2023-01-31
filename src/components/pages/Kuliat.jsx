@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet-async'
 import { FiTrash } from 'react-icons/fi'
 import apis from '../apis'
 import { ConfirmAlert } from '../confirm'

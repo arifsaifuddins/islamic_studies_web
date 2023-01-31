@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react'
 import useCookies from 'react-cookie/cjs/useCookies'
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet-async'
 import { FiLogOut, FiTrash } from 'react-icons/fi'
 import apis from '../../apis'
 import { ConfirmAlert } from '../../confirm'

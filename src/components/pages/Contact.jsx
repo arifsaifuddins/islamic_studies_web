@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet-async'
 import { FiFacebook, FiInstagram, FiMail, FiTwitter } from 'react-icons/fi'
 
 const Contact = () => {

@@ -1,7 +1,7 @@
 import downloadFile from 'fs-browsers/dist/cjs/download-file/downloadFile'
 import React, { useState } from 'react'
 import { useEffect } from 'react'
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet-async'
 import { FiMonitor, FiUser, FiX, FiTrash } from 'react-icons/fi'
 import Modal from 'react-modal'
 import apis from '../../apis'

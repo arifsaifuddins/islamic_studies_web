@@ -56,14 +56,14 @@ const Qobul = () => {
                       }
                       <p className='md:w-[50%] w-full text-center md:text-start'>{a.name}</p>
                       <div className="p-1 rounded-lg w-full flex flex-row items-center justify-around md:hidden border">
-                        <p className='md:hidden text-center'>{a.dollar}</p>
+                        <p className='md:hidden text-center'>$ {a.dollar}</p>
                         <div className='border-2 md:hidden h-6 border-gray-600' />
-                        <p className='md:hidden text-center'>{a.pound}</p>
+                        <p className='md:hidden text-center'>SDG {a.pound}</p>
                       </div>
                       <div className='border-2 hidden md:block h-6 border-gray-600' />
-                      <p className=' hidden md:block w-[20%] text-center'>{a.dollar}</p>
+                      <p className=' hidden md:block w-[20%] text-center'>$ {a.dollar}</p>
                       <div className='border-2 hidden md:block h-6 border-gray-600' />
-                      <p className=' hidden md:block w-[20%] text-center'>{a.pound}</p>
+                      <p className=' hidden md:block w-[20%] text-center'>SDG {a.pound}</p>
                     </li>
                   )
                 })

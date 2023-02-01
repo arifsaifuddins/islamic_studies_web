@@ -35,7 +35,7 @@ const All = () => {
           const body = a?.body.replace(/<[^>]+>/g, ' ').trim()
           return (
             <div key={a.id} className="flex flex-row  mt-10 md:gap-6 gap-4" data-aos="fade-up">
-              <Link to={`/programs/${a.id_post}`} ><img src={`${php}/assets/${a.poster}`} alt={a.title} className='object-cover aspect-square h-32 md:h-44' /></Link>
+              <Link to={`/programs/${a.id_post}`} ><img src={`${php}/assets/${a.poster}`} alt={a.title} className='object-cover aspect-square hover:object-right-bottom transition-all duration-500 h-32 md:h-44' /></Link>
               <div>
                 <Link to={`/programs/${a.id_post}`} >
                   <h2 className='font-bold md:text-2xl text-sm text-yellow-600 hover:underline'>{(a.title.length < 30) ? a.title : a.title.slice(0, 30) + '...'}</h2>

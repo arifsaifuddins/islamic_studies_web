@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 function TasjeelField({ url }) {
 
   const [sharat, setSharat] = useState(null)
+  const [category, setCategory] = useState(null)
 
   const [Errored, setErrored] = useState(false)
   const [Error, setError] = useState(null)
@@ -10,7 +11,7 @@ function TasjeelField({ url }) {
 
   useEffect(() => {
 
-    if (document.querySelector('.shar').value !== '') {
+    if (document.querySelector('.shar').value !== '' && document.querySelector('.categ').value !== '') {
       setCommited(true)
     } else {
       setCommited(false)
@@ -29,7 +30,8 @@ function TasjeelField({ url }) {
       },
       method: 'POST',
       body: JSON.stringify({
-        sharat: sharat
+        sharat,
+        category: category || document.querySelector('.categ').value
       })
     })
       .then(r => r.json())
@@ -59,6 +61,15 @@ function TasjeelField({ url }) {
         </div>
       }
       <div className="sharat">
+        <div className="w-full">
+          <label htmlFor="sharatid" className="my-2 block font-bold text-yellow-600">النوع :</label>
+          <select required type="text" id="sharatid" onChange={(e) => setCategory(e.target.value)} className="categ bg-transparent p-3 rounded-lg  border  outline-none border-yellow-600 w-[100%]" >
+            <option value="1">البكالوريوس</option>
+            <option value="2">الدبلومات</option>
+            <option value="3">الماجستير</option>
+            <option value="4">الدكتوراه</option>
+          </select>
+        </div>
         <div className="flex flex-row justify-between text-yellow-600 font-bold my-3">
           <label htmlFor="sharat" className="block">الشروط :</label>
         </div>

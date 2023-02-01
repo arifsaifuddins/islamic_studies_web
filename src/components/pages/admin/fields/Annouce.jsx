@@ -7,19 +7,9 @@ function AnnoucField({ url }) {
   const [Error, setError] = useState(null)
   const [Commited, setCommited] = useState(false)
 
-  const [Title, setTitle] = useState(null)
   const [Poster, setPoster] = useState(null)
 
   const nav = useNavigate()
-
-  useEffect(() => {
-
-    if (document.querySelector('.titl').value !== '') {
-      setCommited(true)
-    } else {
-      setCommited(false)
-    }
-  }, [Title])
 
   const submitAnnouc = async () => {
     setCommited(false)
@@ -28,7 +18,7 @@ function AnnoucField({ url }) {
 
     let forms = new FormData()
 
-    forms.append('title', Title)
+    forms.append('title', 'annouc')
     forms.append('poster', Poster)
 
     return await fetch(`${url}/annoucs.php`, {
@@ -66,17 +56,14 @@ function AnnoucField({ url }) {
     <>
       <h1 className="text-center mb-6 mt-2 text-xl font-bold">زيادة الإعلام الواحد</h1>
       {
-        (Errored == true) && <div className="text-sm w-[100%] bg-transparent border py-1 px-2 my-4 rounded-lg text-[#222222] dark:text-slate-100 flex justify-between items-center">
+        (Errored == true) && <div className="text-sm w-[100%] bg-transparent border py-1 px-2 my-4 rounded-lg text-[#222222] flex justify-between items-center">
           <div>{Error}</div>
           <p onClick={() => setErrored(false)} className="text-yellow-600 hover:text-yellow-700 text-2xl cursor-pointer">&times;</p>
         </div>
       }
-      <div className="w-full">
-        <input required type="text" onChange={(e) => setTitle(e.target.value)} id="titlepost" placeholder="موضوع الإعلام" className="titl bg-transparent py-1 pr-3 mt-4 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
-      </div>
       <div className="flex justify-around items-center md:gap-8 md:flex-row flex-col">
         <div className="w-full">
-          <label htmlFor="postfile" className="my-2 block font-bold text-yellow-600">الصورة :</label>
+          <label htmlFor="postfile" className="my-2 block font-bold text-yellow-600">الإعلان :</label>
           <input required onChange={(e) => setPoster(e.target.files[0])} type="file" id="postfile" className="pos bg-transparent py-1 pr-3 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
         </div>
       </div>

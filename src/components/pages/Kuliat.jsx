@@ -36,7 +36,7 @@ const Kuliat = () => {
                     <div className='relative'>
                       {
                         cookies.admin && cookies.id_admin && (
-                          <button onClick={() => ConfirmAlert(Kuliat?.id, 'kuliat')} className="h-8 w-8 rounded-bl-lg text-xl flex items-center justify-center font-bold bg-red-600 absolute right-0">
+                          <button onClick={() => ConfirmAlert(a?.id, 'kuliat')} className="h-8 w-8 rounded-bl-lg text-xl flex items-center justify-center font-bold bg-red-600 absolute right-0">
                             <FiTrash color='white' />
                           </button>
 

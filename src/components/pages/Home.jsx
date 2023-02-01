@@ -112,10 +112,10 @@ const Home = () => {
           <div className="pt-40 md:pb-10 pb-8 flex lg:flex-row flex-col items-center justify-around md:gap-10 gap-8" data-aos="fade-up">
             {
               Programs != null && Programs[0] != null && (
-                <Link to={`/programs/${Programs[0]?.id_post}`} className="flex flex-row  lg:w-80 w-full px-4 lg:px-0 py-3 md:gap-6 gap-4">
-                  <img src={`${php}/assets/${Programs[0]?.poster}`} alt={Programs[0]?.title} className='object-cover aspect-square h-32' />
+                <Link to={`/programs/${Programs[0]?.id_post}`} className="flex flex-row  lg:w-96 border-b-2 w-full px-4 py-3 md:gap-6 gap-4">
+                  <img src={`${php}/assets/${Programs[0]?.poster}`} alt={Programs[0]?.title} className='object-cover aspect-square hover:object-right-bottom transition-all duration-500 h-32 md:h-40' />
                   <div className="text-start">
-                    <h2 className='font-bold md:text-xl text-lg text-yellow-600 underline'>{Programs[0]?.title}</h2>
+                    <h2 className='font-bold md:text-xl text-lg text-yellow-600 underline'>{(Programs[0]?.title.length < 40) ? Programs[0]?.title : Programs[0]?.title.slice(0, 40) + '...'}</h2>
                     <p className="pt-2 flex flex-row gap-3 items-center">
                       <FiCalendar />
                       <span>{Programs[0]?.date}</span>
@@ -126,10 +126,10 @@ const Home = () => {
             }
             {
               Programs != null && Programs[1] != null && (
-                <Link to={`/programs/${Programs[1]?.id_post}`} className="flex flex-row  lg:w-80 w-full px-4 lg:px-0 py-3 md:gap-6 gap-4">
-                  <img src={`${php}/assets/${Programs[1]?.poster}`} alt={Programs[1]?.title} className='object-cover aspect-square h-32' />
+                <Link to={`/programs/${Programs[1]?.id_post}`} className="flex flex-row  lg:w-96 border-b-2 w-full px-4 py-3 md:gap-6 gap-4">
+                  <img src={`${php}/assets/${Programs[1]?.poster}`} alt={Programs[1]?.title} className='object-cover aspect-square hover:object-right-bottom transition-all duration-500 h-32 md:h-40' />
                   <div className="text-start">
-                    <h2 className='font-bold md:text-xl text-lg text-yellow-600 underline'>{Programs[1]?.title}</h2>
+                    <h2 className='font-bold md:text-xl text-lg text-yellow-600 underline'>{(Programs[1]?.title.length < 40) ? Programs[1]?.title : Programs[1]?.title.slice(0, 40) + '...'}</h2>
                     <p className="pt-2 flex flex-row gap-3 items-center">
                       <FiCalendar />
                       <span>{Programs[1]?.date}</span>
@@ -142,10 +142,10 @@ const Home = () => {
           <div className="pb-40 flex lg:flex-row flex-col items-center justify-around md:gap-10 gap-8" data-aos="fade-up">
             {
               Programs != null && Programs[2] != null && (
-                <Link to={`/programs/${Programs[2]?.id_post}`} className="flex flex-row  lg:w-80 w-full px-4 lg:px-0 py-3 md:gap-6 gap-4">
-                  <img src={`${php}/assets/${Programs[2]?.poster}`} alt={Programs[2]?.title} className='object-cover aspect-square h-32' />
+                <Link to={`/programs/${Programs[2]?.id_post}`} className="flex flex-row  lg:w-96 border-b-2 w-full px-4 py-3 md:gap-6 gap-4">
+                  <img src={`${php}/assets/${Programs[2]?.poster}`} alt={Programs[2]?.title} className='object-cover aspect-square hover:object-right-bottom transition-all duration-500 h-32 md:h-40' />
                   <div className="text-start">
-                    <h2 className='font-bold md:text-xl text-lg text-yellow-600 underline'>{Programs[2]?.title}</h2>
+                    <h2 className='font-bold md:text-xl text-lg text-yellow-600 underline'>{(Programs[2]?.title.length < 40) ? Programs[2]?.title : Programs[2]?.title.slice(0, 40) + '...'}</h2>
                     <p className="pt-2 flex flex-row gap-3 items-center">
                       <FiCalendar />
                       <span>{Programs[2]?.date}</span>
@@ -156,10 +156,10 @@ const Home = () => {
             }
             {
               Programs != null && Programs[3] != null && (
-                <Link to={`/programs/${Programs[3]?.id_post}`} className="flex flex-row  lg:w-80 w-full px-4 lg:px-0 py-3 md:gap-6 gap-4">
-                  <img src={`${php}/assets/${Programs[3]?.poster}`} alt={Programs[3]?.title} className='object-cover aspect-square h-32' />
+                <Link to={`/programs/${Programs[3]?.id_post}`} className="flex flex-row  lg:w-96 border-b-2 w-full px-4 py-3 md:gap-6 gap-4">
+                  <img src={`${php}/assets/${Programs[3]?.poster}`} alt={Programs[3]?.title} className='object-cover aspect-square hover:object-right-bottom transition-all duration-500 h-32 md:h-40' />
                   <div className="text-start">
-                    <h2 className='font-bold md:text-xl text-lg text-yellow-600 underline'>{Programs[3]?.title}</h2>
+                    <h2 className='font-bold md:text-xl text-lg text-yellow-600 underline'>{(Programs[3]?.title.length < 40) ? Programs[3]?.title : Programs[3]?.title.slice(0, 40) + '...'}</h2>
                     <p className="pt-2 flex flex-row gap-3 items-center">
                       <FiCalendar />
                       <span>{Programs[3]?.date}</span>
@@ -175,7 +175,7 @@ const Home = () => {
             <h2 className='px-3 py-1 absolute rounded-bl-lg bg-yellow-600 w-max text-white'>نشاطات كلية الدراسات الإسلامية</h2>
             <div className="pb-20 pt-40">
               <div className="flex lg:flex-row-reverse flex-col items-center justify-between py-3 lg:gap-28 gap-10">
-                <img src="/exmp.jpg" alt="photo" className='object-cover h-[500px] w-[450px]' data-aos="fade-up" />
+                <img src="/program.jpg" alt="photo" className='object-cover hover:object-right-bottom transition-all duration-500 h-[500px] w-[450px]' data-aos="fade-up" />
                 <div className="lg:text-start sm:text-center text-start">
                   <h2 className='font-bold lg:text-5xl md:text-4xl text-3xl text-yellow-600 mb-4'>الطلاب والطالبات</h2>
                   <p className="md:text-xl text-md pt-2">تعد هذه الكلية من أكثرها عددا من الطلاب والطالبات المسجلين من جميع أنحاء قارة الآسيا والإفريقيا</p>
@@ -185,7 +185,7 @@ const Home = () => {
             </div>
             <div className="pb-20">
               <div className="flex lg:flex-row flex-col items-center justify-between py-3 lg:gap-28 gap-10">
-                <img src="/exmp.jpg" alt="photo" className='object-cover h-[500px] w-[450px]' data-aos="fade-up" />
+                <img src="/exam.jpg" alt="photo" className='object-cover hover:object-right-bottom transition-all duration-500 h-[500px] w-[450px]' data-aos="fade-up" />
                 <div className="lg:text-start sm:text-center text-start">
                   <h2 className='font-bold lg:text-5xl md:text-4xl text-3xl text-yellow-600 mb-4'>الامتحانات الإليكترونية</h2>
                   <p className="md:text-xl text-md pt-2">نشاطات الطلاب والطالبات في الامتحانات الإليكترونية في الفصول الدراسية الفردية والزوجية</p>
@@ -200,21 +200,21 @@ const Home = () => {
         <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
           <h2 className='px-3 py-1 absolute xl:left-0 left-4 rounded-br-lg bg-yellow-600 w-max text-white'>أقسام كلية الدراسات الإسلامية</h2>
           <div className="py-40 flex lg:flex-row flex-col items-center justify-around gap-8" data-aos="fade-down">
-            <Link to="/hadith" className="flex flex-col w-full items-center px-4 pb-6 pt-16 rounded-lg shadow bg-white">
+            <Link to="/hadith" className="flex flex-col w-full items-center hover:bg-slate-50 px-4 pb-6 pt-16 rounded-lg shadow bg-white">
               <div className="p-4 rounded-lg bg-purple-400 mb-4 text-white w-max text-2xl">
                 <FiBookOpen />
               </div>
               <h1 className='font-bold text-center text-yellow-600 my-4'>قسم السنة وعلوم الحديث</h1>
               <p className='text-center'>قسم تدرس فيه علوم الحديث ومصطلحاته ورجاله وكتبه لتنتج منه الطلاب المتمكنين فيها</p>
             </Link>
-            <Link to="/dakwah" className="flex flex-col w-full items-center px-4 pb-6 pt-16 rounded-lg shadow bg-white">
+            <Link to="/dakwah" className="flex flex-col w-full items-center hover:bg-slate-50 px-4 pb-6 pt-16 rounded-lg shadow bg-white">
               <div className="p-4 rounded-lg bg-orange-400 mb-4 text-white w-max text-2xl">
                 <FiVolume2 />
               </div>
               <h1 className='font-bold text-center text-yellow-600 my-4'>قسم الدعوة والسيرة</h1>
               <p className='text-center'>قسم تدرس فيه أساليب الدعوة وتاريخها والسيرة النبوية لتنتج منه الطلاب المتمكنين فيها</p>
             </Link>
-            <Link to="/aqidah" className="flex flex-col w-full items-center px-4 pb-6 pt-16 rounded-lg shadow bg-white">
+            <Link to="/aqidah" className="flex flex-col w-full items-center hover:bg-slate-50 px-4 pb-6 pt-16 rounded-lg shadow bg-white">
               <div className="p-4 rounded-lg bg-green-400 mb-4 text-white w-max text-2xl">
                 <FiTarget />
               </div>

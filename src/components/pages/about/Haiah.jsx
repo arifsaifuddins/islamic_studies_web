@@ -73,7 +73,7 @@ const Haiah = () => {
                       </button>
                     )
                   }
-                  <img src={`${php}/assets/${Haiah[0]?.poster}`} alt={Haiah[0]?.name} className='object-cover w-72 h-72' />
+                  <img src={`${php}/assets/${Haiah[0]?.poster}`} alt={Haiah[0]?.name} className='object-cover lg:w-72 w-full h-72' />
                   <div onClick={() => downloadFile(`${php}/assets/${Haiah[0]?.cv}`, Haiah[0]?.name + '.pdf')} className='lg:w-72 w-full cursor-pointer justify-center bg-yellow-600 py-2 text-white rounded-lg flex flex-row mx-auto  items-center gap-2'>CV | السيرة الذاتية </div>
                 </div>
                 <div className="flex flex-col gap-2">

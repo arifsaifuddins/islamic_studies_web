@@ -56,7 +56,7 @@ const Haiah = () => {
       <Helmet>
         <title>Islamic Studies | هيئة التدريس</title>
       </Helmet>
-      <Modal isOpen={HaiahIsOpen} onRequestClose={() => close()} style={{ content: { transform: 'translate(-50%, -50%)', top: '50%', right: 'auto', left: '50%', bottom: 'auto', marginRight: '-50%', padding: 0 } }} >
+      <Modal isOpen={HaiahIsOpen} onRequestClose={() => close()} style={{ content: { transform: 'translate(-50%, -50%)', top: '50%', right: 'auto', left: '50%', overflowY: 'auto', bottom: 'auto', marginRight: '-50%', padding: 0 } }} >
         <button onClick={() => close()} className="h-8 w-8 rounded-br-lg text-xl flex items-center justify-center font-bold bg-red-600 left-0 absolute ">
           <FiX color='white' />
         </button>

@@ -60,7 +60,7 @@ const Home = () => {
     <>
       {
         Annouc != null && (
-          <Modal isOpen={AnnoucIsOpen} onRequestClose={() => close()} style={{ content: { transform: 'translate(-50%, -50%)', top: '50%', right: 'auto', left: '50%', bottom: 'auto', marginRight: '-50%', padding: 0 } }} >
+          <Modal isOpen={AnnoucIsOpen} onRequestClose={() => close()} style={{ content: { transform: 'translate(-50%, -50%)', top: '50%', right: 'auto', left: '50%', bottom: 'auto', overflowY: 'auto', marginRight: '-50%', padding: 0 } }} >
             {
               cookie.admin && cookie.id_admin && (
                 <button onClick={() => ConfirmAlert(Annouc[0]?.id, 'annouc')} className="h-8 w-8 rounded-bl-lg text-xl flex items-center justify-center font-bold bg-red-600 absolute right-0">

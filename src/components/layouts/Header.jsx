@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { FiChevronDown, FiClock, FiMenu, FiX } from 'react-icons/fi'
+import downloadFile from 'fs-browsers/dist/cjs/download-file/downloadFile'
 
 const Header = () => {
 
@@ -118,6 +119,7 @@ const Header = () => {
                 <Link to="/about" className='py-2 px-3 hover:underline border-b w-full'>التعريف بالكلية</Link>
                 <Link to="/haikal" className='py-2 px-3 hover:underline border-b w-full'>الهيكل الإداري</Link>
                 <Link to="/haiah" className='py-2 px-3 hover:underline border-b w-full'>هيئة التدريس</Link>
+                <div onClick={() => downloadFile(`/dalilkuliah.pdf`, 'dalilkuliah.pdf')} className='w-full cursor-pointer py-2 px-3 hover:underline text-yellow-600'>دليل الكلية</div>
               </div>
               <FiChevronDown />
               عن الكلية
@@ -165,6 +167,9 @@ const Header = () => {
           </div>
         </div>
         <div className="flex flex-col w-full text-slate-800 pb-40 px-4 h-[100vh] overflow-y-scroll">
+          <Link to="/qobul" onClick={() => sidebar()} className="py-3 text-yellow-600 w-full hover:underline border-b">التسجيل والقبول</Link>
+          <Link to="/kuliat" onClick={() => sidebar()} className="py-3 text-yellow-600 w-full hover:underline border-b">الكليات المنتسبة</Link>
+          <Link to="/programs" onClick={() => sidebar()} className="py-3 text-yellow-600 w-full hover:underline border-b">البرامج والأخبار والمؤتمرات</Link>
           <div className="py-3 text-yellow-600 flex justify-between items-center w-full border-b">
             <p>عن الكلية</p>
             <FiChevronDown />
@@ -194,9 +199,9 @@ const Header = () => {
             <Link to="/master" className='w-full rounded-lg border hover:underline p-2' onClick={() => sidebar()}>الماجستير</Link>
             <Link to="/doctoral" className='w-full rounded-lg border hover:underline p-2' onClick={() => sidebar()}>الدكتوراه</Link>
           </div>
-          <Link to="/qobul" onClick={() => sidebar()} className="py-3 text-yellow-600 w-full hover:underline border-b">التسجيل والقبول</Link>
-          <Link to="/kuliat" onClick={() => sidebar()} className="py-3 text-yellow-600 w-full hover:underline border-b">الكليات المنتسبة</Link>
-          <Link to="/programs" onClick={() => sidebar()} className="py-3 text-yellow-600 w-full hover:underline border-b">البرامج والأخبار والمؤتمرات</Link>
+          <div className="flex-col  w-full p-2 gap-2 border-b flex">
+            <div onClick={() => downloadFile(`/dalilkuliah.pdf`, 'dalilkuliah.pdf')} className='w-full cursor-pointer justify-center bg-yellow-600 py-2 text-white rounded-lg flex flex-row mx-auto  items-center gap-2'>دليل الكلية</div>
+          </div>
         </div>
       </div>
     </>

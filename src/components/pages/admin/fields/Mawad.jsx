@@ -68,8 +68,8 @@ function MawadField({ url }) {
       <label htmlFor="categor" className="my-2 block font-bold text-yellow-600">البرنامج :</label>
       <select required id="categor" onChange={(e) => setProgram(e.target.value)} className="progm bg-transparent p-3  rounded-lg  border outline-none border-yellow-600 w-[100%]" >
         <option value="all_major">جميع التخصصات</option>
-        <option value="dakwah_bachelor">قسم السنة وعلوم الحديث</option>
-        <option value="hadith_bachelor">قسم الدعوة والسيرة</option>
+        <option value="hadith_bachelor">قسم السنة وعلوم الحديث</option>
+        <option value="dakwah_bachelor">قسم الدعوة والسيرة</option>
         <option value="akidah_bachelor">قسم العقيدة والفكر الإسلامي</option>
         <option value="diploma_wasit_quran">علوم القرآن (الدبلوم الوسيط)</option>
         <option value="diploma_wasit_dakwah">الدعوة (الدبلوم الوسيط)</option>

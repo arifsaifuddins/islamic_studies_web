@@ -71,7 +71,7 @@ function AnnoucField({ url }) {
         (Poster != null) && <img src={URL.createObjectURL(Poster)} alt="blog" className="mt-4 w-full" />
       }
       <div className="my-5">
-      <p className="cursor-pointer text-center bg-yellow-600 text-white py-1 pl-3 rounded-lg hover:bg-yellow-700 font-bold w-[100%]" onClick={() => submitAnnouc()}>إضافة الإعلام</p>
+        <p className="cursor-pointer text-center bg-yellow-600 text-white py-1 pl-3 rounded-lg hover:bg-yellow-700 font-bold w-[100%]" onClick={() => submitAnnouc()}>إضافة الإعلام</p>
       </div>
     </>
   )

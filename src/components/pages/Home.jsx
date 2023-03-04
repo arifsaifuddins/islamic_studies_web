@@ -91,7 +91,7 @@ const Home = () => {
         <div className="mx-auto xl:w-[1200px] w-[100vw] px-4 xl:px-0 relative">
           <h2 className='px-3 py-1 absolute rounded-bl-lg bg-yellow-600 w-max text-white'>إعلانات كلية الدراسات الإسلامية</h2>
           <div className="mx-auto overflow-x-scroll">
-            <div className="py-40 flex flex-row items-center mx-auto w-max sm:w-full sm:justify-around gap-6">
+            <div className="py-40 flex flex-row items-center mx-auto w-full justify-around gap-6">
               {
                 Annoucs != null && Annoucs?.map(a => {
                   return (

@@ -6,6 +6,7 @@ import apis from '../apis'
 import { useCookies } from 'react-cookie'
 import { FiTrash } from 'react-icons/fi'
 import { ConfirmAlert } from '../confirm'
+import Loader from '../layouts/Loader'
 
 const Qobul = () => {
   const [cookies] = useCookies()
@@ -44,7 +45,7 @@ const Qobul = () => {
                 <p className=' hidden md:block w-[20%] text-center'>الجنيه</p>
               </li>
               {
-                Fee != null && Fee?.map(a => {
+                Fee != null ? Fee?.map(a => {
                   return (
                     <li key={a._id} className='flex md:flex-row relative flex-col items-center gap-8 border-b-4 px-4 py-2'>
                       {
@@ -66,7 +67,9 @@ const Qobul = () => {
                       <p className=' hidden md:block w-[20%] text-center'>SDG {a.pound}</p>
                     </li>
                   )
-                })
+                }) : (
+                  <Loader />
+                )
               }
             </ul>
           </div>

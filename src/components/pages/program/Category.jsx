@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { FiCalendar, FiChevronsLeft, FiChevronsRight } from 'react-icons/fi'
 import apis from '../../apis'
+import Loader from '../../layouts/Loader'
 
 const Category = () => {
   const php = import.meta.env.VITE_PURL
@@ -16,7 +17,7 @@ const Category = () => {
   return (
     <>
       {
-        Blogs != null && Blogs?.data != null && Blogs?.data?.map(a => {
+        Blogs != null ? Blogs?.data != null && Blogs?.data?.map(a => {
           const body = a?.body.replace(/<[^>]+>/g, ' ').trim()
           return (
             <Link to={`/programs/${a.id_post}`} key={a.id} className="flex flex-row  mt-10 md:gap-6 gap-4" data-aos="fade-up">
@@ -31,7 +32,9 @@ const Category = () => {
               </div>
             </Link>
           )
-        })
+        }) : (
+          <Loader />
+        )
       }
       <div className="flex flex-row py-1 bg-yellow-600 text-white mx-auto md:mx-0 items-center text-sm md:text-xl w-max mt-24">
         {

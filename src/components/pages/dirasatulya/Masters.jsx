@@ -6,6 +6,7 @@ import apis from '../../apis'
 import { useCookies } from 'react-cookie'
 import { FiTrash } from 'react-icons/fi'
 import { ConfirmAlert } from '../../confirm'
+import Loader from '../../layouts/Loader'
 
 const Masters = () => {
   const [cookies] = useCookies()
@@ -37,7 +38,7 @@ const Masters = () => {
           <h2 className='px-3 py-1 absolute  rounded-bl-lg bg-yellow-600 w-max text-white'>ماجستير السنة وعلوم الحديث</h2>
           <div className="mx-auto lg:w-[900px] w-full  leading-9 py-32">
             {
-              hadith_master_1?.length > 0 && (
+              hadith_master_1 != null ? hadith_master_1?.length > 0 && (
                 <>
                   <div className="mb-20">
                     <h2 className='text-lg text-white w-full px-4 py-2 bg-yellow-600 text-center'>الفصل الدراسي الأول</h2>
@@ -68,6 +69,8 @@ const Masters = () => {
                     </ul>
                   </div>
                 </>
+              ) : (
+                <Loader />
               )
             }
             {

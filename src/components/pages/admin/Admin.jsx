@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet-async'
 import { FiLogOut, FiTrash } from 'react-icons/fi'
 import apis from '../../apis'
 import { ConfirmAlert } from '../../confirm'
+import Loader from '../../layouts/Loader'
 import AdminField from './fields/Admin'
 import AnnoucField from './fields/Annouce'
 import FeesField from './fields/Fees'
@@ -120,7 +121,7 @@ const Admin = () => {
                 <h1 className="text-center text-xl pb-6 pt-2 font-bold ">دخلت إشرافا</h1>
                 <div >
                   {
-                    Admin != null && (
+                    Admin != null ? (
                       <div className="text-center">
                         <h1 className="text-2xl mt-4 font-bold text-yellow-600">{Admin.name}</h1>
                         <p>@{Admin.email}</p>
@@ -128,6 +129,8 @@ const Admin = () => {
                           removeCookie('admin'); removeCookie('id_admin'); location.reload()
                         }} className='mt-10 w-72 cursor-pointer justify-center bg-red-600 py-1 text-white rounded-lg flex flex-row mx-auto  items-center gap-2'><FiLogOut /> الخروج عن الإشراف</div>
                       </div>
+                    ) : (
+                      <Loader />
                     )
                   }
                 </div>
@@ -138,7 +141,7 @@ const Admin = () => {
                 <h1 className="text-center text-xl pb-6 pt-2 font-bold ">المشرفون</h1>
                 <div className="h-52 overflow-auto border-t">
                   {
-                    Admins != null && Admins.map(c => {
+                    Admins != null ? Admins.map(c => {
                       return (
                         <div key={c._id} className="flex text-md p-4 gap-4 justify-between items-center border-b hover:bg-slate-50 relative">
                           <h1 className=" font-bold text-yellow-600">{c.name}</h1>
@@ -152,7 +155,9 @@ const Admin = () => {
                           }
                         </div>
                       )
-                    })
+                    }) : (
+                      <Loader />
+                    )
                   }
                 </div>
               </div>

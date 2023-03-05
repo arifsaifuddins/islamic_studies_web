@@ -4,6 +4,7 @@ import { Link, useParams } from 'react-router-dom'
 import { FiCalendar, FiUser } from 'react-icons/fi'
 import apis from '../../apis'
 import parse from 'html-react-parser'
+import Loader from '../../layouts/Loader'
 
 const Program = () => {
 
@@ -27,7 +28,7 @@ const Program = () => {
         <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
           <h2 className='px-3 py-1 absolute rounded-bl-lg bg-yellow-600 w-max text-white'>البرامج والمؤتمرات والأخبار</h2>
           {
-            Blog != null && (
+            Blog != null ? (
               <div className="mx-auto lg:w-[900px] w-full  leading-9 py-32">
                 <Link className="text-red-600 underline hover:text-red-800 font-bold text-xl" to={`/programs/c/${Blog[0].category}`}># {Blog[0].category}</Link>
                 <div className="pt-4 pb-6 flex flex-row gap-6 items-center">
@@ -46,6 +47,8 @@ const Program = () => {
                   {parse(Blog[0].body)}
                 </article>
               </div>
+            ) : (
+              <Loader />
             )
           }
         </div>

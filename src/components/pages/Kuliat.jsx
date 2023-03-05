@@ -6,6 +6,7 @@ import { FiTrash } from 'react-icons/fi'
 import apis from '../apis'
 import { ConfirmAlert } from '../confirm'
 import { useCookies } from 'react-cookie'
+import Loader from '../layouts/Loader'
 
 const Kuliat = () => {
   const [Kuliat, setKuliat] = useState(null)
@@ -29,7 +30,7 @@ const Kuliat = () => {
           <h2 className='px-3 py-1 absolute xl:right-0 right-4 rounded-bl-lg bg-yellow-600 w-max text-white'>الكليات المنتسبة للدراسات الإسلامية</h2>
           <div className="mx-auto lg:w-[900px] w-full py-32 leading-9">
             {
-              Kuliat != null && Kuliat?.map(a => {
+              Kuliat != null ? Kuliat?.map(a => {
                 return (
                   <div key={a.id} className="mb-20 flex flex-col">
                     <h3 className='py-2 mb-12 px-6 text-center text-2xl text-yellow-600 font-bold '>{a.title}</h3>
@@ -54,7 +55,9 @@ const Kuliat = () => {
                     </div>
                   </div>
                 )
-              })
+              }) : (
+                <Loader />
+              )
             }
           </div>
         </div>

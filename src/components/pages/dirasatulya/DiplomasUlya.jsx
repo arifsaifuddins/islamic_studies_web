@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import apis from '../../apis'
 import { useCookies } from 'react-cookie'
+import Loader from '../../layouts/Loader'
 
 const DiplomaUlya = () => {
   const [cookies] = useCookies()
@@ -31,7 +32,7 @@ const DiplomaUlya = () => {
           <h2 className='px-3 py-1 absolute rounded-bl-lg bg-yellow-600 w-max text-white'>دبلوم الدراسات الإسلامية</h2>
           <div className="mx-auto lg:w-[900px] w-full leading-9 py-32">
             {
-              diploma_ulya_dirasat_1?.length > 0 && (
+              diploma_ulya_dakwah_1 != null ? diploma_ulya_dirasat_1?.length > 0 && (
                 <>
                   <div className="mb-20">
                     <h2 className='text-lg text-white w-full px-4 py-2 bg-yellow-600 text-center'>الفصل الدراسي الأول</h2>
@@ -55,6 +56,8 @@ const DiplomaUlya = () => {
                     </ul>
                   </div>
                 </>
+              ) : (
+                <Loader />
               )
             }
             {

@@ -5,6 +5,7 @@ import { FiBookOpen, FiBriefcase, FiCalendar, FiPhone, FiTarget, FiVolume2, FiX,
 import Modal from 'react-modal'
 import apis from '../apis'
 import { ConfirmAlert } from '../confirm'
+import Loader from '../layouts/Loader'
 
 const Home = () => {
 
@@ -93,14 +94,16 @@ const Home = () => {
           <div className="mx-auto overflow-x-scroll">
             <div className="py-40 flex flex-row items-center mx-auto w-max gap-6">
               {
-                Annoucs != null && Annoucs?.map(a => {
+                Annoucs != null ? Annoucs?.map(a => {
                   return (
                     <div className="shadow cursor-pointer" key={a.id}>
                       <a href="#"> <img src={`${php}/assets/${a?.poster}`} alt={a?.title} className='object-cover h-72 w-52 hover:scale-110' onClick={() => { setId(a?.id); open() }} />
                       </a>
                     </div>
                   )
-                })
+                }) : (
+                  <Loader />
+                )
               }
             </div>
           </div>
@@ -111,7 +114,7 @@ const Home = () => {
           <h2 className='px-3 py-1 absolute  xl:left-0 left-4 rounded-br-lg bg-yellow-600 w-max text-white'>أخبار كلية الدراسات الإسلامية</h2>
           <div className="pt-40 md:pb-10 pb-8 flex lg:flex-row flex-col items-center justify-around md:gap-10 gap-8" data-aos="fade-up">
             {
-              Programs != null && Programs[0] != null && (
+              Programs != null ? Programs[0] != null && (
                 <Link to={`/programs/${Programs[0]?.id_post}`} className="flex flex-row  lg:w-96 border-b-2 w-full px-4 py-3 md:gap-6 gap-4">
                   <img src={`${php}/assets/${Programs[0]?.poster}`} alt={Programs[0]?.title} className='object-cover aspect-square hover:object-right-bottom transition-all duration-500 h-32 md:h-40' />
                   <div className="text-start">
@@ -122,6 +125,8 @@ const Home = () => {
                     </p>
                   </div>
                 </Link>
+              ) : (
+                <Loader />
               )
             }
             {

@@ -5,6 +5,7 @@ import apis from '../../apis'
 import { ConfirmAlert } from '../../confirm'
 import { useCookies } from 'react-cookie'
 import { FiTrash } from 'react-icons/fi'
+import Loader from '../../layouts/Loader'
 
 const About = () => {
   const [VisMis, setVisMis] = useState(null)
@@ -58,7 +59,7 @@ const About = () => {
           <h2 className='px-3 py-1 absolute xl:left-0 left-4 rounded-br-lg bg-yellow-600 w-max text-white'>الرؤيات والأهداف لكلية الدراسات الإسلامية</h2>
           <div className="mx-auto lg:w-[900px] w-full leading-9 py-32">
             {
-              vision?.length > 0 && (
+              vision != null ? vision?.length > 0 && (
                 <>
                   <h2 className='text-2xl font-bold text-yellow-600 mb-12'>رؤيات الكلية</h2>
                   {
@@ -82,6 +83,8 @@ const About = () => {
                     })
                   }
                 </>
+              ) : (
+                <Loader />
               )
             }
             {

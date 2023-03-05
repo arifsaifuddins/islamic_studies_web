@@ -7,6 +7,7 @@ import Modal from 'react-modal'
 import apis from '../../apis'
 import { useCookies } from 'react-cookie'
 import { ConfirmAlert } from '../../confirm'
+import Loader from '../../layouts/Loader'
 
 const Haiah = () => {
   const [HaiahIsOpen, setHaiahIsOpen] = useState(false)
@@ -63,7 +64,7 @@ const Haiah = () => {
         <div className='w-max text-black py-2 px-6 '>
           <h1 className=' font-bold pb-2 border-b-2'>السيرة الذاتية</h1>
           {
-            Haiah != null && (
+            Haiah != null ? (
               <div className="flex flex-col sm:flex-row gap-4 my-2">
                 <div className="flex flex-col gap-4 relative">
                   {
@@ -120,6 +121,8 @@ const Haiah = () => {
                   </div>
                 </div>
               </div>
+            ) : (
+              <Loader />
             )
           }
         </div>

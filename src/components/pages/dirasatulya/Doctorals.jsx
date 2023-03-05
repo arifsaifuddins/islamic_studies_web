@@ -4,6 +4,7 @@ import apis from '../../apis'
 import { useCookies } from 'react-cookie'
 import { FiTrash } from 'react-icons/fi'
 import { ConfirmAlert } from '../../confirm'
+import Loader from '../../layouts/Loader'
 
 const Doctorals = () => {
   const [cookies] = useCookies()
@@ -35,7 +36,7 @@ const Doctorals = () => {
           <h2 className='px-3 py-1 absolute rounded-bl-lg bg-yellow-600 w-max text-white'>الفصول الدراسية</h2>
           <div className="mx-auto lg:w-[900px] w-full leading-9 py-32">
             {
-              phd_1?.length > 0 && (
+              phd_1 != null ? phd_1?.length > 0 && (
                 <>
                   <div className="mb-20">
                     <h2 className='text-lg text-white w-full px-4 py-2 bg-yellow-600 text-center'>الفصل الدراسي الأول</h2>
@@ -66,6 +67,8 @@ const Doctorals = () => {
                     </ul>
                   </div>
                 </>
+              ) : (
+                <Loader />
               )
             }
             {

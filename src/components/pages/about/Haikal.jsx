@@ -5,6 +5,7 @@ import { FiMonitor, FiUser, FiUserCheck, FiTrash } from 'react-icons/fi'
 import apis from '../../apis'
 import { useCookies } from 'react-cookie'
 import { ConfirmAlert } from '../../confirm'
+import Loader from '../../layouts/Loader'
 
 const Haikal = () => {
   const [cookies] = useCookies()
@@ -75,7 +76,7 @@ const Haikal = () => {
           <h2 className='px-3 py-1 absolute xl:left-0 left-4 rounded-br-lg bg-yellow-600 w-max text-white'>الهيكل الوظيفي لكلية الدراسات الإسلامية</h2>
           <div className="mx-auto lg:w-[900px] w-full px-2 md:px-0 text-lg  leading-9 py-32">
             {
-              Haikal != null && Haikal.map(a => {
+              Haikal != null ? Haikal.map(a => {
                 return (
                   <div key={a._id} className="relative mb-24">
                     <h2 className='text-lg text-white px-4 py-1 rounded-full z-10 w-max bg-yellow-600 absolute -right-3 -top-5'>{a.position}</h2>
@@ -102,7 +103,9 @@ const Haikal = () => {
                     </ul>
                   </div>
                 )
-              })
+              }) : (
+                <Loader />
+              )
             }
           </div>
         </div>

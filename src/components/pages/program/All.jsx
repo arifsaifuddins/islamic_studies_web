@@ -5,6 +5,7 @@ import apis from '../../apis'
 import { ConfirmAlert } from '../../confirm'
 import { FiTrash } from 'react-icons/fi'
 import { useCookies } from 'react-cookie'
+import Loader from '../../layouts/Loader'
 
 const All = () => {
   const php = import.meta.env.VITE_PURL
@@ -19,7 +20,7 @@ const All = () => {
   return (
     <>
       {
-        Blogs != null && Blogs?.data != null && (
+        Blogs != null ? Blogs?.data != null && (
           <div key={Blogs.data[0].id} className="lg:flex hidden flex-col shadow-lg hover:shadow-xl overflow-hidden bg-white mb-14">
             <Link to={`/programs/${Blogs.data[0].id_post}`} className="relative">
               <img src={`${php}/assets/${Blogs.data[0].poster}`} alt={Blogs.data[0].title} className="w-full lg:h-80 h-60 object-cover hover:object-right-bottom transition-all duration-500" />
@@ -28,6 +29,8 @@ const All = () => {
               </div>
             </Link>
           </div>
+        ) : (
+          <Loader />
         )
       }
       {

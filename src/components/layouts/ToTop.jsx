@@ -18,7 +18,7 @@ const ToTop = () => {
   return (
     <div>
       <a href="#" className="topscroll hidden ">
-        <i className="fixed bottom-4 lg:bottom-8 left-4 lg:left-8 bg-yellow-600 p-2 cursor-pointer hover:bg-yellow-400 rounded-xl text-lg text-white font-bold">
+        <i className="fixed bottom-4 lg:bottom-8 left-4 lg:left-8 bg-blue-600 p-2 cursor-pointer hover:bg-blue-400 rounded-xl text-lg text-white font-bold">
           <FiArrowUp />
         </i>
       </a>

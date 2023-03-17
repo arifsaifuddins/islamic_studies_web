@@ -49,6 +49,26 @@ class Apis {
       .then(j => j.json())
   }
 
+  getDaleel = async () => {
+    return await fetch(`${php}/daleel.php`)
+      .then(j => j.json())
+  }
+
+  getResults = async (page) => {
+    return await fetch(`${php}/results.php?page=${page}`)
+      .then(j => j.json())
+  }
+
+  getYearResult = async (year) => {
+    return await fetch(`${php}/results.php?year=${year}`)
+      .then(j => j.json())
+  }
+
+  getSearchResult = async (s, page) => {
+    return await fetch(`${php}/results.php?s=${s}&page=${page}`)
+      .then(j => j.json())
+  }
+
   getAnnoucement = async () => {
     return await fetch(`${php}/annoucs.php`)
       .then(j => j.json())
@@ -128,6 +148,12 @@ class Apis {
 
   delFees = async (id) => {
     return await fetch(`${node}/fees/${id}`, {
+      method: 'DELETE'
+    })
+  }
+
+  delResult = async (id) => {
+    return await fetch(`${php}/results.php?id=${id}`, {
       method: 'DELETE'
     })
   }

@@ -24,9 +24,9 @@ const Program = () => {
       <div className='md:h-80 h-72 flex bg-stone-700 bg-opacity-50 text-white'>
         <h1 className='lg:text-5xl text-4xl text-center m-auto'>البرامج والأخبار</h1>
       </div>
-      <div className="bg-white border-t-4 border-yellow-600">
+      <div className="bg-white border-t-4 border-blue-600">
         <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
-          <h2 className='px-3 py-1 absolute rounded-bl-lg bg-yellow-600 w-max text-white'>البرامج والمؤتمرات والأخبار</h2>
+          <h2 className='px-3 py-1 absolute rounded-bl-lg bg-blue-600 w-max text-white'>البرامج والمؤتمرات والأخبار</h2>
           {
             Blog != null ? (
               <div className="mx-auto lg:w-[900px] w-full  leading-9 py-32">
@@ -42,7 +42,7 @@ const Program = () => {
                   </p>
                 </div>
                 <img src={`${php}/assets/${Blog[0].poster}`} alt={Blog[0].title} className='object-cover w-full' />
-                <p className=" lg:text-4xl text-3xl my-12 leading-normal font-bold text-yellow-600">{Blog[0].title}</p>
+                <p className=" lg:text-4xl text-3xl my-12 leading-normal font-bold text-blue-600">{Blog[0].title}</p>
                 <article>
                   {parse(Blog[0].body)}
                 </article>

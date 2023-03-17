@@ -26,6 +26,11 @@ import Admin from './pages/admin/Admin'
 import Category from './pages/program/Category'
 import Search from './pages/program/Search'
 import All from './pages/program/All'
+import { Result } from 'postcss'
+import Alls from './pages/results/Alls'
+import Year from './pages/results/Year'
+import Results from './pages/results/Results'
+import Searchs from './pages/results/Searchs'
 
 const Routers = () => {
   const [admin, setAdmin] = useState(false)
@@ -53,6 +58,12 @@ const Routers = () => {
           <Route path="s/:search" element={<Search />} />
         </Route>
         <Route path="/programs/:id" element={<Program />} />
+
+        <Route path="/results" element={<Results />} >
+          <Route index element={<Alls />} />
+          <Route path=":year" element={<Year />} />
+          <Route path="s/:s" element={<Searchs />} />
+        </Route>
 
         <Route path="/about" element={<About />} />
         <Route path="/haiah" element={<Haiah />} />

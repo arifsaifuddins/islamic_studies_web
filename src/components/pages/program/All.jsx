@@ -25,7 +25,7 @@ const All = () => {
             <Link to={`/programs/${Blogs.data[0].id_post}`} className="relative">
               <img src={`${php}/assets/${Blogs.data[0].poster}`} alt={Blogs.data[0].title} className="w-full lg:h-80 h-60 object-cover hover:object-right-bottom transition-all duration-500" />
               <div className="flex justify-end bg-cover text-slate-100 flex-col absolute right-0 bottom-0 left-0">
-                <h1 className="md:text-2xl text-sm font-bold p-4 bg-opacity-50 bg-slate-200 hover:underline hover:text-yellow-600">{(Blogs.data[0].title.length < 50) ? Blogs.data[0].title : Blogs.data[0].title.slice(0, 50)}</h1>
+                <h1 className="md:text-2xl text-sm font-bold p-4 bg-opacity-50 bg-slate-200 hover:underline hover:text-blue-600">{(Blogs.data[0].title.length < 50) ? Blogs.data[0].title : Blogs.data[0].title.slice(0, 50)}</h1>
               </div>
             </Link>
           </div>
@@ -41,7 +41,7 @@ const All = () => {
               <Link to={`/programs/${a.id_post}`} ><img src={`${php}/assets/${a.poster}`} alt={a.title} className='object-cover aspect-square hover:object-right-bottom transition-all duration-500 h-32 md:h-44' /></Link>
               <div>
                 <Link to={`/programs/${a.id_post}`} >
-                  <h2 className='font-bold md:text-2xl text-sm text-yellow-600 hover:underline'>{(a.title.length < 30) ? a.title : a.title.slice(0, 30) + '...'}</h2>
+                  <h2 className='font-bold md:text-2xl text-sm text-blue-600 hover:underline'>{(a.title.length < 30) ? a.title : a.title.slice(0, 30) + '...'}</h2>
                   <p className='md:text-lg text-xs md:mt-4 mt-2'>{(body?.replaceAll('&nbsp;', ' ').trim().length < 50) ? body?.replaceAll('&nbsp;', ' ').trim() : body?.replaceAll('&nbsp;', ' ').trim().slice(0, 50) + '...'}</p>
                 </Link>
                 <p className="pt-2 flex flex-row text-sm md:text-md gap-3 items-center">
@@ -60,7 +60,7 @@ const All = () => {
           )
         })
       }
-      <div className="flex flex-row py-1 bg-yellow-600 text-white mx-auto md:mx-0 items-center text-sm md:text-xl w-max mt-24">
+      <div className="flex flex-row py-1 bg-blue-600 text-white mx-auto md:mx-0 items-center text-sm md:text-xl w-max mt-24">
         {
           Blogs != null && Blogs?.data != null && Blogs?.previouspage == 0 ? (
             <p onClick={() => setPage(1)} className='px-4 text-slate-600 cursor-not-allowed py-2'><FiChevronsRight /></p>

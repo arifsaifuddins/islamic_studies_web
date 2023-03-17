@@ -75,47 +75,47 @@ const Haiah = () => {
                     )
                   }
                   <img src={`${php}/assets/${Haiah[0]?.poster}`} alt={Haiah[0]?.name} className='object-cover lg:w-72 w-full h-72' />
-                  <div onClick={() => downloadFile(`${php}/assets/${Haiah[0]?.cv}`, Haiah[0]?.name + '.pdf')} className='lg:w-72 w-full cursor-pointer justify-center bg-yellow-600 py-2 text-white rounded-lg flex flex-row mx-auto  items-center gap-2'>CV | السيرة الذاتية </div>
+                  <div onClick={() => downloadFile(`${php}/assets/${Haiah[0]?.cv}`, Haiah[0]?.name + '.pdf')} className='lg:w-72 w-full cursor-pointer justify-center bg-blue-600 py-2 text-white rounded-lg flex flex-row mx-auto  items-center gap-2'>CV | السيرة الذاتية </div>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <h1 className='font-bold text-yellow-600 mb-2 text-xl'>{Haiah[0]?.name}</h1>
+                  <h1 className='font-bold text-blue-600 mb-2 text-xl'>{Haiah[0]?.name}</h1>
                   <div className="items-center flex flex-row gap-2">
-                    <p className='text-yellow-600'>الدرجة العلمية</p>
+                    <p className='text-blue-600'>الدرجة العلمية</p>
                     <span>:</span>
                     <p>{Haiah[0]?.position}</p>
                   </div>
                   <div className="items-center flex flex-row gap-2">
-                    <p className='text-yellow-600'>تاريخ الميلاد</p>
+                    <p className='text-blue-600'>تاريخ الميلاد</p>
                     <span>:</span>
                     <p>{Haiah[0]?.birth}</p>
                   </div>
                   <div className="items-center flex flex-row gap-2">
-                    <p className='text-yellow-600'>الدولة</p>
+                    <p className='text-blue-600'>الدولة</p>
                     <span>:</span>
                     <p>{Haiah[0]?.country}</p>
                   </div>
                   <div className="items-center flex flex-row gap-2">
-                    <p className='text-yellow-600'>العوان</p>
+                    <p className='text-blue-600'>العوان</p>
                     <span>:</span>
                     <p>{Haiah[0]?.address}</p>
                   </div>
                   <div className="items-center flex flex-row gap-2">
-                    <p className='text-yellow-600'>الجنس</p>
+                    <p className='text-blue-600'>الجنس</p>
                     <span>:</span>
                     <p>{Haiah[0]?.gender}</p>
                   </div>
                   <div className="items-center flex flex-row gap-2">
-                    <p className='text-yellow-600'>الحالة الزوجية</p>
+                    <p className='text-blue-600'>الحالة الزوجية</p>
                     <span>:</span>
                     <p>{Haiah[0]?.status}</p>
                   </div>
                   <div className="items-center flex flex-row gap-2">
-                    <p className='text-yellow-600'>البريد الإلكتروني</p>
+                    <p className='text-blue-600'>البريد الإلكتروني</p>
                     <span>:</span>
                     <p>{Haiah[0]?.email}</p>
                   </div>
                   <div className="items-center flex flex-row gap-2">
-                    <p className='text-yellow-600'>الهاتف</p>
+                    <p className='text-blue-600'>الهاتف</p>
                     <span>:</span>
                     <p>{Haiah[0]?.phone}</p>
                   </div>
@@ -130,9 +130,9 @@ const Haiah = () => {
       <div className='md:h-80 h-72 flex bg-stone-700 bg-opacity-50 text-white'>
         <h1 className='lg:text-5xl text-4xl text-center m-auto'>هيئة التدريس</h1>
       </div>
-      <div className="bg-white border-t-4 border-yellow-600">
+      <div className="bg-white border-t-4 border-blue-600">
         <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
-          <h2 className='px-3 py-1 absolute rounded-bl-lg bg-yellow-600 w-max text-white'>هيئة التدريس لكلية الدراسات الإسلامية</h2>
+          <h2 className='px-3 py-1 absolute rounded-bl-lg bg-blue-600 w-max text-white'>هيئة التدريس لكلية الدراسات الإسلامية</h2>
           <div className="mx-auto lg:w-[900px] w-full  leading-9 py-32">
             <div className="flex flex-col items-center md:flex-row gap-6 justify-between mb-20">
               {
@@ -141,8 +141,8 @@ const Haiah = () => {
                     <div className="p-4 rounded-lg bg-purple-400 mb-4 text-white w-max text-2xl">
                       <FiUser />
                     </div>
-                    <h3 className='text-yellow-600 font-bold'>عميد الكلية</h3>
-                    <h3 className='hover:underline hover:text-yellow-600'>{Ameed[0]?.name}</h3>
+                    <h3 className='text-blue-600 font-bold'>عميد الكلية</h3>
+                    <h3 className='hover:underline hover:text-blue-600'>{Ameed[0]?.name}</h3>
                   </a>
                 )
               }
@@ -152,8 +152,8 @@ const Haiah = () => {
                     <div className="p-4 rounded-lg bg-red-400 mb-4 text-white w-max text-2xl">
                       <FiMonitor />
                     </div>
-                    <h3 className='text-yellow-600 font-bold'>مسجل الكلية</h3>
-                    <h3 className='hover:underline hover:text-yellow-600'>{Musajil[0]?.name}</h3>
+                    <h3 className='text-blue-600 font-bold'>مسجل الكلية</h3>
+                    <h3 className='hover:underline hover:text-blue-600'>{Musajil[0]?.name}</h3>
                   </a>
                 )
               }
@@ -163,24 +163,24 @@ const Haiah = () => {
                     <div className="p-4 rounded-lg bg-purple-400 mb-4 text-white w-max text-2xl">
                       <FiUser />
                     </div>
-                    <h3 className='text-yellow-600 font-bold'>نائب العميد</h3>
-                    <h3 className='hover:underline hover:text-yellow-600'>{NaibAmeed[0]?.name}</h3>
+                    <h3 className='text-blue-600 font-bold'>نائب العميد</h3>
+                    <h3 className='hover:underline hover:text-blue-600'>{NaibAmeed[0]?.name}</h3>
                   </a>
                 )
               }
             </div>
             <div className="mt-20">
-              <h2 className='text-lg text-yellow-600 shadow font-bold w-full px-4 py-2 border-2 bg-white border-yellow-600 text-center'>قسم السنة وعلوم الحديث</h2>
+              <h2 className='text-lg text-blue-600 shadow font-bold w-full px-4 py-2 border-2 bg-white border-blue-600 text-center'>قسم السنة وعلوم الحديث</h2>
               <ul className='bg-white border-x'>
-                <li className='flex flex-row items-center font-bold gap-6 border-b-4 px-6 py-2 text-yellow-600'>
+                <li className='flex flex-row items-center font-bold gap-6 border-b-4 px-6 py-2 text-blue-600'>
                   <p className='w-[65%] text-center'>الأسماء</p>
-                  <div className='border-2 h-6 border-yellow-600' />
+                  <div className='border-2 h-6 border-blue-600' />
                   <p className='w-[30%] text-center'>الدرجة</p>
                 </li>
                 {
                   RaisQismHadith != null && (
                     <a href="#"><li onClick={() => { open(); setId(RaisQismHadith[0]?.id) }} className='flex hover:bg-slate-50 flex-row items-center gap-6 border-b-4 px-6 py-2'>
-                      <p className='hover:underline hover:text-yellow-600 cursor-pointer w-[65%]'>{RaisQismHadith[0]?.name}</p>
+                      <p className='hover:underline hover:text-blue-600 cursor-pointer w-[65%]'>{RaisQismHadith[0]?.name}</p>
                       <div className='border-2 h-6 border-gray-600' />
                       <p className='w-[30%] text-center'>رئيس</p>
                     </li>
@@ -191,7 +191,7 @@ const Haiah = () => {
                   QismHadith != null && QismHadith.map(a => {
                     return (
                       <a href="#"><li onClick={() => { open(); setId(a.id) }} className='flex hover:bg-slate-50 flex-row items-center gap-6 border-b-4 px-6 py-2'>
-                        <p className='hover:underline hover:text-yellow-600 cursor-pointer w-[65%]'>{a.name}</p>
+                        <p className='hover:underline hover:text-blue-600 cursor-pointer w-[65%]'>{a.name}</p>
                         <div className='border-2 h-6 border-gray-600' />
                         <p className='w-[30%] text-center'>{a.position}</p>
                       </li>
@@ -202,17 +202,17 @@ const Haiah = () => {
               </ul>
             </div>
             <div className="mt-20">
-              <h2 className='text-lg text-yellow-600 shadow font-bold w-full px-4 py-2 border-2 bg-white border-yellow-600 text-center'>قسم الدعوة والسيرة</h2>
+              <h2 className='text-lg text-blue-600 shadow font-bold w-full px-4 py-2 border-2 bg-white border-blue-600 text-center'>قسم الدعوة والسيرة</h2>
               <ul className='bg-white border-x'>
-                <li className='flex flex-row items-center font-bold gap-6 border-b-4 px-6 py-2 text-yellow-600'>
+                <li className='flex flex-row items-center font-bold gap-6 border-b-4 px-6 py-2 text-blue-600'>
                   <p className='w-[65%] text-center'>الأسماء</p>
-                  <div className='border-2 h-6 border-yellow-600' />
+                  <div className='border-2 h-6 border-blue-600' />
                   <p className='w-[30%] text-center'>الدرجة</p>
                 </li>
                 {
                   RaisQismDakwah != null && (
                     <a href="#"><li onClick={() => { open(); setId(RaisQismDakwah[0]?.id) }} className='flex hover:bg-slate-50 flex-row items-center gap-6 border-b-4 px-6 py-2'>
-                      <p className='hover:underline hover:text-yellow-600 cursor-pointer w-[65%]'>{RaisQismDakwah[0]?.name}</p>
+                      <p className='hover:underline hover:text-blue-600 cursor-pointer w-[65%]'>{RaisQismDakwah[0]?.name}</p>
                       <div className='border-2 h-6 border-gray-600' />
                       <p className='w-[30%] text-center'>رئيس</p>
                     </li>
@@ -223,7 +223,7 @@ const Haiah = () => {
                   QismDakwah != null && QismDakwah.map(a => {
                     return (
                       <a href="#"><li onClick={() => { open(); setId(a.id) }} className='flex hover:bg-slate-50 flex-row items-center gap-6 border-b-4 px-6 py-2'>
-                        <p className='hover:underline hover:text-yellow-600 cursor-pointer w-[65%]'>{a.name}</p>
+                        <p className='hover:underline hover:text-blue-600 cursor-pointer w-[65%]'>{a.name}</p>
                         <div className='border-2 h-6 border-gray-600' />
                         <p className='w-[30%] text-center'>{a.position}</p>
                       </li>
@@ -234,17 +234,17 @@ const Haiah = () => {
               </ul>
             </div>
             <div className="mt-20">
-              <h2 className='text-lg text-yellow-600 shadow font-bold w-full px-4 py-2 border-2 bg-white border-yellow-600 text-center'>قسم العقيدة والفكر الإسلامي</h2>
+              <h2 className='text-lg text-blue-600 shadow font-bold w-full px-4 py-2 border-2 bg-white border-blue-600 text-center'>قسم العقيدة والفكر الإسلامي</h2>
               <ul className='bg-white border-x'>
-                <li className='flex flex-row items-center font-bold gap-6 border-b-4 px-6 py-2 text-yellow-600'>
+                <li className='flex flex-row items-center font-bold gap-6 border-b-4 px-6 py-2 text-blue-600'>
                   <p className='w-[65%] text-center'>الأسماء</p>
-                  <div className='border-2 h-6 border-yellow-600' />
+                  <div className='border-2 h-6 border-blue-600' />
                   <p className='w-[30%] text-center'>الدرجة</p>
                 </li>
                 {
                   RaisQismAkidah != null && (
                     <a href="#"><li onClick={() => { open(); setId(RaisQismAkidah[0]?.id) }} className='flex hover:bg-slate-50 flex-row items-center gap-6 border-b-4 px-6 py-2'>
-                      <p className='hover:underline hover:text-yellow-600 cursor-pointer w-[65%]'>{RaisQismAkidah[0]?.name}</p>
+                      <p className='hover:underline hover:text-blue-600 cursor-pointer w-[65%]'>{RaisQismAkidah[0]?.name}</p>
                       <div className='border-2 h-6 border-gray-600' />
                       <p className='w-[30%] text-center'>رئيس</p>
                     </li>
@@ -255,7 +255,7 @@ const Haiah = () => {
                   QismAkidah != null && QismAkidah.map(a => {
                     return (
                       <a href="#"><li onClick={() => { open(); setId(a.id) }} className='flex hover:bg-slate-50 flex-row items-center gap-6 border-b-4 px-6 py-2'>
-                        <p className='hover:underline hover:text-yellow-600 cursor-pointer w-[65%]'>{a.name}</p>
+                        <p className='hover:underline hover:text-blue-600 cursor-pointer w-[65%]'>{a.name}</p>
                         <div className='border-2 h-6 border-gray-600' />
                         <p className='w-[30%] text-center'>{a.position}</p>
                       </li>

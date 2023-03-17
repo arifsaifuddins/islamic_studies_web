@@ -4,19 +4,19 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <footer className='py-14 bg-stone-700 text-slate-100 border-t-4 border-yellow-600' >
+    <footer className='py-14 bg-stone-700 text-slate-100 border-t-4 border-blue-600' >
       <div className="mx-auto xl:px-0 px-4 w-full xl:w-[1200px] flex flex-col gap-5 lg:flex-row items-center justify-between">
-        <Link className='text-yellow-600 hover:underline text-bold text-2xl lg:text-xl' to="/">كلية الدراسات الإسلامية</Link>
+        <Link className='text-blue-600 hover:underline text-bold text-2xl lg:text-xl' to="/">كلية الدراسات الإسلامية</Link>
         <div className="flex flex-row items-center text-sm lg:text-base gap-2">
-          <Link className='hover:text-yellow-600' to="/about">عن الكلية</Link>
+          <Link className='hover:text-blue-600' to="/about">عن الكلية</Link>
           <p>.</p>
-          <Link className='hover:text-yellow-600' to="/contact">اتصل بنا</Link>
+          <Link className='hover:text-blue-600' to="/contact">اتصل بنا</Link>
           <p>.</p>
-          <a className='hover:text-yellow-600 hidden sm:inline' href='https://iua.edu.sd' target="_blank">جامعة إفريقيا العالمية</a>
+          <a className='hover:text-blue-600 hidden sm:inline' href='https://iua.edu.sd' target="_blank">جامعة إفريقيا العالمية</a>
           <p className='hidden sm:block'>.</p>
-          <Link className='hover:text-yellow-600' to="/admin">إشراف</Link>
+          <Link className='hover:text-blue-600' to="/admin">إشراف</Link>
           <p>.</p>
-          <a className='hover:text-yellow-600' href='https://github.com/ariefsaifuddien/islamic_studies_web'>
+          <a className='hover:text-blue-600' href='https://github.com/ariefsaifuddien/islamic_studies_web'>
             <FiGithub />
           </a>
         </div>
@@ -31,7 +31,7 @@ const Footer = () => {
           </div>
           <h3 className='lg:text-start text-center text-xs lg:text-base'>الموقع الرسمي لكلية الدراسات الإسلامية بجامعة إفريقيا العالمية</h3>
         </div>
-        <p className='font-light text-center w-max py-1 px-2 h-max text-xs lg:text-base rounded-lg border border-yellow-600'>&copy; Islamic Studies 2022 . Khartoum-Sudan . IUA</p>
+        <p className='font-light text-center w-max py-1 px-2 h-max text-xs lg:text-base rounded-lg border border-blue-600'>&copy; Islamic Studies 2022 . Khartoum-Sudan . IUA</p>
       </div>
     </footer>
   )

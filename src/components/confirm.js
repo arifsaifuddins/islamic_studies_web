@@ -39,6 +39,10 @@ export const ConfirmAlert = (id, each) => {
             apis.delKuliat(id).then(a => a.json()).then(_ => location.reload())
           }
 
+          if (each == 'result') {
+            apis.delResult(id).then(a => a.json()).then(_ => location.reload())
+          }
+
           if (each == 'program') {
             apis.delProgram(id).then(a => a.json()).then(_ => location.reload())
           }

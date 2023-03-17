@@ -32,16 +32,16 @@ const Qobul = () => {
       <div className='md:h-80 h-72 flex bg-stone-700 bg-opacity-50 text-white'>
         <h1 className='lg:text-5xl text-4xl text-center m-auto'>التسجيل والقبول</h1>
       </div>
-      <div className="bg-white border-t-4 border-yellow-600">
+      <div className="bg-white border-t-4 border-blue-600">
         <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
-          <h2 className='px-3 py-1 absolute rounded-bl-lg bg-yellow-600 w-max text-white'>رسوم كلية الدراسات الإسلامية</h2>
+          <h2 className='px-3 py-1 absolute rounded-bl-lg bg-blue-600 w-max text-white'>رسوم كلية الدراسات الإسلامية</h2>
           <div className="mx-auto lg:w-[900px] w-full text-start leading-9 py-32">
             <ul className='bg-white mt-4 border-t border-x'>
-              <li className='flex flex-row items-center font-bold gap-8 border-b-4 px-4 py-2 text-yellow-600'>
+              <li className='flex flex-row items-center font-bold gap-8 border-b-4 px-4 py-2 text-blue-600'>
                 <p className='md:w-[50%] w-full text-center'>البرامج الدراسية</p>
-                <div className='border-2 hidden md:block h-6 border-yellow-600' />
+                <div className='border-2 hidden md:block h-6 border-blue-600' />
                 <p className=' hidden md:block w-[20%] text-center'>الدولار</p>
-                <div className='border-2 hidden md:block h-6 border-yellow-600' />
+                <div className='border-2 hidden md:block h-6 border-blue-600' />
                 <p className=' hidden md:block w-[20%] text-center'>الجنيه</p>
               </li>
               {
@@ -75,14 +75,14 @@ const Qobul = () => {
           </div>
         </div>
       </div>
-      <div className="bg-slate-100 border-t-4 border-yellow-600">
+      <div className="bg-slate-100 border-t-4 border-blue-600">
         <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
-          <h2 className='px-3 py-1 absolute xl:left-0 left-4 rounded-br-lg bg-yellow-600 w-max text-white'>شروط كلية الدراسات الإسلامية</h2>
+          <h2 className='px-3 py-1 absolute xl:left-0 left-4 rounded-br-lg bg-blue-600 w-max text-white'>شروط كلية الدراسات الإسلامية</h2>
           <div className="mx-auto lg:w-[900px] w-full text-start leading-9 py-32">
             {
               bachelor?.length > 0 && (
                 <>
-                  <h2 className='text-2xl font-bold text-yellow-600 mb-10'>شروط البكالوريوس</h2>
+                  <h2 className='text-2xl font-bold text-blue-600 mb-10'>شروط البكالوريوس</h2>
                   {
                     bachelor?.map(a => {
                       return (
@@ -94,7 +94,7 @@ const Qobul = () => {
                               </button>
                             )
                           }
-                          <p className='py-1 px-6 border-r-8 bg-white rounded-l-lg w-full border-yellow-600 pr-4'>{a.sharat}</p>
+                          <p className='py-1 px-6 border-r-8 bg-white rounded-l-lg w-full border-blue-600 pr-4'>{a.sharat}</p>
                         </li>
                       )
                     })
@@ -105,7 +105,7 @@ const Qobul = () => {
             {
               diplom?.length > 0 && (
                 <>
-                  <h2 className='text-2xl font-bold text-yellow-600 mb-10 mt-20'>شروط الدبلومات</h2>
+                  <h2 className='text-2xl font-bold text-blue-600 mb-10 mt-20'>شروط الدبلومات</h2>
                   {
                     diplom?.map(a => {
                       return (
@@ -117,7 +117,7 @@ const Qobul = () => {
                               </button>
                             )
                           }
-                          <p className='py-1 px-6 border-r-8 bg-white rounded-l-lg w-full border-yellow-600 pr-4'>{a.sharat}</p>
+                          <p className='py-1 px-6 border-r-8 bg-white rounded-l-lg w-full border-blue-600 pr-4'>{a.sharat}</p>
                         </li>
                       )
                     })
@@ -128,7 +128,7 @@ const Qobul = () => {
             {
               master?.length > 0 && (
                 <>
-                  <h2 className='text-2xl font-bold text-yellow-600 mb-10 mt-20'>شروط الماجستير</h2>
+                  <h2 className='text-2xl font-bold text-blue-600 mb-10 mt-20'>شروط الماجستير</h2>
                   {
                     master?.map(a => {
                       return (
@@ -140,7 +140,7 @@ const Qobul = () => {
                               </button>
                             )
                           }
-                          <p className='py-1 px-6 border-r-8 bg-white rounded-l-lg w-full border-yellow-600 pr-4'>{a.sharat}</p>
+                          <p className='py-1 px-6 border-r-8 bg-white rounded-l-lg w-full border-blue-600 pr-4'>{a.sharat}</p>
                         </li>
                       )
                     })
@@ -151,7 +151,7 @@ const Qobul = () => {
             {
               doctor?.length > 0 && (
                 <>
-                  <h2 className='text-2xl font-bold text-yellow-600 mb-10 mt-20'>شروط الدكتوراه</h2>
+                  <h2 className='text-2xl font-bold text-blue-600 mb-10 mt-20'>شروط الدكتوراه</h2>
                   {
                     doctor?.map(a => {
                       return (
@@ -163,7 +163,7 @@ const Qobul = () => {
                               </button>
                             )
                           }
-                          <p className='py-1 px-6 border-r-8 bg-white rounded-l-lg w-full border-yellow-600 pr-4'>{a.sharat}</p>
+                          <p className='py-1 px-6 border-r-8 bg-white rounded-l-lg w-full border-blue-600 pr-4'>{a.sharat}</p>
                         </li>
                       )
                     })

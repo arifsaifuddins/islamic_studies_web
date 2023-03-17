@@ -11,9 +11,9 @@ const Contact = () => {
       <div className='md:h-80 h-72 flex bg-stone-700 bg-opacity-50 text-white'>
         <h1 className='lg:text-5xl text-4xl text-center m-auto'>اتصل بنا</h1>
       </div>
-      <div className="bg-white border-t-4 border-yellow-600">
+      <div className="bg-white border-t-4 border-blue-600">
         <div className="mx-auto xl:w-[1200px] w-full px-4 xl:px-0 relative">
-          <h2 className='px-3 py-1 absolute xl:right-0 right-4 rounded-bl-lg bg-yellow-600 w-max text-white'>اتصل بنا أو أجدنا</h2>
+          <h2 className='px-3 py-1 absolute xl:right-0 right-4 rounded-bl-lg bg-blue-600 w-max text-white'>اتصل بنا أو أجدنا</h2>
           <div className="mx-auto lg:w-[900px] w-full leading-9 py-32">
             <div className='w-full mb-20'>
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d466.45611320821246!2d32.57352796387993!3d15.525614369404877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x168e91d2009ab833%3A0x8619ddb180b9d7e2!2sInternational%20University%20of%20Africa%20Faculty%20of%20Shariah!5e1!3m2!1sen!2s!4v1670451398740!5m2!1sen!2s" height="450" style={{ border: 0, width: '100%' }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>

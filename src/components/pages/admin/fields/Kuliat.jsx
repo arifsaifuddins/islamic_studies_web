@@ -85,11 +85,11 @@ function kuliatField({ url }) {
     const close = document.createElement('p')
 
     close.innerHTML = '&times;'
-    close.className = 'absolute left-3 top-3 cursor-pointer hover:text-yellow-800 text-yellow-600 text-3xl'
+    close.className = 'absolute left-3 top-3 cursor-pointer hover:text-blue-800 text-blue-600 text-3xl'
     close.onclick = e => e.target.parentElement.remove()
 
     input.placeholder = "السطر التعريفي"
-    input.className = `mt-2 bg-transparent py-1 pr-3  pl-9 w-[100%] rounded-lg  border outline-none border-yellow-600 ${a.toLowerCase()}s`
+    input.className = `mt-2 bg-transparent py-1 pr-3  pl-9 w-[100%] rounded-lg  border outline-none border-blue-600 ${a.toLowerCase()}s`
 
     div.append(input)
     div.append(close)
@@ -104,27 +104,27 @@ function kuliatField({ url }) {
       {
         (Errored == true) && <div className="text-sm w-[100%] bg-transparent border py-1 px-2 mt-4 rounded-lg text-[#222222] flex justify-between items-center">
           <div>{Error}</div>
-          <p onClick={() => setErrored(false)} className="text-yellow-600 hover:text-yellow-700 text-2xl cursor-pointer">&times;</p>
+          <p onClick={() => setErrored(false)} className="text-blue-600 hover:text-blue-700 text-2xl cursor-pointer">&times;</p>
         </div>
       }
-      <label htmlFor="postimg" className="my-2 block font-bold text-yellow-600">الصورة :</label>
-      <input type="file" required id="postimg" onChange={(e) => setPoster(e.target.files[0])} className="images bg-transparent py-1 px-3 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
-      <label htmlFor="name" className="my-2 block font-bold text-yellow-600">اسم الكلية :</label>
-      <input type="text" required id="name" onChange={(e) => setName(e.target.value)} placeholder="اسم الكلية" className="dess bg-transparent py-1 pr-3  rounded-lg  border outline-none border-yellow-600 w-[100%] mb-2" />
+      <label htmlFor="postimg" className="my-2 block font-bold text-blue-600">الصورة :</label>
+      <input type="file" required id="postimg" onChange={(e) => setPoster(e.target.files[0])} className="images bg-transparent py-1 px-3 rounded-lg  border outline-none border-blue-600 w-[100%]" />
+      <label htmlFor="name" className="my-2 block font-bold text-blue-600">اسم الكلية :</label>
+      <input type="text" required id="name" onChange={(e) => setName(e.target.value)} placeholder="اسم الكلية" className="dess bg-transparent py-1 pr-3  rounded-lg  border outline-none border-blue-600 w-[100%] mb-2" />
       {
         (Poster != null) && <img src={URL.createObjectURL(Poster)} alt="blog" className="mt-4 w-full" />
       }
       <div className="kuliat">
-        <div className="flex flex-row justify-between text-yellow-600 font-bold mb-3">
+        <div className="flex flex-row justify-between text-blue-600 font-bold mb-3">
           <label htmlFor="missions" className="block">المعلومات :</label>
           <p onClick={() => addInput('kuliat')} className="h-max -mb-1 cursor-pointer py-3">
             <FiPlus />
           </p>
         </div>
-        <textarea required id="missions" onChange={(e) => setDesc(e.target.value)} placeholder="السطر التعريفي" className="kulia kuliats bg-transparent py-1 pr-3 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
+        <textarea required id="missions" onChange={(e) => setDesc(e.target.value)} placeholder="السطر التعريفي" className="kulia kuliats bg-transparent py-1 pr-3 rounded-lg  border outline-none border-blue-600 w-[100%]" />
       </div>
       {
-        (Commited == false) ? <p className="bmiss cursor-not-allowed text-center mt-4 bg-yellow-800 text-slate-400 py-1 rounded-lg font-bold w-[100%]">إضافة الكلية المنتسبة</p> : <p className="cursor-pointer text-center mt-4 bg-yellow-600 text-white py-1 rounded-lg hover:bg-yellow-700 font-bold w-[100%]" onClick={() => submitKuliat()}>إضافة الكلية المنتسبة</p>
+        (Commited == false) ? <p className="bmiss cursor-not-allowed text-center mt-4 bg-blue-800 text-slate-400 py-1 rounded-lg font-bold w-[100%]">إضافة الكلية المنتسبة</p> : <p className="cursor-pointer text-center mt-4 bg-blue-600 text-white py-1 rounded-lg hover:bg-blue-700 font-bold w-[100%]" onClick={() => submitKuliat()}>إضافة الكلية المنتسبة</p>
       }
     </>
   )

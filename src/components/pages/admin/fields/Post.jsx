@@ -77,21 +77,21 @@ function PostField({ url }) {
       {
         (Errored == true) && <div className="text-sm w-[100%] bg-transparent border py-1 px-2 my-4 rounded-lg text-[#222222] dark:text-slate-100 flex justify-between items-center">
           <div>{Error}</div>
-          <p onClick={() => setErrored(false)} className="text-yellow-600 hover:text-yellow-700 text-2xl cursor-pointer">&times;</p>
+          <p onClick={() => setErrored(false)} className="text-blue-600 hover:text-blue-700 text-2xl cursor-pointer">&times;</p>
         </div>
       }
       <div>
         <div className="w-full">
-          <input required type="text" onChange={(e) => setTitle(e.target.value)} placeholder="موضوع البرنامج" className="tit  bg-transparent py-1 pr-3 mt-4 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
+          <input required type="text" onChange={(e) => setTitle(e.target.value)} placeholder="موضوع البرنامج" className="tit  bg-transparent py-1 pr-3 mt-4 rounded-lg  border outline-none border-blue-600 w-[100%]" />
         </div>
         <div className="flex justify-around items-center md:gap-8 md:flex-row flex-col">
           <div className="w-full">
-            <label htmlFor="postfile" className="my-2 block font-bold text-yellow-600">الصورة :</label>
-            <input required onChange={(e) => setPoster(e.target.files[0])} type="file" id="postfile" className="pos bg-transparent py-1 pr-3 rounded-lg  border outline-none border-yellow-600 w-[100%]" />
+            <label htmlFor="postfile" className="my-2 block font-bold text-blue-600">الصورة :</label>
+            <input required onChange={(e) => setPoster(e.target.files[0])} type="file" id="postfile" className="pos bg-transparent py-1 pr-3 rounded-lg  border outline-none border-blue-600 w-[100%]" />
           </div>
           <div className="w-full">
-            <label htmlFor="authorpost" className="my-2 block font-bold text-yellow-600">نوع البرامح :</label>
-            <select required type="text" id="authorpost" onChange={(e) => setCategory(e.target.value)} className="cat bg-transparent p-3 rounded-lg  border  outline-none border-yellow-600 w-[100%]" >
+            <label htmlFor="authorpost" className="my-2 block font-bold text-blue-600">نوع البرامح :</label>
+            <select required type="text" id="authorpost" onChange={(e) => setCategory(e.target.value)} className="cat bg-transparent p-3 rounded-lg  border  outline-none border-blue-600 w-[100%]" >
               <option value="البرامج">البرامج</option>
               <option value="الأخبار">الأخبار</option>
               <option value="المؤتمرات">المؤتمرات</option>
@@ -105,13 +105,13 @@ function PostField({ url }) {
           (Poster != null) && <img src={URL.createObjectURL(Poster)} alt="blog" className="mt-4 w-full" />
         }
         <div className="w-full mt-10">
-          <label htmlFor="x" className="my-2 block font-bold text-yellow-600">المعلومات :</label>
+          <label htmlFor="x" className="my-2 block font-bold text-blue-600">المعلومات :</label>
           <textarea id="x" name="content" className="hidden"></textarea>
           <trix-editor input="x"></trix-editor>
         </div>
         <div className="my-5">
           {
-            (Commited == false) ? <p className="bblog cursor-not-allowed text-center bg-yellow-800 text-slate-400 py-1 pl-3 rounded-lg font-bold w-[100%]">إضافة البرنامج</p> : <p className="cursor-pointer text-center bg-yellow-600 text-white py-1 pl-3 rounded-lg hover:bg-yellow-700 font-bold w-[100%]" onClick={() => submitProgram()}>إضافة البرنامج</p>
+            (Commited == false) ? <p className="bblog cursor-not-allowed text-center bg-blue-800 text-slate-400 py-1 pl-3 rounded-lg font-bold w-[100%]">إضافة البرنامج</p> : <p className="cursor-pointer text-center bg-blue-600 text-white py-1 pl-3 rounded-lg hover:bg-blue-700 font-bold w-[100%]" onClick={() => submitProgram()}>إضافة البرنامج</p>
           }
         </div>
       </div>
